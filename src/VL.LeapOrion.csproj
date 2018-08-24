@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LeapCSharp4">
+      <HintPath>..\lib\netstandard2.0\LeapCSharp4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

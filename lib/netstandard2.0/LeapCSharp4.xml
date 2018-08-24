@@ -1,0 +1,3160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LeapCSharp4</name>
+    </assembly>
+    <members>
+        <member name="T:Leap.Arm">
+            <summary>
+            The Arm class represents the forearm.
+            </summary>
+        </member>
+        <member name="M:Leap.Arm.#ctor">
+            <summary>
+            Constructs a default Arm object.
+            Get valid Arm objects from a Hand object.
+            
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="M:Leap.Arm.#ctor(Leap.Vector,Leap.Vector,Leap.Vector,Leap.Vector,System.Single,System.Single,Leap.LeapQuaternion)">
+            <summary>
+            Constructs a new Arm object. 
+            @since 3.0 
+            </summary>
+        </member>
+        <member name="M:Leap.Arm.Equals(Leap.Arm)">
+            <summary>
+            Compare Arm object equality.
+            Two Arm objects are equal if and only if both Arm objects represent the
+            exact same physical arm in the same frame and both Arm objects are valid.
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="M:Leap.Arm.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Arm object.
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="P:Leap.Arm.ElbowPosition">
+            <summary>
+            The position of the elbow.
+            If not in view, the elbow position is estimated based on typical human
+            anatomical proportions.
+            
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="P:Leap.Arm.WristPosition">
+            <summary>
+            The position of the wrist.
+            
+            Note that the wrist position is not collocated with the end of any bone in
+            the hand. There is a gap of a few centimeters since the carpal bones are
+            not included in the skeleton model.
+            
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="T:Leap.Bone">
+            <summary>
+            The Bone class represents a tracked bone.
+            
+            All fingers contain 4 bones that make up the anatomy of the finger.
+            Get valid Bone objects from a Finger object.
+            
+            Bones are ordered from base to tip, indexed from 0 to 3.  Additionally, the
+            bone's Type enum may be used to index a specific bone anatomically.
+            
+            The thumb does not have a base metacarpal bone and therefore contains a valid,
+            zero length bone at that location.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="M:Leap.Bone.#ctor">
+            <summary>
+            Constructs a default invalid Bone object.
+            
+            @since 2.0
+            </summary>
+        </member>
+        <member name="M:Leap.Bone.#ctor(Leap.Vector,Leap.Vector,Leap.Vector,Leap.Vector,System.Single,System.Single,Leap.Bone.BoneType,Leap.LeapQuaternion)">
+            <summary>
+            Constructs a new Bone object.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Bone.Equals(Leap.Bone)">
+            <summary>
+            Compare Bone object equality.
+            
+            Two Bone objects are equal if and only if both Bone objects represent the
+            exact same physical bone in the same frame and both Bone objects are valid.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="M:Leap.Bone.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Bone object.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.PrevJoint">
+            <summary>
+            The base of the bone, closest to the wrist.
+            In anatomical terms, this is the proximal end of the bone.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.NextJoint">
+            <summary>
+            The end of the bone, closest to the finger tip.
+            In anatomical terms, this is the distal end of the bone.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Center">
+            <summary>
+            The midpoint of the bone. 
+            @since 2.0 
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Direction">
+            <summary>
+            The normalized direction of the bone from base to tip.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Length">
+            <summary>
+            The estimated length of the bone.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Width">
+            <summary>
+            The average width of the flesh around the bone.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Type">
+            <summary>
+            The type of this bone.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Bone.Rotation">
+            <summary>
+            The orientation of this Bone as a Quaternion.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="P:Leap.Bone.Basis">
+            <summary>
+            The orthonormal basis vectors for this Bone as a Matrix.
+            The orientation of this Bone as a Quaternion.
+            
+            Basis vectors specify the orientation of a bone.
+            
+            **xBasis** Perpendicular to the longitudinal axis of the
+              bone; exits the sides of the finger.
+            
+            **yBasis or up vector** Perpendicular to the longitudinal
+              axis of the bone; exits the top and bottom of the finger. More positive
+              in the upward direction.
+            
+            **zBasis** Aligned with the longitudinal axis of the bone.
+              More positive toward the base of the finger.
+            
+            The bases provided for the right hand use the right-hand rule; those for
+            the left hand use the left-hand rule. Thus, the positive direction of the
+            x-basis is to the right for the right hand and to the left for the left
+            hand. You can change from right-hand to left-hand rule by multiplying the
+            z basis vector by -1.
+            
+            You can use the basis vectors for such purposes as measuring complex
+            finger poses and skeletal animation.
+            
+            Note that converting the basis vectors directly into a quaternion
+            representation is not mathematically valid. If you use quaternions,
+            create them from the derived rotation matrix not directly from the bases.
+            
+            @since 2.0
+            </summary>
+        </member>
+        <member name="T:Leap.Bone.BoneType">
+            <summary>
+            Enumerates the type of bones.
+            
+            Members of this enumeration are returned by Bone.Type() to identify a
+            Bone object.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="T:Leap.Config">
+            <summary>
+            The Config class provides access to Leap Motion system configuration information.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Config.#ctor(System.Int32)">
+            <summary>
+            Creates a new Config object for setting runtime configuration settings.
+            
+            Note that the Controller.Config provides a properly initialized Config object already.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Config.Get``1(System.String,System.Action{``0})">
+            <summary>
+            Requests a configuration value.
+            
+            You must provide an action to take when the Leap service returns the config value.
+            The Action delegate must take a parameter matching the config value type. The current
+            value of the setting is passed to this delegate.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Config.Set``1(System.String,``0,System.Action{System.Boolean})">
+            <summary>
+            Sets a configuration value.
+            
+            You must provide an action to take when the Leap service sets the config value.
+            The Action delegate must take a boolean parameter. The service calls this delegate
+            with the value true if the setting was changed successfully and false, otherwise.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.Config.ValueType">
+            <summary>
+            Enumerates the possible data types for configuration values.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="T:Leap.Controller">
+            <summary>
+            The Controller class is your main interface to the Leap Motion Controller.
+            
+            Create an instance of this Controller class to access frames of tracking
+            data and configuration information.Frame data can be polled at any time
+            using the Controller.Frame() function.Call frame() or frame(0) to get the
+            most recent frame.Set the history parameter to a positive integer to access
+            previous frames.A controller stores up to 60 frames in its frame history.
+            
+            
+            Polling is an appropriate strategy for applications which already have an
+            intrinsic update loop, such as a game. You can also subscribe to the FrameReady
+            event to get tracking frames through an event delegate.
+            
+            If the current thread implements a SynchronizationContext that contains a message
+            loop, events are posted to that threads message loop. Otherwise, events are called
+            on an independent thread and applications must perform any needed synchronization
+            or marshalling of data between threads. Note that Unity3D does not create an
+            appropriate SynchronizationContext object. Typically, event handlers cannot access
+            any Unity objects.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Controller.EventContext">
+            <summary>
+            The SynchronizationContext used for dispatching events.
+            
+            By default the synchronization context of the thread creating the controller
+            instance is used. You can change the context if desired.
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.Init">
+            <summary>
+            Dispatched when the connection is initialized (but not necessarily connected).
+            
+            Can be dispatched more than once, if connection is restarted.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.Connect">
+            <summary>
+            Dispatched when the connection to the service is established.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.Disconnect">
+            <summary>
+            Dispatched if the connection to the service is lost.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.FrameReady">
+            <summary>
+            Dispatched when a tracking frame is ready.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.InternalFrameReady">
+            <summary>
+            Dispatched when an internal tracking frame is ready.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.Device">
+            <summary>
+            Dispatched when a Leap Motion device is connected.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.DeviceLost">
+            <summary>
+            Dispatched when a Leap Motion device is disconnected.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.DeviceFailure">
+            <summary>
+            Dispatched when a Leap device fails to initialize.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.LogMessage">
+            <summary>
+            Dispatched when the system generates a loggable event.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.PolicyChange">
+            <summary>
+            Dispatched when a policy changes.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.ConfigChange">
+            <summary>
+            Dispatched when a configuration setting changes.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.DistortionChange">
+            <summary>
+            Dispatched when the image distortion map changes.
+            The distortion map can change when the Leap device switches orientation,
+            or a new device becomes active.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.DroppedFrame">
+            <summary>
+            Dispatched when the service drops a tracking frame.
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.ImageReady">
+            <summary>
+            Dispatched when an unrequested image is ready.
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.BeginProfilingForThread">
+            <summary>
+            Dispatched whenever a thread wants to start profiling for a custom thread.
+            The event is always dispatched from the thread itself.
+            
+            The event data will contain the name of the thread, as well as an array of
+            all possible profiling blocks that could be entered on that thread.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.EndProfilingForThread">
+            <summary>
+            Dispatched whenever a thread is finished profiling.  The event is always
+            dispatched from the thread itself.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.BeginProfilingBlock">
+            <summary>
+            Dispatched whenever a thread enters a profiling block.  The event is always
+            dispatched from the thread itself.
+            
+            The event data will contain the name of the profiling block.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.EndProfilingBlock">
+            <summary>
+            Dispatched whenever a thread ends a profiling block.  The event is always
+            dispatched from the thread itself.
+            
+            The event data will contain the name of the profiling block.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.PointMappingChange">
+            <summary>
+            Dispatched when point mapping change events are generated by the service.
+            @since 4.0
+            </summary>
+        </member>
+        <member name="E:Leap.Controller.HeadPoseChange">
+            <summary>
+            Dispatched when a new HeadPose is available.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.#ctor">
+            <summary>
+            Constructs a Controller object.
+            
+            The default constructor uses a connection key of 0.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.#ctor(System.Int32)">
+            <summary>
+            Constructs a Controller object using the specified connection key.
+            
+            All controller instances using the same key will use the same connection
+            to the service. In general, an application should not use more than one connection
+            for all its controllers. Each connection keeps its own cache of frames and images.
+            
+            @param connectionKey An identifier specifying the connection to use. If a
+            connection with the specified key already exists, that connection is used.
+            Otherwise, a new connection is created.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.StartConnection">
+            <summary>
+            Starts the connection.
+            
+            A connection starts automatically when created, but you can
+            use this function to restart the connection after stopping it.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.StopConnection">
+            <summary>
+            Stops the connection.
+            
+            No more frames or other events are received from a stopped connection. You can
+            restart with StartConnection().
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="P:Leap.Controller.IsServiceConnected">
+            <summary>
+            Reports whether your application has a connection to the Leap Motion
+            daemon/service. Can be true even if the Leap Motion hardware is not available. 
+            @since 1.2 
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.SetPolicy(Leap.Controller.PolicyFlag)">
+            <summary>
+            Requests setting a policy.
+             
+            A request to change a policy is subject to user approval and a policy 
+            can be changed by the user at any time (using the Leap Motion settings dialog). 
+            The desired policy flags must be set every time an application runs. 
+             
+            Policy changes are completed asynchronously and, because they are subject 
+            to user approval or system compatibility checks, may not complete successfully. Call 
+            Controller.IsPolicySet() after a suitable interval to test whether 
+            the change was accepted. 
+            @since 2.1.6 
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.ClearPolicy(Leap.Controller.PolicyFlag)">
+            <summary>
+            Requests clearing a policy.
+            
+            Policy changes are completed asynchronously and, because they are subject
+            to user approval or system compatibility checks, may not complete successfully. Call
+            Controller.IsPolicySet() after a suitable interval to test whether
+            the change was accepted.
+            @since 2.1.6
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.IsPolicySet(Leap.Controller.PolicyFlag)">
+             <summary>
+             Gets the active setting for a specific policy.
+             
+             Keep in mind that setting a policy flag is asynchronous, so changes are
+             not effective immediately after calling setPolicyFlag(). In addition, a
+             policy request can be declined by the user. You should always set the
+             policy flags required by your application at startup and check that the
+             policy change request was successful after an appropriate interval.
+             
+             If the controller object is not connected to the Leap Motion software, then the default
+             state for the selected policy is returned.
+            
+             @since 2.1.6
+             </summary>
+        </member>
+        <member name="M:Leap.Controller.Frame(System.Int32)">
+            <summary>
+            In most cases you should get Frame objects using the LeapProvider.CurrentFrame
+            property. The data in Frame objects taken directly from a Leap.Controller instance
+            is still in the Leap Motion frame of reference and will not match the hands
+            displayed in a Unity scene.
+            
+            Returns a frame of tracking data from the Leap Motion software. Use the optional
+            history parameter to specify which frame to retrieve. Call frame() or
+            frame(0) to access the most recent frame; call frame(1) to access the
+            previous frame, and so on. If you use a history value greater than the
+            number of stored frames, then the controller returns an empty frame.
+            
+            @param history The age of the frame to return, counting backwards from
+            the most recent frame (0) into the past and up to the maximum age (59).
+            @returns The specified frame; or, if no history parameter is specified,
+            the newest frame. If a frame is not available at the specified history
+            position, an invalid Frame is returned.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.Frame(Leap.Frame,System.Int32)">
+            <summary>
+            Identical to Frame(history) but instead of constructing a new frame and returning
+            it, the user provides a frame object to be filled with data instead.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.FrameTimestamp(System.Int32)">
+            <summary>
+            Returns the timestamp of a recent tracking frame.  Use the
+            optional history parameter to specify how many frames in the past
+            to retrieve the timestamp.  Leave the history parameter as
+            it's default value to return the timestamp of the most recent
+            tracked frame.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.GetTransformedFrame(Leap.LeapTransform,System.Int32)">
+            <summary>
+            Returns the frame object with all hands transformed by the specified
+            transform matrix.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.GetInterpolatedFrame(System.Int64)">
+            <summary>
+            Returns the Frame at the specified time, interpolating the data between existing frames, if necessary.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.GetInterpolatedFrame(Leap.Frame,System.Int64)">
+            <summary>
+            Fills the Frame with data taken at the specified time, interpolating the data between existing frames, if necessary.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.GetInterpolatedHeadPose(System.Int64)">
+            <summary>
+            Returns the Head pose at the specified time, interpolating the data between existing frames, if necessary.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.GetInterpolatedLeftRightTransform(System.Int64,System.Int64,System.Int32,System.Int32,Leap.LeapTransform@,Leap.LeapTransform@)">
+            <summary>
+            This is a special variant of GetInterpolatedFrameFromTime, for use with special
+            features that only require the position and orientation of the palm positions, and do
+            not care about pose data or any other data.
+            
+            You must specify the id of the hand that you wish to get a transform for.  If you specify
+            an id that is not present in the interpolated frame, the output transform will be the
+            identity transform.
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.Now">
+            <summary>
+            Returns a timestamp value as close as possible to the current time.
+            Values are in microseconds, as with all the other timestamp values.
+            
+            @since 2.2.7
+            </summary>
+        </member>
+        <member name="P:Leap.Controller.IsConnected">
+            <summary>
+            Reports whether this Controller is connected to the Leap Motion service and
+            the Leap Motion hardware is plugged in.
+            
+            When you first create a Controller object, isConnected() returns false.
+            After the controller finishes initializing and connects to the Leap Motion
+            software and if the Leap Motion hardware is plugged in, isConnected() returns true.
+            
+            You can either handle the onConnect event using a Listener instance or
+            poll the isConnected() function if you need to wait for your
+            application to be connected to the Leap Motion software before performing some other
+            operation.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Controller.Config">
+            <summary>
+            Returns a Config object, which you can use to query the Leap Motion system for
+            configuration information.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Controller.Devices">
+            <summary>
+            The list of currently attached and recognized Leap Motion controller devices.
+            
+            The Device objects in the list describe information such as the range and
+            tracking volume.
+            
+            Currently, the Leap Motion Controller only allows a single active device at a time,
+            however there may be multiple devices physically attached and listed here.  Any active
+            device(s) are guaranteed to be listed first, however order is not determined beyond that.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Controller.FailedDevices">
+            <summary>
+            A list of any Leap Motion hardware devices that are physically connected to
+            the client computer, but are not functioning correctly. The list contains
+            FailedDevice objects containing the pnpID and the reason for failure. No
+            other device information is available.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.Controller.PolicyFlag">
+            <summary>
+            The supported controller policies.
+            
+            The supported policy flags are:
+            
+            **POLICY_BACKGROUND_FRAMES** -- requests that your application receives frames
+              when it is not the foreground application for user input.
+            
+              The background frames policy determines whether an application
+              receives frames of tracking data while in the background. By
+              default, the Leap Motion  software only sends tracking data to the foreground application.
+              Only applications that need this ability should request the background
+              frames policy. The "Allow Background Apps" checkbox must be enabled in the
+              Leap Motion Control Panel or this policy will be denied.
+            
+            **POLICY_OPTIMIZE_HMD** -- request that the tracking be optimized for head-mounted
+              tracking.
+            
+              The optimize HMD policy improves tracking in situations where the Leap
+              Motion hardware is attached to a head-mounted display. This policy is
+              not granted for devices that cannot be mounted to an HMD, such as
+              Leap Motion controllers embedded in a laptop or keyboard.
+            
+            Some policies can be denied if the user has disabled the feature on
+            their Leap Motion control panel.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_DEFAULT">
+            <summary>
+            The default policy.
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_BACKGROUND_FRAMES">
+            <summary>
+            Receive background frames.
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_IMAGES">
+            <summary>
+            Allow streaming images.
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_OPTIMIZE_HMD">
+            <summary>
+            Optimize the tracking for head-mounted device.
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_ALLOW_PAUSE_RESUME">
+            <summary>
+            Allow pausing and unpausing of the Leap Motion service.
+            </summary>
+        </member>
+        <member name="F:Leap.Controller.PolicyFlag.POLICY_MAP_POINTS">
+            <summary>
+            Allow streaming map point
+            </summary>
+        </member>
+        <member name="M:Leap.CopyFromOtherExtensions.CopyFrom(Leap.Frame,Leap.Frame)">
+             Copies the data from a source frame into a frame.  After the operation is
+             complete, the frame will be identical to the source frame.
+            
+             @param source The source frame that is copied into a frame.
+        </member>
+        <member name="M:Leap.CopyFromOtherExtensions.CopyFrom(Leap.Finger,Leap.Finger)">
+             Copies the data from a source finger into a finger.  After the operation is
+             complete, the finger will be identical to the source finger.
+            
+             @param source The source finger that is copied into a finger.
+        </member>
+        <member name="M:Leap.CopyFromOtherExtensions.CopyFrom(Leap.Bone,Leap.Bone)">
+             Copies the data from a source bone into a bone.  After the operation is
+             complete, the bone will be identical to the source bone.
+            
+             @param source The source bone that is copied into a bone.
+        </member>
+        <member name="T:Leap.CSharpExtensions">
+             <summary>
+             Various C# extensions used by the Leap C# classes.
+            
+             @since 3.0
+             </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.NearlyEquals(System.Single,System.Single,System.Single)">
+            <summary>
+            Compares whether two floating point numbers are within an epsilon value of each other.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.HasMethod(System.Object,System.String)">
+            <summary>
+            Reports whether this object has the specified method.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.indexOf(System.Enum)">
+            <summary>
+            Returns the ordinal index of this enumeration item.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.itemFor``1(System.Int32)">
+            <summary>
+            Gets the item at the ordinal position in this enumeration.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.Dispatch``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Convenience function to consolidate event dispatching boilerplate code.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.CSharpExtensions.DispatchOnContext``1(System.EventHandler{``0},System.Object,System.Threading.SynchronizationContext,``0)">
+            <summary>
+            Convenience function to consolidate event dispatching boilerplate code.
+            Events are dispatched on the message queue of a threads' synchronization
+            context, if possible.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.Device">
+            <summary>
+            The Device class represents a physically connected device.
+            
+            The Device class contains information related to a particular connected
+            device such as device id, field of view relative to the device,
+            and the position and orientation of the device in relative coordinates.
+            
+            The position and orientation describe the alignment of the device relative to the user.
+            The alignment relative to the user is only descriptive. Aligning devices to users
+            provides consistency in the parameters that describe user interactions.
+            
+            Note that Device objects can be invalid, which means that they do not contain
+            valid device information and do not correspond to a physical device.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Device.#ctor">
+            <summary>
+            Constructs a default Device object.
+            
+            Get valid Device objects from a DeviceList object obtained using the
+            Controller.Devices() method.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Device.Update(System.Single,System.Single,System.Single,System.Single,System.Boolean,System.String)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Leap.Device.Update(Leap.Device)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Leap.Device.Handle">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="M:Leap.Device.Equals(Leap.Device)">
+            <summary>
+            Compare Device object equality. 
+            
+            Two Device objects are equal if and only if both Device objects represent the 
+            exact same Device and both Devices are valid. 
+            
+            @since 1.0 
+            </summary>
+        </member>
+        <member name="M:Leap.Device.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Device object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Device.HorizontalViewAngle">
+            <summary>
+            The angle in radians of view along the x axis of this device.
+            
+            The Leap Motion controller scans a region in the shape of an inverted pyramid
+            centered at the device's center and extending upwards. The horizontalViewAngle
+            reports the view angle along the long dimension of the device.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Device.VerticalViewAngle">
+            <summary>
+            The angle in radians of view along the z axis of this device.
+            
+            The Leap Motion controller scans a region in the shape of an inverted pyramid
+            centered at the device's center and extending upwards. The verticalViewAngle
+            reports the view angle along the short dimension of the device.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Device.Range">
+            <summary>
+            The maximum reliable tracking range from the center of this device.
+            
+            The range reports the maximum recommended distance from the device center
+            for which tracking is expected to be reliable. This distance is not a hard limit.
+            Tracking may be still be functional above this distance or begin to degrade slightly
+            before this distance depending on calibration and extreme environmental conditions.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Device.Baseline">
+            <summary>
+            The distance in mm between the center points of the stereo sensors.
+            
+            The baseline value, together with the maximum resolution, influence the
+            maximum range.
+            
+            @since 2.2.5
+            </summary>
+        </member>
+        <member name="P:Leap.Device.IsStreaming">
+            <summary>
+            Reports whether this device is streaming data to your application.
+            
+            Currently only one controller can provide data at a time.
+            @since 1.2
+            </summary>
+        </member>
+        <member name="P:Leap.Device.Type">
+            <summary>
+            The device type.
+            
+            Use the device type value in the (rare) circumstances that you
+            have an application feature which relies on a particular type of device.
+            Current types of device include the original Leap Motion peripheral,
+            keyboard-embedded controllers, and laptop-embedded controllers.
+            
+            @since 1.2
+            </summary>
+        </member>
+        <member name="P:Leap.Device.SerialNumber">
+            <summary>
+            An alphanumeric serial number unique to each device.
+            
+            Consumer device serial numbers consist of 2 letters followed by 11 digits.
+            
+            When using multiple devices, the serial number provides an unambiguous
+            identifier for each device.
+            @since 2.2.2
+            </summary>
+        </member>
+        <member name="P:Leap.Device.IsSmudged">
+            <summary>
+            The software has detected a possible smudge on the translucent cover
+            over the Leap Motion cameras.
+            
+            Not implemented yet.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="P:Leap.Device.IsLightingBad">
+            <summary>
+            The software has detected excessive IR illumination, which may interfere 
+            with tracking. If robust mode is enabled, the system will enter robust mode when 
+            isLightingBad() is true. 
+            
+            Not implemented yet. 
+            @since 3.0 
+            </summary>
+        </member>
+        <member name="T:Leap.Device.DeviceType">
+            <summary>
+            The available types of Leap Motion controllers.
+            </summary>
+        </member>
+        <member name="F:Leap.Device.DeviceType.TYPE_PERIPHERAL">
+            <summary>
+            A standalone USB peripheral. The original Leap Motion controller device.
+            @since 1.2
+            </summary>
+        </member>
+        <member name="F:Leap.Device.DeviceType.TYPE_DRAGONFLY">
+            <summary>
+            Internal research product codename "Dragonfly".
+            </summary>
+        </member>
+        <member name="F:Leap.Device.DeviceType.TYPE_NIGHTCRAWLER">
+            <summary>
+            Internal research product codename "Nightcrawler".
+            </summary>
+        </member>
+        <member name="F:Leap.Device.DeviceType.TYPE_RIGEL">
+            <summary>
+            Research product codename "Rigel".
+            </summary>
+        </member>
+        <member name="T:Leap.DeviceList">
+            <summary>
+            The DeviceList class represents a list of Device objects.
+            
+            Get a DeviceList object by calling Controller.Devices().
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.DeviceList.#ctor">
+            <summary>
+            Constructs an empty list of devices.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.DeviceList.FindDeviceByHandle(System.IntPtr)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Leap.DeviceList.ActiveDevice">
+            <summary>
+            The device that is currently streaming tracking data.
+            If no streaming devices are found, returns null
+            </summary>
+        </member>
+        <member name="M:Leap.DeviceList.AddOrUpdate(Leap.Device)">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Leap.DeviceList.IsEmpty">
+            <summary>
+            Reports whether the list is empty.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="T:Leap.DistortionData">
+             <summary>
+             The DistortionData class contains the distortion map for correcting the
+             lens distortion of an image.
+            
+             The distortion data is an array containing a 64x64 grid of floating point pairs.
+             The distortion map for both sides of an image pair are stacked in
+             the Data array -- the left map first, followed by the right map.
+            
+             @since 3.0
+             </summary>
+        </member>
+        <member name="M:Leap.DistortionData.#ctor">
+            <summary>
+            Constructs an uninitialized distortion object.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.DistortionData.#ctor(System.UInt64,System.Single,System.Single,System.Single[])">
+            <summary>
+            @since 3.0
+            </summary>
+        </member>
+        <member name="P:Leap.DistortionData.Version">
+             <summary>
+             An identifier assigned to the distortion map.
+            
+             When the distortion map changes -- either because the devices flips the images
+             to automatically orient the hands or because a different device is plugged in,
+             the version number of the distortion data changes.
+            
+             Note that the version always increases. If the images change orientation and then
+             return to their original orientation, a new version number is assigned. Thus
+             the version number can be used to detect when the data has changed, but not
+             to uniquely identify the data.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="P:Leap.DistortionData.Width">
+             <summary>
+             The width of the distortion map.
+            
+             Currently always 64. Note that there are two floating point values for every point in the map.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="P:Leap.DistortionData.Height">
+             <summary>
+             The height of the distortion map.
+            
+             Currently always 64.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="P:Leap.DistortionData.Data">
+             <summary>
+             The distortion data.
+            
+             @since 3.0
+             </summary>
+        </member>
+        <member name="P:Leap.DistortionData.IsValid">
+            <summary>
+            Reports whether the distortion data is internally consistent.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.LeapEvent">
+            <summary>
+            An enumeration defining the types of Leap Motion events.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.LeapEventArgs">
+            <summary>
+            A generic object with no arguments beyond the event type.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.FrameEventArgs">
+             <summary>
+             Dispatched when a tracking frame is ready.
+            
+             Provides the Frame object as an argument.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.LogEventArgs">
+             <summary>
+             Dispatched when loggable events are generated by the service and the
+             service connection code.
+            
+             Provides the severity rating, log text, and timestamp as arguments.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.PolicyEventArgs">
+             <summary>
+             Dispatched when a policy change is complete.
+            
+             Provides the current and previous policies as arguments.
+            
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.DistortionEventArgs">
+             <summary>
+             Dispatched when the image distortion map changes.
+            
+             Provides the new distortion map as an argument.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.ConfigChangeEventArgs">
+             <summary>
+             Dispatched when a configuration change is completed.
+            
+             Provides the configuration key, whether the change was successful, and the id of the original change request.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.SetConfigResponseEventArgs">
+             <summary>
+             Dispatched when a configuration change is completed.
+            
+             Provides the configuration key, whether the change was successful, and the id of the original change request.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.ConnectionEventArgs">
+            <summary>
+            Dispatched when the connection is established.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.ConnectionLostEventArgs">
+            <summary>
+            Dispatched when the connection is lost.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.DeviceEventArgs">
+             <summary>
+             Dispatched when a device is plugged in.
+            
+             Provides the device as an argument.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.DeviceFailureEventArgs">
+             <summary>
+             Dispatched when a device is plugged in, but fails to initialize or when
+             a working device fails in use.
+            
+             Provides the failure reason and, if available, the serial number.
+             @since 3.0
+             </summary>
+        </member>
+        <member name="T:Leap.ImageEventArgs">
+             <summary>
+             Dispatched when an unrequested Image is ready.
+            
+             Provides the Image object as an argument.
+             @since 4.0
+             </summary>
+        </member>
+        <member name="T:Leap.PointMappingChangeEventArgs">
+             <summary>
+             Dispatched when point mapping change events are generated by the service.
+            
+             @since 4.0
+             </summary>
+        </member>
+        <member name="T:Leap.FailedDevice">
+            <summary>
+            The FailedDevice class provides information about Leap Motion hardware that
+            has been physically connected to the client computer, but is not operating
+            correctly.
+            
+            Failed devices do not provide any tracking data and do not show up in the
+            Controller.Devices() list.
+            
+            Get the list of failed devices using Controller.FailedDevices().
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.FailedDevice.Equals(Leap.FailedDevice)">
+            <summary>
+            Test FailedDevice equality.
+            True if the devices are the same.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="P:Leap.FailedDevice.PnpId">
+            <summary>
+            The device plug-and-play id string.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="P:Leap.FailedDevice.Failure">
+            <summary>
+            The reason for device failure.
+            The failure reasons are defined as members of the FailureType enumeration.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="T:Leap.FailedDevice.FailureType">
+            <summary>
+            The errors that can cause a device to fail to properly connect to the service.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="F:Leap.FailedDevice.FailureType.FAIL_UNKNOWN">
+            <summary>
+            The cause of the error is unknown.
+            </summary>
+        </member>
+        <member name="F:Leap.FailedDevice.FailureType.FAIL_CALIBRATION">
+            <summary>
+            The device has a bad calibration record.
+            </summary>
+        </member>
+        <member name="F:Leap.FailedDevice.FailureType.FAIL_FIRMWARE">
+            <summary>
+            The device firmware is corrupt or failed to update.
+            </summary>
+        </member>
+        <member name="F:Leap.FailedDevice.FailureType.FAIL_TRANSPORT">
+            <summary>
+            The device is unresponsive.
+            </summary>
+        </member>
+        <member name="F:Leap.FailedDevice.FailureType.FAIL_CONTROl">
+            <summary>
+            The service cannot establish the required USB control interfaces.
+            </summary>
+        </member>
+        <member name="T:Leap.FailedDeviceList">
+            <summary>
+            The list of FailedDevice objects contains an entry for every failed Leap Motion
+            hardware device connected to the client computer. FailedDevice objects report
+            the device pnpID string and reason for failure.
+            
+            Get the list of FailedDevice objects from Controller.FailedDevices().
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.FailedDeviceList.#ctor">
+            <summary>
+            Constructs an empty list.
+            </summary>
+        </member>
+        <member name="M:Leap.FailedDeviceList.Append(Leap.FailedDeviceList)">
+            <summary>
+            Appends the contents of another FailedDeviceList to this one.
+            </summary>
+        </member>
+        <member name="P:Leap.FailedDeviceList.IsEmpty">
+            <summary>
+            Reports whether the list is empty.
+            </summary>
+        </member>
+        <member name="T:Leap.Finger">
+            <summary>
+            The Finger class represents a tracked finger.
+            
+            Fingers are objects that the Leap Motion software has classified as a finger.
+            Get valid Finger objects from a Frame or a Hand object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Finger.#ctor">
+            <summary>
+            Constructs a finger.
+            
+            An uninitialized finger is considered invalid.
+            Get valid Finger objects from a Hand object.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Finger.#ctor(System.Int64,System.Int32,System.Int32,System.Single,Leap.Vector,Leap.Vector,System.Single,System.Single,System.Boolean,Leap.Finger.FingerType,Leap.Bone,Leap.Bone,Leap.Bone,Leap.Bone)">
+            <summary>
+            Constructs a finger.
+            
+            Generally, you should not create your own finger objects. Such objects will not
+            have valid tracking data. Get valid finger objects from a hand in a frame
+            received from the service.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Finger.Bone(Leap.Bone.BoneType)">
+            <summary>
+            The bone at a given bone index on this finger.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="M:Leap.Finger.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Finger object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.Type">
+            <summary>
+            The type of this finger.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.Id">
+            <summary>
+            A unique ID assigned to this Finger object, whose value remains the
+            same across consecutive frames while the tracked hand remains visible. 
+            If tracking of the hand is lost, the Leap Motion software may assign a 
+            new ID when it detects the hand in a future frame.
+            
+            Use the ID value to find this Finger object in future frames.
+            
+            IDs should be from 1 to 100 (inclusive). If more than 100 objects are tracked
+            an IDs of -1 will be used until an ID in the defined range is available.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.HandId">
+            <summary>
+            The Hand associated with a finger.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.TipPosition">
+            <summary>
+            The tip position of this Finger.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.Direction">
+            <summary>
+            The direction in which this finger or tool is pointing. The direction is expressed 
+            as a unit vector pointing in the same direction as the tip.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.Width">
+            <summary>
+            The estimated width of the finger.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.Length">
+            <summary>
+            The estimated length of the finger.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.IsExtended">
+            <summary>
+            Whether or not this Finger is in an extended posture.
+            
+            A finger is considered extended if it is extended straight from the hand as if
+            pointing. A finger is not extended when it is bent down and curled towards the
+            palm.
+            
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Finger.TimeVisible">
+            <summary>
+            The duration of time this Finger has been visible to the Leap Motion Controller.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="T:Leap.Finger.FingerType">
+            <summary>
+            Enumerates the names of the fingers.
+            
+            Members of this enumeration are returned by Finger.Type() to identify a
+            Finger object.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="T:Leap.Frame">
+            <summary>
+            The Frame class represents a set of hand and finger tracking data detected
+            in a single frame.
+            
+            The Leap Motion software detects hands, fingers and tools within the tracking area, reporting
+            their positions, orientations, gestures, and motions in frames at the Leap Motion frame rate.
+            
+            Access Frame objects through an instance of the Controller class.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Frame.#ctor">
+            <summary>
+            Constructs a Frame object.
+            
+            Frame instances created with this constructor are invalid.
+            Get valid Frame objects by calling the Controller.Frame() function.
+            
+            The only time you should use this constructor is before deserializing
+            serialized frame data, or if you are going to be passing this Frame
+            to a method that fills it with valid data.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Frame.#ctor(System.Int64,System.Int64,System.Single,System.Collections.Generic.List{Leap.Hand})">
+            <summary>
+            Constructs a new Frame.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Frame.Hand(System.Int32)">
+            <summary>
+            The Hand object with the specified ID in this frame, or null if none
+            exists.
+            
+            Use the Frame.Hand() function to retrieve the Hand object from 
+            this frame using an ID value obtained from a previous frame. 
+            This function always returns a Hand object, but if no hand 
+            with the specified ID is present, an invalid Hand object is returned. 
+            
+            Note that ID values persist across frames, but only until tracking of a 
+            particular object is lost. If tracking of a hand is lost and subsequently 
+            regained, the new Hand object representing that physical hand may have 
+            a different ID than that representing the physical hand in an earlier frame. 
+            @since 1.0 </summary>
+        </member>
+        <member name="M:Leap.Frame.Equals(Leap.Frame)">
+            <summary>
+            Compare Frame object equality.
+            
+            Two Frame objects are equal if and only if both Frame objects represent
+            the exact same frame of tracking data and both Frame objects are valid.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Frame.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Frame object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Frame.Id">
+            <summary>
+            A unique ID for this Frame.
+            
+            Consecutive frames processed by the Leap Motion software have consecutive
+            increasing values. You can use the frame ID to avoid processing the same
+            Frame object twice, as well as to make sure that your application processes 
+            every frame.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Frame.Timestamp">
+            <summary>
+            The frame capture time in microseconds elapsed since an arbitrary point in
+            time in the past.
+            
+            You can use Controller.Now() to calculate the age of the frame.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Frame.CurrentFramesPerSecond">
+            <summary>
+            The instantaneous framerate.
+            
+            The rate at which the Leap Motion software is providing frames of data
+            (in frames per second). The framerate can fluctuate depending on available computing
+            resources, activity within the device field of view, software tracking settings,
+            and other factors.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Frame.Hands">
+            <summary>
+            The list of Hand objects detected in this frame, given in arbitrary order.
+            The list can be empty if no hands are detected.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Frame.ResizeHandList(System.Int32)">
+            <summary>
+            Resizes the Hand list to have a specific size.  If the size is decreased,
+            the removed hands are placed into the hand pool.  If the size is increased, the
+            new spaces are filled with hands taken from the hand pool.  If the pool is
+            empty, new hands are constructed instead.
+            </summary>
+        </member>
+        <member name="T:Leap.Hand">
+            <summary>
+            The Hand class reports the physical characteristics of a detected hand.
+            
+            Hand tracking data includes a palm position and velocity; vectors for
+            the palm normal and direction to the fingers; and lists of the attached fingers.
+            
+            Note that Hand objects can be invalid, which means that they do not contain
+            valid tracking data and do not correspond to a physical entity. Invalid Hand
+            objects can be the result of using the default constructor, or modifying the
+            hand data in an incorrect way.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Hand.#ctor">
+            <summary>
+            Constructs a Hand object.
+            
+            An uninitialized hand is considered invalid.
+            Get valid Hand objects from a Frame object.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Hand.#ctor(System.Int64,System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Single,Leap.Arm,System.Collections.Generic.List{Leap.Finger},Leap.Vector,Leap.Vector,Leap.Vector,Leap.Vector,Leap.LeapQuaternion,Leap.Vector,Leap.Vector)">
+            <summary>
+            Constructs a hand.
+            
+            Generally, you should not create your own Hand objects. Such objects will not
+            have valid tracking data. Get valid Hand objects from a frame
+            received from the service.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="M:Leap.Hand.Finger(System.Int32)">
+            <summary>
+            The Finger object with the specified ID attached to this hand.
+            
+            Use the Hand.Finger() function to retrieve a Finger object attached to
+            this hand using an ID value obtained from a previous frame.
+            
+            Note that ID values persist across frames, but only until tracking of a
+            particular object is lost. If tracking of a hand is lost and subsequently
+            regained, the new Finger object representing that finger may have a
+            different ID than that representing the finger in an earlier frame.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Hand.Equals(Leap.Hand)">
+            <summary>
+            Compare Hand object equality.
+            
+            Two Hand objects are equal if and only if both Hand objects represent the
+            exact same physical hand in the same frame and both Hand objects are valid.
+            </summary>
+        </member>
+        <member name="M:Leap.Hand.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Hand object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Id">
+            <summary>
+            A unique ID assigned to this Hand object, whose value remains the same
+            across consecutive frames while the tracked hand remains visible. If
+            tracking is lost (for example, when a hand is occluded by another hand
+            or when it is withdrawn from or reaches the edge of the Leap Motion Controller field of view),
+            the Leap Motion software may assign a new ID when it detects the hand in a future frame.
+            
+            Use the ID value with the Frame.Hand() function to find this Hand object
+            in future frames.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Fingers">
+            <summary>
+            The list of Finger objects detected in this frame that are attached to
+            this hand, given in order from thumb to pinky.  The list cannot be empty.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PalmPosition">
+            <summary>
+            The center position of the palm.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PalmVelocity">
+            <summary>
+            The rate of change of the palm position.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PalmNormal">
+            <summary>
+            The normal vector to the palm. If your hand is flat, this vector will
+            point downward, or "out" of the front surface of your palm.
+            
+            The direction is expressed as a unit vector pointing in the same
+            direction as the palm normal (that is, a vector orthogonal to the palm).
+            
+            You can use the palm normal vector to compute the roll angle of the palm with
+            respect to the horizontal plane.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Direction">
+            <summary>
+            The direction from the palm position toward the fingers.
+            
+            The direction is expressed as a unit vector pointing in the same
+            direction as the directed line from the palm position to the fingers.
+            
+            You can use the palm direction vector to compute the pitch and yaw angles of the palm with
+            respect to the horizontal plane.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Hand.Basis">
+            <summary>
+            The transform of the hand.
+            
+            Note, in version prior to 3.1, the Basis was a Matrix object.
+            @since 3.1
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Rotation">
+            <summary>
+            The rotation of the hand as a quaternion.
+            
+            @since 3.1
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.GrabStrength">
+            <summary>
+            The strength of a grab hand pose.
+            
+            The strength is zero for an open hand, and blends to one when a grabbing hand
+            pose is recognized.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.GrabAngle">
+            <summary>
+            The angle between the fingers and the hand of a grab hand pose.
+            
+            The angle is computed by looking at the angle between the direction of the
+            4 fingers and the direction of the hand. Thumb is not considered when
+            computing the angle.
+            The angle is 0 radian for an open hand, and reaches pi radians when the pose
+            is a tight fist.
+            
+            @since 3.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PinchStrength">
+            <summary>
+            The holding strength of a pinch hand pose.
+            
+            The strength is zero for an open hand, and blends to one when a pinching
+            hand pose is recognized. Pinching can be done between the thumb
+            and any other finger of the same hand.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PinchDistance">
+            <summary>
+            The distance between the thumb and index finger of a pinch hand pose.
+            
+            The distance is computed by looking at the shortest distance between
+            the last 2 phalanges of the thumb and those of the index finger.
+            This pinch measurement only takes thumb and index finger into account.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.PalmWidth">
+            <summary>
+            The estimated width of the palm when the hand is in a flat position.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.StabilizedPalmPosition">
+            <summary>
+            The stabilized palm position of this Hand.
+            
+            Smoothing and stabilization is performed in order to make
+            this value more suitable for interaction with 2D content. The stabilized
+            position lags behind the palm position by a variable amount, depending
+            primarily on the speed of movement.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.WristPosition">
+            <summary>
+            The position of the wrist of this hand.
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.TimeVisible">
+            <summary>
+            The duration of time this Hand has been visible to the Leap Motion Controller.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Confidence">
+            <summary>
+            How confident we are with a given hand pose.
+            The confidence level ranges between 0.0 and 1.0 inclusive.
+            
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.IsLeft">
+            <summary>
+            Identifies whether this Hand is a left hand.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="P:Leap.Hand.IsRight">
+            <summary>
+            Identifies whether this Hand is a right hand.
+            @since 2.0
+            </summary>
+        </member>
+        <member name="F:Leap.Hand.Arm">
+            <summary>
+            The arm to which this hand is attached.
+            
+            If the arm is not completely in view, Arm attributes are estimated based on
+            the attributes of entities that are in view combined with typical human anatomy.
+            @since 2.0.3
+            </summary>
+        </member>
+        <member name="T:Leap.Image">
+            <summary>
+            The Image class represents a stereo image pair from the Leap Motion device. 
+            
+            In addition to image data, the Image object provides a distortion map for correcting 
+            lens distortion. 
+            @since 2.1.0 
+            </summary>
+        </member>
+        <member name="M:Leap.Image.Data(Leap.Image.CameraType)">
+            <summary>
+            The buffer containing the image data.
+            
+            The image data is a set of 8-bit intensity values. The buffer is
+            image.Width * image.Height * image.BytesPerPixel bytes long.
+            
+            Use the ByteOffset(` method to find the beginning offset
+            of the data for the specified camera.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.ByteOffset(Leap.Image.CameraType)">
+            <summary>
+            The offset, in number of bytes, from the beginning of the Data()
+            buffer to the first byte of the image data for the specified camera.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.NumBytes">
+            <summary>
+            The number of bytes in the Data() buffer corresponding to each
+            image. Use the ByteOffset() function to find the starting byte
+            offset for each image.
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.Distortion(Leap.Image.CameraType)">
+            <summary>
+            The distortion calibration map for this image.
+            
+            The calibration map is a 64x64 grid of points. Each point is defined by
+            a pair of 32-bit floating point values. Each point in the map
+            represents a ray projected into the camera. The value of
+            a grid point defines the pixel in the image data containing the brightness
+            value produced by the light entering along the corresponding ray. By
+            interpolating between grid data points, you can find the brightness value
+            for any projected ray. Grid values that fall outside the range [0..1] do
+            not correspond to a value in the image data and those points should be ignored.
+            
+            The calibration map can be used to render an undistorted image as well as to
+            find the true angle from the camera to a feature in the raw image. The
+            distortion map itself is designed to be used with GLSL shader programs.
+            In other contexts, it may be more convenient to use the Image Rectify()
+            and Warp() functions.
+            
+            Distortion is caused by the lens geometry as well as imperfections in the
+            lens and sensor window. The calibration map is created by the calibration
+            process run for each device at the factory (and which can be rerun by the
+            user).
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.PixelToRectilinear(Leap.Image.CameraType,Leap.Vector)">
+            <summary>
+            Provides the corrected camera ray intercepting the specified point on the image.
+            
+            Given a point on the image, PixelToRectilinear() corrects for camera distortion
+            and returns the true direction from the camera to the source of that image point
+            within the Leap Motion field of view.
+            
+            This direction vector has an x and y component [x, y, 1], with the third element
+            always one. Note that this vector uses the 2D camera coordinate system
+            where the x-axis parallels the longer (typically horizontal) dimension and
+            the y-axis parallels the shorter (vertical) dimension. The camera coordinate
+            system does not correlate to the 3D Leap Motion coordinate system.
+            
+            **Note:** This function should be called immediately after an image is obtained. Incorrect
+            results will be returned if the image orientation has changed or a different device is plugged
+            in between the time the image was received and the time this function is called.
+            
+            Note, this function was formerly named Rectify().
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.RectilinearToPixel(Leap.Image.CameraType,Leap.Vector)">
+            <summary>
+            Provides the point in the image corresponding to a ray projecting
+            from the camera.
+            
+            Given a ray projected from the camera in the specified direction, RectilinearToPixel()
+            corrects for camera distortion and returns the corresponding pixel
+            coordinates in the image.
+            
+            The ray direction is specified in relationship to the camera. The first
+            vector element corresponds to the "horizontal" view angle; the second
+            corresponds to the "vertical" view angle.
+            
+            The RectilinearToPixel() function returns pixel coordinates outside of the image bounds
+            if you project a ray toward a point for which there is no recorded data.
+            
+            RectilinearToPixel() is typically not fast enough for realtime distortion correction.
+            For better performance, use a shader program executed on a GPU.
+            
+            **Note:** This function should be called immediately after an image is obtained. Incorrect
+            results will be returned if the image orientation has changed or a different device is plugged
+            in between the time the image was received and the time this function is called.
+            
+            Note, this function was formerly named Warp().
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.Equals(Leap.Image)">
+            <summary>
+            Compare Image object equality.
+            
+            Two Image objects are equal if and only if both Image objects represent the
+            exact same Image and both Images are valid.
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.ToString">
+            <summary>
+            A string containing a brief, human readable description of the Image object.
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.SequenceId">
+            <summary>
+            The image sequence ID.
+            @since 2.2.1
+            </summary>
+        </member>
+        <member name="P:Leap.Image.Width">
+            <summary>
+            The image width. 
+            @since 2.1.0 
+            </summary>
+        </member>
+        <member name="P:Leap.Image.Height">
+            <summary>
+            The image height.
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.BytesPerPixel">
+            <summary>
+            The number of bytes per pixel.
+            
+            Use this value along with Image.Width() and Image.Height()
+            to calculate the size of the data buffer.
+            
+            @since 2.2.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.Format">
+            <summary>
+            The image format.
+            @since 2.2.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.DistortionWidth">
+            <summary>
+            The stride of the distortion map.
+            
+            Since each point on the 64x64 element distortion map has two values in the
+            buffer, the stride is 2 times the size of the grid. (Stride is currently fixed
+            at 2 * 64 = 128).
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.DistortionHeight">
+            <summary>
+            The distortion map height.
+            Currently fixed at 64.
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.RayOffsetX(Leap.Image.CameraType)">
+            <summary>
+            The horizontal ray offset for a particular camera.
+            
+            Used to convert between normalized coordinates in the range [0..1] and the
+            ray slope range [-4..4].
+            
+            @since 4.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.RayOffsetY(Leap.Image.CameraType)">
+            <summary>
+            The vertical ray offset for a particular camera.
+            
+            Used to convert between normalized coordinates in the range [0..1] and the
+            ray slope range [-4..4].
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.RayScaleX(Leap.Image.CameraType)">
+            <summary>
+            The horizontal ray scale factor for a particular camera.
+            
+            Used to convert between normalized coordinates in the range [0..1] and the
+            ray slope range [-4..4].
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Image.RayScaleY(Leap.Image.CameraType)">
+            <summary>
+            The vertical ray scale factor for a particular camera.
+            
+            Used to convert between normalized coordinates in the range [0..1] and the
+            ray slope range [-4..4].
+            
+            @since 2.1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Image.Timestamp">
+            <summary>
+            Returns a timestamp indicating when this frame began being captured on the device.
+            @since 2.2.7
+            </summary>
+        </member>
+        <member name="T:Leap.Image.FormatType">
+            <summary>
+            Enumerates the possible image formats.
+            
+            The Image.Format() function returns an item from the FormatType enumeration.
+            @since 2.2.0
+            </summary>
+        </member>
+        <member name="T:Leap.LeapQuaternion">
+            <summary>
+            The LeapQuaternion struct represents a rotation in three-dimensional space.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new LeapQuaternion with the specified component values.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.#ctor(Leap.LeapQuaternion)">
+            <summary>
+            Copies the specified LeapQuaternion.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.#ctor(LeapInternal.LEAP_QUATERNION)">
+            <summary>
+            Copies the specified LEAP_QUATERNION.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.ToString">
+            <summary>
+            Returns a string containing this quaternion in a human readable format: (x, y, z).
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.Equals(Leap.LeapQuaternion)">
+            <summary>
+            Compare LeapQuaternion equality component-wise.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.IsValid">
+            <summary>
+            Returns true if all of the quaternion's components are finite.  If any
+            component is NaN or infinite, then this returns false.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapQuaternion.Magnitude">
+            <summary>
+            The magnitude, or length, of this quaternion.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapQuaternion.MagnitudeSquared">
+            <summary>
+            The square of the magnitude, or length, of this quaternion.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapQuaternion.Normalized">
+            <summary>
+            A normalized copy of this quaternion.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapQuaternion.Multiply(Leap.LeapQuaternion)">
+            <summary>
+            Concatenates the rotation described by this quaternion with the one provided
+            and returns the result.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="F:Leap.LeapQuaternion.Identity">
+            <summary>
+            The identity quaternion.
+            @since 3.1.2 
+            </summary>
+        </member>
+        <member name="T:Leap.LeapTransform">
+            <summary>
+            The LeapTransform class represents a transform in three dimensional space.
+            
+            Note that the LeapTransform class replaces the Leap.Matrix class.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.#ctor(Leap.Vector,Leap.LeapQuaternion)">
+            <summary>
+            Constructs a new transform from the specified translation and rotation.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.#ctor(Leap.Vector,Leap.LeapQuaternion,Leap.Vector)">
+            <summary>
+            Constructs a new transform from the specified translation, rotation and scale.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.TransformPoint(Leap.Vector)">
+            <summary>
+            Transforms the specified position vector, applying translation, rotation and scale.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.TransformDirection(Leap.Vector)">
+            <summary>
+            Transforms the specified direction vector, applying rotation only.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.TransformVelocity(Leap.Vector)">
+            <summary>
+            Transforms the specified velocity vector, applying rotation and scale.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.TransformQuaternion(Leap.LeapQuaternion)">
+             <summary>
+             Transforms the specified quaternion.
+             Multiplies the quaternion representing the rotational part of this transform by the specified
+             quaternion.
+            
+             **Important:** Modifying the basis vectors of this transform directly leaves the underlying quaternion in
+             an indeterminate state. Neither this function nor the LeapTransform.rotation quaternion can be used after
+             the basis vectors are set.
+            
+             @since 3.1.2
+             </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.MirrorX">
+            <summary>
+            Mirrors this transform's rotation and scale across the x-axis. Translation is not affected.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="M:Leap.LeapTransform.MirrorZ">
+            <summary>
+            Mirrors this transform's rotation and scale across the z-axis. Translation is not affected.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.xBasis">
+             <summary>
+             The x-basis of the transform.
+            
+             **Important:** Modifying the basis vectors of this transform directly leaves the underlying quaternion in
+             an indeterminate state. Neither the TransformQuaternion() function nor the LeapTransform.rotation quaternion
+              can be used after the basis vectors are set.
+            
+             @since 3.1.2
+             </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.yBasis">
+             <summary>
+             The y-basis of the transform.
+            
+             **Important:** Modifying the basis vectors of this transform directly leaves the underlying quaternion in
+             an indeterminate state. Neither the TransformQuaternion() function nor the LeapTransform.rotation quaternion
+              can be used after the basis vectors are set.
+            
+             @since 3.1.2
+             </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.zBasis">
+             <summary>
+             The z-basis of the transform.
+            
+             **Important:** Modifying the basis vectors of this transform directly leaves the underlying quaternion in
+             an indeterminate state. Neither the TransformQuaternion() function nor the LeapTransform.rotation quaternion
+              can be used after the basis vectors are set.
+            
+             @since 3.1.2
+             </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.translation">
+            <summary>
+            The translation component of the transform.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.scale">
+            <summary>
+            The scale factors of the transform.
+            Scale is kept separate from translation.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="P:Leap.LeapTransform.rotation">
+             <summary>
+             The rotational component of the transform.
+            
+             **Important:** Modifying the basis vectors of this transform directly leaves the underlying quaternion in
+             an indeterminate state. This rotation quaternion cannot be accessed after
+             the basis vectors are modified directly.
+            
+             @since 3.1.2
+             </summary>
+        </member>
+        <member name="F:Leap.LeapTransform.Identity">
+            <summary>
+            The identity transform.
+            @since 3.1.2
+            </summary>
+        </member>
+        <member name="T:Leap.Matrix">
+            <summary>
+            The Matrix struct represents a transformation matrix.
+            
+            To use this struct to transform a Vector, construct a matrix containing the
+            desired transformation and then use the Matrix::transformPoint() or
+            Matrix.TransformDirection() functions to apply the transform.
+            
+            Transforms can be combined by multiplying two or more transform matrices using
+            the * operator.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.op_Multiply(Leap.Matrix,Leap.Matrix)">
+            <summary>
+            Multiply two matrices.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray3x3(System.Single[])">
+            <summary>
+            Copy this matrix to the specified array of 9 float values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray3x3(System.Double[])">
+            <summary>
+            Copy this matrix to the specified array containing 9 double values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray3x3">
+            <summary>
+            Convert this matrix to an array containing 9 float values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray4x4(System.Single[])">
+            <summary>
+            Copy this matrix to the specified array of 16 float values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray4x4(System.Double[])">
+            <summary>
+            Copy this matrix to the specified array of 16 double values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToArray4x4">
+            <summary>
+            Convert this matrix to an array containing 16 float values in row-major order.
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.#ctor(Leap.Matrix)">
+            <summary>
+            Constructs a copy of the specified Matrix object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.#ctor(Leap.Vector,Leap.Vector,Leap.Vector)">
+            <summary>
+            Constructs a transformation matrix from the specified basis vectors.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.#ctor(Leap.Vector,Leap.Vector,Leap.Vector,Leap.Vector)">
+            <summary>
+            Constructs a transformation matrix from the specified basis and translation vectors.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.#ctor(Leap.Vector,System.Single)">
+            <summary>
+            Constructs a transformation matrix specifying a rotation around the specified vector.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.#ctor(Leap.Vector,System.Single,Leap.Vector)">
+            <summary>
+            Constructs a transformation matrix specifying a rotation around the specified vector
+            and a translation by the specified vector.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.SetRotation(Leap.Vector,System.Single)">
+            <summary>
+            Sets this transformation matrix to represent a rotation around the specified vector.
+            
+            This function erases any previous rotation and scale transforms applied
+            to this matrix, but does not affect translation.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.TransformPoint(Leap.Vector)">
+            <summary>
+            Transforms a vector with this matrix by transforming its rotation,
+            scale, and translation.
+            
+            Translation is applied after rotation and scale.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.TransformDirection(Leap.Vector)">
+            <summary>
+            Transforms a vector with this matrix by transforming its rotation and
+            scale only.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.RigidInverse">
+            <summary>
+            Performs a matrix inverse if the matrix consists entirely of rigid
+            transformations (translations and rotations).  If the matrix is not rigid,
+            this operation will not represent an inverse.
+            
+            Note that all matrices that are directly returned by the API are rigid.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix._operator_mul(Leap.Matrix)">
+            <summary>
+            Multiply transform matrices.
+            Combines two transformations into a single equivalent transformation.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.Equals(Leap.Matrix)">
+            <summary>
+            Compare Matrix equality component-wise.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Matrix.ToString">
+            <summary>
+            Write the matrix to a string in a human readable format.
+            </summary>
+        </member>
+        <member name="P:Leap.Matrix.xBasis">
+            <summary>
+            The basis vector for the x-axis.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Matrix.yBasis">
+            <summary>
+            The basis vector for the y-axis.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Matrix.zBasis">
+            <summary>
+            The basis vector for the z-axis.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Matrix.origin">
+            <summary>
+            The translation factors for all three axes.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Matrix.Identity">
+            <summary>
+            Returns the identity matrix specifying no translation, rotation, and scale.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="T:Leap.MessageSeverity">
+            <summary>
+            Reports whether the message is for
+            a severe failure, a recoverable warning, or a status change.
+            @since 3.0
+            </summary>
+        </member>
+        <member name="F:Leap.MessageSeverity.MESSAGE_INFORMATION">
+            A verbose, informational message 
+        </member>
+        <member name="M:Leap.TransformExtensions.Transform(Leap.Frame,Leap.LeapTransform)">
+             Does an in-place rigid transformation of a Frame.
+            
+             @param transform A LeapTransform containing the desired translation, rotation, and scale
+             to be applied to the Frame.
+        </member>
+        <member name="M:Leap.TransformExtensions.TransformedCopy(Leap.Frame,Leap.LeapTransform)">
+             Returns a new frame that is a copy of a frame, with an additional rigid
+             transformation applied to it.
+            
+             @param transform The transformation to be applied to the copied frame.
+        </member>
+        <member name="M:Leap.TransformExtensions.Transform(Leap.Hand,Leap.LeapTransform)">
+             Does an in-place rigid transformation of a Hand.
+            
+             @param transform A LeapTransform containing the desired translation, rotation, and scale
+             to be applied to the Hand.
+        </member>
+        <member name="M:Leap.TransformExtensions.TransformedCopy(Leap.Hand,Leap.LeapTransform)">
+             Returns a new hand that is a copy of a hand, with an additional rigid
+             transformation applied to it.
+            
+             @param transform The transformation to be applied to the copied hand.
+        </member>
+        <member name="M:Leap.TransformExtensions.Transform(Leap.Finger,Leap.LeapTransform)">
+             Does an in-place rigid transformation of a Finger.
+            
+             @param transform A LeapTransform containing the desired translation, rotation, and scale
+             to be applied to the Finger.
+        </member>
+        <member name="M:Leap.TransformExtensions.TransformedCopy(Leap.Finger,Leap.LeapTransform)">
+             Returns a new finger that is a copy of a finger, with an additional rigid
+             transformation applied to it.
+            
+             @param transform The transformation to be applied to the copied finger.
+        </member>
+        <member name="M:Leap.TransformExtensions.Transform(Leap.Bone,Leap.LeapTransform)">
+                 * Does an in-place rigid transformation of a Bone.
+                 *
+                 * @param transform A LeapTransform containing the desired translation, rotation, and scale
+            -    *  to be applied to the bone.
+        </member>
+        <member name="M:Leap.TransformExtensions.TransformGivenJoints(Leap.Bone,Leap.LeapTransform)">
+                 * Does an in-place rigid transformation of a Bone, assuming the joints have already been transformed.
+                 *
+                 * @param transform A LeapTransform containing the desired translation, rotation, and scale
+            -    *  to be applied to the bone.
+        </member>
+        <member name="M:Leap.TransformExtensions.TransformedCopy(Leap.Bone,Leap.LeapTransform)">
+             Returns a new bone that is a copy of a bone, with an additional rigid
+             transformation applied to it.
+            
+             @param transform The transformation to be applied to the copied bone.
+        </member>
+        <member name="T:Leap.Constants">
+            <summary>
+            Constants used in Leap Motion math functions.
+            </summary>
+        </member>
+        <member name="T:Leap.Vector">
+            <summary>
+            The Vector struct represents a three-component mathematical vector or point
+            such as a direction or position in three-dimensional space.
+            
+            The Leap Motion software employs a right-handed Cartesian coordinate system.
+            Values given are in units of real-world millimeters. The origin is centered
+            at the center of the Leap Motion Controller. The x- and z-axes lie in the horizontal
+            plane, with the x-axis running parallel to the long edge of the device.
+            The y-axis is vertical, with positive values increasing upwards (in contrast
+            to the downward orientation of most computer graphics coordinate systems).
+            The z-axis has positive values increasing away from the computer screen.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Creates a new Vector with the specified component values.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.#ctor(Leap.Vector)">
+            <summary>
+            Copies the specified Vector.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.DistanceTo(Leap.Vector)">
+            <summary>
+            The distance between the point represented by this Vector
+            object and a point represented by the specified Vector object.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.AngleTo(Leap.Vector)">
+            <summary>
+            The angle between this vector and the specified vector in radians.
+            
+            The angle is measured in the plane formed by the two vectors. The
+            angle returned is always the smaller of the two conjugate angles.
+            Thus A.angleTo(B) == B.angleTo(A) and is always a positive
+            value less than or equal to pi radians (180 degrees).
+            
+            If either vector has zero length, then this function returns zero.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.Dot(Leap.Vector)">
+            <summary>
+            The dot product of this vector with another vector.
+            
+            The dot product is the magnitude of the projection of this vector
+            onto the specified vector.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.Cross(Leap.Vector)">
+            <summary>
+            The cross product of this vector and the specified vector.
+            
+            The cross product is a vector orthogonal to both original vectors.
+            It has a magnitude equal to the area of a parallelogram having the
+            two vectors as sides. The direction of the returned vector is
+            determined by the right-hand rule. Thus A.cross(B) == -B.cross(A).
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.ToString">
+            <summary>
+            Returns a string containing this vector in a human readable format: (x, y, z).
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.Equals(Leap.Vector)">
+            <summary>
+            Compare Vector equality component-wise.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="M:Leap.Vector.IsValid">
+            <summary>
+            Returns true if all of the vector's components are finite.  If any
+            component is NaN or infinite, then this returns false.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Item(System.UInt32)">
+            <summary>
+            Index vector components numerically.
+            Index 0 is x, index 1 is y, and index 2 is z.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Magnitude">
+            <summary>
+            The magnitude, or length, of this vector.
+            
+            The magnitude is the L2 norm, or Euclidean distance between the origin and
+            the point represented by the (x, y, z) components of this Vector object.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.MagnitudeSquared">
+            <summary>
+            The square of the magnitude, or length, of this vector.
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Pitch">
+            <summary>
+            The pitch angle in radians.
+            
+            Pitch is the angle between the negative z-axis and the projection of
+            the vector onto the y-z plane. In other words, pitch represents rotation
+            around the x-axis.
+            If the vector points upward, the returned angle is between 0 and pi radians
+            (180 degrees); if it points downward, the angle is between 0 and -pi radians.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Roll">
+            <summary>
+            The roll angle in radians.
+            
+            Roll is the angle between the y-axis and the projection of
+            the vector onto the x-y plane. In other words, roll represents rotation
+            around the z-axis. If the vector points to the left of the y-axis,
+            then the returned angle is between 0 and pi radians (180 degrees);
+            if it points to the right, the angle is between 0 and -pi radians.
+            
+            Use this function to get roll angle of the plane to which this vector is a
+            normal. For example, if this vector represents the normal to the palm,
+            then this function returns the tilt or roll of the palm plane compared
+            to the horizontal (x-z) plane.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Yaw">
+            <summary>
+            The yaw angle in radians.
+            
+            Yaw is the angle between the negative z-axis and the projection of
+            the vector onto the x-z plane. In other words, yaw represents rotation
+            around the y-axis. If the vector points to the right of the negative z-axis,
+            then the returned angle is between 0 and pi radians (180 degrees);
+            if it points to the left, the angle is between 0 and -pi radians.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="P:Leap.Vector.Normalized">
+            <summary>
+            A normalized copy of this vector.
+            
+            A normalized vector has the same direction as the original vector,
+            but with a length of one.
+            
+            @since 1.0
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Zero">
+            <summary>
+            The zero vector: (0, 0, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Ones">
+            <summary>
+            The ones vector: (1, 1, 1)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.XAxis">
+            <summary>
+            The x-axis unit vector: (1, 0, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.YAxis">
+            <summary>
+            The y-axis unit vector: (0, 1, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.ZAxis">
+            <summary>
+            The z-axis unit vector: (0, 0, 1)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Forward">
+            <summary>
+            The unit vector pointing forward along the negative z-axis: (0, 0, -1)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Backward">
+            <summary>
+            The unit vector pointing backward along the positive z-axis: (0, 0, 1)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Left">
+            <summary>
+            The unit vector pointing left along the negative x-axis: (-1, 0, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Right">
+            <summary>
+            The unit vector pointing right along the positive x-axis: (1, 0, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Up">
+            <summary>
+            The unit vector pointing up along the positive y-axis: (0, 1, 0)
+            </summary>
+        </member>
+        <member name="F:Leap.Vector.Down">
+            <summary>
+            The unit vector pointing down along the negative y-axis: (0, -1, 0)
+            </summary>
+        </member>
+        <member name="T:LeapInternal.CircularObjectBuffer`1">
+             A Limited capacity, circular LIFO buffer that wraps around
+             when full. Supports indexing to get older items. Array-backed.
+             *
+             Unlike many collections, objects are never removed, just overwritten when
+             the buffer cycles back to their array location.
+            
+             Object types used must have default parameterless constructor. It should be obvious that
+             such default objects are invalid. I.e. for Leap API objects, the IsValid property should be false.
+        </member>
+        <member name="M:LeapInternal.CircularObjectBuffer`1.Put(`0@)">
+            Put an item at the head of the list. Once full, this will overwrite the oldest item. 
+        </member>
+        <member name="M:LeapInternal.CircularObjectBuffer`1.Get(`0@,System.Int32)">
+            Get the item indexed backward from the head of the list 
+        </member>
+        <member name="M:LeapInternal.CircularObjectBuffer`1.Resize(System.Int32)">
+            Increase  
+        </member>
+        <member name="M:LeapInternal.Connection.IsPolicySet(Leap.Controller.PolicyFlag)">
+             <summary>
+             Gets the active setting for a specific policy.
+            
+             Keep in mind that setting a policy flag is asynchronous, so changes are
+             not effective immediately after calling setPolicyFlag(). In addition, a
+             policy request can be declined by the user. You should always set the
+             policy flags required by your application at startup and check that the
+             policy change request was successful after an appropriate interval.
+            
+             If the controller object is not connected to the Leap Motion software, then the default
+             state for the selected policy is returned.
+            
+            
+             @since 2.1.6
+             </summary>
+        </member>
+        <member name="P:LeapInternal.Connection.IsServiceConnected">
+            <summary>
+            Reports whether your application has a connection to the Leap Motion
+            daemon/service. Can be true even if the Leap Motion hardware is not available.
+            @since 1.2
+            </summary>
+        </member>
+        <member name="P:LeapInternal.Connection.Devices">
+             <summary>
+             The list of currently attached and recognized Leap Motion controller devices.
+            
+             The Device objects in the list describe information such as the range and
+             tracking volume.
+            
+            
+             Currently, the Leap Motion Controller only allows a single active device at a time,
+             however there may be multiple devices physically attached and listed here.  Any active
+             device(s) are guaranteed to be listed first, however order is not determined beyond that.
+            
+             @since 1.0
+             </summary>
+        </member>
+        <member name="M:LeapInternal.CopyFromLeapCExtensions.CopyFrom(Leap.Frame,LeapInternal.LEAP_TRACKING_EVENT@)">
+             Copies the data from an internal tracking message into a frame.
+            
+             @param trackingMsg The internal tracking message with the data to be copied into this frame.
+        </member>
+        <member name="M:LeapInternal.CopyFromLeapCExtensions.CopyFrom(Leap.Hand,LeapInternal.LEAP_HAND@,System.Int64)">
+             Copies the data from an internal hand definition into a hand.
+            
+             @param leapHand The internal hand definition to be copied into this hand.
+             @param frameId The frame id of the frame this hand belongs to.
+        </member>
+        <member name="M:LeapInternal.CopyFromLeapCExtensions.CopyFrom(Leap.Finger,LeapInternal.LEAP_DIGIT,Leap.Finger.FingerType,System.Int32,System.Single)">
+             Copies the data from an internal finger definition into a finger.
+            
+             @param leapBone The internal finger definition to be copied into this finger.
+             @param type The finger type of this finger.
+             @param frameId The frame id of the frame this finger belongs to.
+             @param handId The hand id of the hand this finger belongs to.
+             @param timeVisible The time in seconds that this finger has been visible.
+        </member>
+        <member name="M:LeapInternal.CopyFromLeapCExtensions.CopyFrom(Leap.Bone,LeapInternal.LEAP_BONE,Leap.Bone.BoneType)">
+             Copies the data from an internal bone definition into a bone.
+            
+             @param leapBone The internal bone definition to be copied into this bone.
+             @param type The bone type of this bone.
+        </member>
+        <member name="F:LeapInternal.eLeapConnectionStatus.eLeapConnectionStatus_NotConnected">
+            <summary>
+            A connection has been established.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapConnectionStatus.eLeapConnectionStatus_Connected">
+            <summary>
+            The connection has not been completed. Call OpenConnection.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapConnectionStatus.eLeapConnectionStatus_HandshakeIncomplete">
+            <summary>
+            The connection handshake has not completed.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapConnectionStatus.eLeapConnectionStatus_NotRunning">
+            <summary>
+            A connection could not be established because the server does not appear to be running.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceCaps.eLeapDeviceCaps_Color">
+            <summary>
+            The device can send color images.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceType.eLeapDeviceType_Peripheral">
+            <summary>
+            The Leap Motion consumer peripheral
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceType.eLeapDeviceType_Dragonfly">
+            <summary>
+            Internal research product codename "Dragonfly".
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceType.eLeapDeviceType_Nightcrawler">
+            <summary>
+            Internal research product codename "Nightcrawler".
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceType.eLeapDevicePID_Rigel">
+            <summary>
+            Research product codename "Rigel".
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapServiceDisposition.eLeapServiceState_LowFpsDetected">
+            <summary>
+            The service cannot receive frames fast enough from the underlying hardware.
+            @since 3.1.3
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapServiceDisposition.eLeapServiceState_PoorPerformancePause">
+            <summary>
+            The service has paused itself due to an insufficient frame rate from the hardware.
+            @since 3.1.3
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eDistortionMatrixType.eDistortionMatrixType_64x64">
+            <summary>
+            A 64x64 matrix of pairs of points.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPolicyFlag.eLeapPolicyFlag_BackgroundFrames">
+            <summary>
+            Allows frame receipt even when this application is not the foreground application.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPolicyFlag.eLeapPolicyFlag_Images">
+            <summary>
+            Allow streaming images
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPolicyFlag.eLeapPolicyFlag_OptimizeHMD">
+            <summary>
+            Optimize HMD Policy Flag.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPolicyFlag.eLeapPolicyFlag_AllowPauseResume">
+            <summary>
+            Modifies the security token to allow calls to LeapPauseDevice to succeed
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPolicyFlag.eLeapPolicyFlag_MapPoints">
+            <summary>
+            Allows streaming map points.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_Streaming">
+            <summary>
+            Presently sending frames to all clients that have requested them.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_Paused">
+            <summary>
+            Device streaming has been paused.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_Robust">
+            <summary>
+            There are known sources of infrared interference. Device has transitioned to
+            robust mode in order to compensate.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_Smudged">
+            <summary>
+            The device's window is smudged, tracking may be degraded.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_LowResource">
+            <summary>
+            The device has entered low-resource mode.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_UnknownFailure">
+            <summary>
+            The device has failed, but the failure reason is not known.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_BadCalibration">
+            <summary>
+            Bad calibration, cannot send frames.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_BadFirmware">
+            <summary>
+            Corrupt firmware and/or cannot receive a required firmware update.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_BadTransport">
+            <summary>
+            Exhibiting USB communications issues.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceStatus.eLeapDeviceStatus_BadControl">
+            <summary>
+            Missing critical control interfaces needed for communication.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapImageType.eLeapImageType_Default">
+            <summary>
+            Default processed IR image
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapImageType.eLeapImageType_Raw">
+            <summary>
+            Image from raw sensor values
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapImageFormat.eLeapImageFormat_UNKNOWN">
+            <summary>
+            An invalid or unknown format.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapImageFormat.eLeapImageType_IR">
+            <summary>
+            An infrared image.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapImageFormat.eLeapImageType_RGBIr_Bayer">
+            <summary>
+            A Bayer RGBIr image with uncorrected RGB channels
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPerspectiveType.eLeapPerspectiveType_invalid">
+            <summary>
+            An unknown or invalid type.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPerspectiveType.eLeapPerspectiveType_stereo_left">
+            <summary>
+            A canonically left image.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPerspectiveType.eLeapPerspectiveType_stereo_right">
+            <summary>
+            A canonically right image.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapPerspectiveType.eLeapPerspectiveType_mono">
+            <summary>
+            Reserved for future use.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapLogSeverity.eLeapLogSeverity_Unknown">
+            <summary>
+            The message severity is not known or was not specified.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapLogSeverity.eLeapLogSeverity_Critical">
+            <summary>
+            A message about a fault that could render the software or device non-functional.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapLogSeverity.eLeapLogSeverity_Warning">
+            <summary>
+            A message warning about a condition that could degrade device capabilities.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapLogSeverity.eLeapLogSeverity_Information">
+            <summary>
+            A system status message.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapValueType.eLeapValueType_Unknown">
+            <summary>
+            The type is unknown (which is an abnormal condition).
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_Success">
+            <summary>
+            The operation completed successfully.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_UnknownError">
+            <summary>
+            An undetermined error has occurred.
+            This is usually the result of an abnormal operating condition in LeapC,
+            the Leap Motion service, or the host computer itself.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_InvalidArgument">
+            <summary>
+            An invalid argument was specified.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_InsufficientResources">
+            <summary>
+            Insufficient resources existed to complete the request.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_InsufficientBuffer">
+            <summary>
+            The specified buffer was not large enough to complete the request.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_Timeout">
+            <summary>
+            The requested operation has timed out.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_NotConnected">
+            <summary>
+            The operation is invalid because there is no current connection.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_HandshakeIncomplete">
+            <summary>
+            The operation is invalid because the connection is not complete.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_BufferSizeOverflow">
+            <summary>
+            The specified buffer size is too large.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_ProtocolError">
+            <summary>
+            A communications protocol error occurred.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_InvalidClientID">
+            <summary>
+            The server incorrectly specified zero as a client ID.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_UnexpectedClosed">
+            <summary>
+            The connection to the service was unexpectedly closed while reading or writing a message.
+            The server may have terminated.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_UnknownImageFrameRequest">
+            <summary>
+            The specified request token does not appear to be valid
+            
+            Provided that the token value which identifies the request itself was, at one point, valid, this
+            error condition occurs when the request to which the token refers has already been satisfied or
+            is currently being satisfied.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_UnknownTrackingFrameID">
+            <summary>
+            The specified frame ID is not valid or is no longer valid
+            
+            Provided that frame ID was, at one point, valid, this error condition occurs when the identifier
+            refers to a frame that occurred further in the past than is currently recorded in the rolling
+            frame window.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_RoutineIsNotSeer">
+            <summary>
+            The specified timestamp references a future point in time
+            
+            The related routine can only operate on time points having occurred in the past, and the
+            provided timestamp occurs in the future.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_TimestampTooEarly">
+            <summary>
+            The specified timestamp references a point too far in the past
+            
+            The related routine can only operate on time points occurring within its immediate record of
+            the past.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_ConcurrentPoll">
+            <summary>
+            LeapPollConnection is called concurrently.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_NotAvailable">
+            <summary>
+            A connection to the Leap Motion service could not be established.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_NotStreaming">
+            <summary>
+            The requested operation can only be performed while the device is sending data.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapRS.eLeapRS_CannotOpenDevice">
+            <summary>
+            The specified device could not be opened. It is possible that the device identifier
+            is invalid, or that the device has been disconnected since being enumerated.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_None">
+            <summary>
+            No event has occurred within the timeout period specified when calling LeapPollConnection().
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_Connection">
+            <summary>
+            A connection to the Leap Motion service has been established.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_ConnectionLost">
+            <summary>
+            The connection to the Leap Motion service has been lost.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_Device">
+            <summary>
+            A device has been detected or plugged-in.
+            A device event is dispatched after a connection is established for any
+            devices already plugged in. (The system currently only supports one
+            streaming device at a time.)
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_DeviceFailure">
+            <summary>
+            Note that unplugging a device generates an eLeapEventType_DeviceLost event
+            message, not a failure message.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_Policy">
+            <summary>
+            A policy change has occurred.
+            This can be due to setting a policy with LeapSetPolicyFlags() or due to changing
+            or policy-related config settings, including images_mode.
+            (A user can also change these policies using the Leap Motion Control Panel.)
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_Tracking">
+            <summary>
+            A tracking frame. The message contains the tracking data for the frame.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_ImageRequestError">
+            <summary>
+            The request for an image has failed.
+            The message contains information about the failure. The client application
+            will not receive the requested image set.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_ImageComplete">
+            <summary>
+            The request for an image is complete.
+            The image data has been completely written to the application-provided
+            buffer.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_LogEvent">
+            <summary>
+            A system message.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_DeviceLost">
+            <summary>
+             The device connection has been lost.
+            
+            This event is generally asserted when the device has been detached from the system, when the
+            connection to the service has been lost, or if the device is closed while streaming. Generally,
+            any event where the system can conclude no further frames will be received will result in this
+            message. The DeviceEvent field will be filled with the id of the formerly attached device.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_ConfigResponse">
+            <summary>
+            The asynchronous response to a call to LeapRequestConfigValue().
+            Contains the value of requested configuration item.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_ConfigChange">
+            <summary>
+            The asynchronous response to a call to LeapSaveConfigValue().
+            Reports whether the change succeeded or failed.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_DeviceStatusChange">
+            <summary>
+            Notification that a status change has been detected on an attached device.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_DroppedFrame">
+            <summary>
+            A tracking frame has been dropped by the service.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_Image">
+            <summary>
+            Notification that an unrequested stereo image pair is available.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_PointMappingChange">
+            <summary>
+            Notification that point mapping has changed.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_LogEvents">
+            <summary>
+            An array of system messages.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapEventType.eLeapEventType_HeadPose">
+            <summary>
+            A new head pose is available.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.eLeapDeviceFlag.eLeapDeviceFlag_Stream">
+            <summary>
+            Flag set if the device is presently streaming frames
+            
+            This flag is updated when the user pauses or resumes tracking on the device from the Leap control
+            panel. Modification of this flag will fail if the AllowPauseResume policy is not set on this device
+            object.
+            </summary>
+        </member>
+        <member name="M:LeapInternal.Logger.Log(System.Object)">
+            <summary>
+            Logs message to the a Console.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.MemoryManager.EnablePooling">
+            <summary>
+            Specifies whether or not a pooling strategy should be used for the
+            internal MemoryManager.  If enabled, memory will be periodically 
+            recycled to be used again instead of being deallocated.  
+            
+            An object may be reclaimed from the pool at any time on the 
+            worker thread.  If you are running into issues where an object
+            you are working with is being overwritten, consider making a copy,
+            or turning up the MinPoolSize.
+            </summary>
+        </member>
+        <member name="F:LeapInternal.MemoryManager.MinPoolSize">
+            <summary>
+            Specifies how many objects of a specific type need to be in the pool
+            before they will start to be recycled.  Turning this number up can
+            help prevent issues where objects you are working with are being
+            overwritten with new objects.  Turning this number down can reduce
+            the total memory footprint used by the memory manager.
+            </summary>
+        </member>
+        <member name="T:LeapInternal.StructMarshal`1">
+            A helper class to marshal between unmanaged memory and structs without creating garbage.
+        </member>
+        <member name="P:LeapInternal.StructMarshal`1.Size">
+            Returns the size in bytes of the struct of type T.  This call is equivalent to
+            Marshal.Sizeof(typeof(T)) but caches the result for ease of access.
+        </member>
+        <member name="M:LeapInternal.StructMarshal`1.PtrToStruct(System.IntPtr,`0@)">
+            Converts an IntPtr to a struct of type T.
+        </member>
+        <member name="M:LeapInternal.StructMarshal`1.ArrayElementToStruct(System.IntPtr,System.Int32,`0@)">
+            Converts a single element in an array pointed to by ptr to a struct
+            of type T.  This method does not and cannot do any bounds checking!
+            This method does not create any garbage.
+        </member>
+    </members>
+</doc>
