@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="LgGctDfgW2PMBe5fii5LXw" Summary="vvvvrapper for Leap VL Nodes" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl.html" ProjectUrl="http://vvvv.org/" Version="0.92">
+<Document xmlns:p="property" Id="LgGctDfgW2PMBe5fii5LXw" Summary="vvvvrapper for Leap VL Nodes" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl.html" ProjectUrl="http://vvvv.org/" Version="0.93">
   <NugetDependency Id="RYLBV3aWiMLPnwIhAQexDX" Location="VL.CoreLib" Version="0.35.33" />
   <Patch Id="FRSiE2uUOCUQFRUdEZJlyG">
     <Canvas Id="FCxVvCF9jifM2J7sGVAd17" DefaultCategory="VVVV.Leap" CanvasType="FullCategory">
@@ -85,7 +85,6 @@
               <Pin Id="GRbKDrilei9PkwabyuB8Et" Name="Allow Pause/Resume" Kind="InputPin" />
               <Pin Id="AeXoCjncHWvQHXPOStumKV" Name="Map Points" Kind="InputPin" />
               <Pin Id="VFN7bC5bEazPetEGPVYOem" Name="Frames" Kind="OutputPin" />
-              <Pin Id="Se1sJc7Y94ZMqQN23s44ER" Name="Images" Kind="OutputPin" />
               <Pin Id="FS9PyJ4eGb8OA8SqPmgFRP" Name="Background Frames Set" Kind="OutputPin" />
               <Pin Id="VlNfk66s9DeMwB9pdXKSCK" Name="Images Set" Kind="OutputPin" />
               <Pin Id="LKX7cJjr6M4NYhmtCp4XUo" Name="Head Mount Optimization Set" Kind="OutputPin" />
@@ -192,8 +191,8 @@
                       </p:NodeReference>
                       <Pin Id="Qs6QwKFhfwnOm3lJfpFmxX" Name="Finger" Kind="InputPin" />
                       <Pin Id="PRKibuDGCNhMNoSEMlK1nh" Name="Bones" Kind="OutputPin" />
-                      <Pin Id="VRTnw3qGhsGOZ2edzROckW" Name="FingerType" Kind="OutputPin" />
-                      <Pin Id="P2myIubG54PO30kb1pL4QR" Name="TipPosition" Kind="OutputPin" />
+                      <Pin Id="D3GRMjPotsULHjFAda5vOO" Name="Type" Kind="OutputPin" />
+                      <Pin Id="UapV5hv9oc8NM9ZWV5B0On" Name="Tip Position" Kind="OutputPin" />
                       <Pin Id="M8GR5fGJ8q5QKPZwR6KfFT" Name="Direction" Kind="OutputPin" />
                       <Pin Id="EbAW9Wwv3aeLan2Ye0esQZ" Name="Width" Kind="OutputPin" />
                       <Pin Id="JUSLzQxp3OGPU3pfbITs1M" Name="Length" Kind="OutputPin" />
@@ -282,7 +281,6 @@
           <Link Id="UspUdaMQdfLPndkRiPuZjk" Ids="T0U6NCDWMKpPEFWLb85Dhh,Fp3rnbyeO5zQZ3YWEjEnrJ" />
           <Link Id="QV2c5o6fXhGMJ1IELzPPeo" Ids="RnZafnNfok7LxUrOSG7h78,Fr2Iz9jbTa1LcgMIU1HcAc" />
           <Link Id="GxfPLvDvwrNN6sXwDumg5E" Ids="M8GR5fGJ8q5QKPZwR6KfFT,T0U6NCDWMKpPEFWLb85Dhh" />
-          <Link Id="Gc0M32fF8ndLdS08VeLwt5" Ids="P2myIubG54PO30kb1pL4QR,VFNebP3stn5OHi33XpJosn" />
           <ProcessDefinition Id="UgZi5Y5pz91P8zbaRQCpmT">
             <Fragment Id="MpFRJlRUOWsNmv1Y7zDPEj" Patch="AQxyCe8cvUSOr7lh1KmQbL" Enabled="true" />
             <Fragment Id="AtsF09JP2SePDDX7JTfvW2" Patch="AFqzR2pz9eWPNoh4o8sFSk" Enabled="true" />
@@ -295,6 +293,7 @@
           <Link Id="KmpEjOgKmQiQWksvtwi3fw" Ids="HXoR1StwUt6P6H2etZRvwZ,UtaZ6AhBAJLOJbXRBWm3I5" />
           <Link Id="EhuRrkicRMbLF0TpFQCmev" Ids="VFN7bC5bEazPetEGPVYOem,IdziuwWSydwLPRIfwm6dBC" />
           <Link Id="DhirNYZx8vzM7gCs3zTeWF" Ids="VFN7bC5bEazPetEGPVYOem,NcJ9uyOOnSiNhsIiO2oY5Z" />
+          <Link Id="Bfkv6gTgv7SMaHrmk4YDfc" Ids="UapV5hv9oc8NM9ZWV5B0On,VFNebP3stn5OHi33XpJosn" />
         </Patch>
       </Node>
       <Canvas Id="CRiCKpZehkIM3MsPxQrwaZ" Name="Selectors" Position="229,300" DefaultCategory="VVVV.Leap" CanvasType="Group">
@@ -317,8 +316,8 @@
                 </CategoryReference>
               </p:NodeReference>
               <Pin Id="JYSFwrq9h5cOo5wln4alUm" Name="Hands" Kind="InputPin" />
-              <Pin Id="EcGDtPgysiKQadfFhEewkm" Name="Type" Kind="InputPin" />
-              <Pin Id="LkmbO089YfJPxezIEHZZM9" Name="Fingers" Kind="OutputPin" />
+              <Pin Id="S32oT01toGJL6QR3vu6igJ" Name="Side" Kind="InputPin" />
+              <Pin Id="Qe01wQse6pnMrqNFU62WKf" Name="Hands" Kind="OutputPin" />
             </Node>
             <Node Bounds="319,476,77,22" Id="C6RBTfJ1Pf8OF6dm7wbS1R">
               <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
@@ -333,14 +332,14 @@
             <ControlPoint Id="ELj2a8xB7qvLg0V30GBMDI" Bounds="318,568" />
             <Link Id="MB3wJrFo6SWOB0hafHeNm5" Ids="VZEKhdyGrlVMX5qeko3F0B,JYSFwrq9h5cOo5wln4alUm" />
             <Link Id="Nx1Gr9zwVp5PwPemZ00VRv" Ids="RTnzVUDG0mDP3IjwzdPnhy,Pe8FnyqJI01PCPdE2K0Vi7" />
-            <Link Id="NmX7xToR2lcNwOXjFhFQem" Ids="RcWIgTLxEF6Qb9dPJkzDh8,EcGDtPgysiKQadfFhEewkm" />
-            <Link Id="TCQGfuhWzdbPTKRMTio286" Ids="LkmbO089YfJPxezIEHZZM9,ELj2a8xB7qvLg0V30GBMDI" />
             <Link Id="JeJOXMNBU5dOEZEQWbfcJC" Ids="K4eOUwGiH1HPksgQSuC2Is,RTnzVUDG0mDP3IjwzdPnhy" IsHidden="true" />
             <Link Id="Lf3DviiEnbhPphc41NBIZi" Ids="EGtWtfHlxgXL2iJGh34UlN,RcWIgTLxEF6Qb9dPJkzDh8" IsHidden="true" />
             <Link Id="Gxxk2s0Z9ouO8NtLgz7Rmr" Ids="ELj2a8xB7qvLg0V30GBMDI,KEQoWs3vlwWNjVFGPwxJKp" IsHidden="true" />
             <Pin Id="K4eOUwGiH1HPksgQSuC2Is" Name="Hands" Kind="InputPin" />
             <Pin Id="KEQoWs3vlwWNjVFGPwxJKp" Name="Hands" Kind="OutputPin" />
             <Pin Id="EGtWtfHlxgXL2iJGh34UlN" Name="Side" Kind="InputPin" />
+            <Link Id="C8cMAgDBPQFMcwuFczYNmg" Ids="Qe01wQse6pnMrqNFU62WKf,ELj2a8xB7qvLg0V30GBMDI" />
+            <Link Id="EPLvbmJ76AuMdoR901zexS" Ids="RcWIgTLxEF6Qb9dPJkzDh8,S32oT01toGJL6QR3vu6igJ" />
           </Patch>
         </Node>
         <!--
@@ -668,12 +667,12 @@
                 </CategoryReference>
               </p:NodeReference>
               <Pin Id="P4ebB68zV23MOi2oaieEJ3" Name="Arm" Kind="InputPin" />
-              <Pin Id="NmUbQN6NE6XM3eSNkSVIdF" Name="ElbowPosition" Kind="OutputPin" />
-              <Pin Id="VK2GbN5b3fPPcmAWGwFDMt" Name="WristPosition" Kind="OutputPin" />
+              <Pin Id="GTHC7CCQUDkLedctZFFm7h" Name="Elbow Position" Kind="OutputPin" />
+              <Pin Id="OJYZJtD5hqJMaAztf5OlI4" Name="Wrist Position" Kind="OutputPin" />
             </Node>
             <Pin Id="GJAaH0ECCgLPGULyzd8IsB" Name="Arm" Kind="InputPin" />
-            <Pin Id="FC4RvJgXoBGLFJkZRdghX2" Name="ElbowPosition" Kind="OutputPin" />
-            <Pin Id="KiM3aokd1lnL6EGkIf0ybs" Name="WristPosition" Kind="OutputPin" />
+            <Pin Id="S15FrcubpHlO0afpSglXWz" Name="Elbow Position" Kind="OutputPin" />
+            <Pin Id="Vd6f3sPa3CVNrB3Gd0TTzS" Name="Wrist Position" Kind="OutputPin" />
           </Patch>
         </Node>
         <!--
@@ -762,8 +761,8 @@
               </p:NodeReference>
               <Pin Id="Uh7MonzjnWjNMUkW5fK6Va" Name="Finger" Kind="InputPin" />
               <Pin Id="RFUe9tvk7USP2eVvzqtlo1" Name="Bones" Kind="OutputPin" />
-              <Pin Id="L4j27HJYaJHLqdIFEOS6UT" Name="FingerType" Kind="OutputPin" />
-              <Pin Id="Io4DX1XZ9hGNeoRHtXMAjs" Name="TipPosition" Kind="OutputPin" />
+              <Pin Id="Vx3rK7HTn2iMvgEAOpbuU5" Name="Type" Kind="OutputPin" />
+              <Pin Id="KEt7iuopETtQJ2FwXwrj6J" Name="Tip Position" Kind="OutputPin" />
               <Pin Id="UBCcZA5D8fdPI3QZdqR1RA" Name="Direction" Kind="OutputPin" />
               <Pin Id="VvgfWF10ojeNGLRGGAvruv" Name="Width" Kind="OutputPin" />
               <Pin Id="I2Ln3fjT37xLlCUwWgTqQ0" Name="Length" Kind="OutputPin" />
@@ -773,14 +772,14 @@
             </Node>
             <Pin Id="GsZ3aSzBLqOPTeeLGC5Jue" Name="Finger" Kind="InputPin" />
             <Pin Id="PMHtheoVroNOBMq8JSP4ns" Name="Bones" Kind="OutputPin" />
-            <Pin Id="TyRx4wiNG93MdqGJJHrQ9Q" Name="FingerType" Kind="OutputPin" />
-            <Pin Id="LXszJYXFZgUL3IBSNtMWaG" Name="TipPosition" Kind="OutputPin" />
             <Pin Id="TQx0wrBVZxBNgoOlBy51QA" Name="Direction" Kind="OutputPin" />
             <Pin Id="UqBe7nGXcNmOgDhWirJYHs" Name="Width" Kind="OutputPin" />
             <Pin Id="OiRZ9DFK8IJMZxoSZ0HnFu" Name="Length" Kind="OutputPin" />
             <Pin Id="QGp7ZeclHz2LmqHVn4DH5M" Name="Is Extended" Kind="OutputPin" />
             <Pin Id="CJ1ilJ2RVYoO8HqgKsujqz" Name="Time Visible" Kind="OutputPin" />
             <Pin Id="UN5QXgEVZGdNqlvGzRcIfC" Name="Id" Kind="OutputPin" />
+            <Pin Id="Gu7YZT1m27tP1koRWVSSPZ" Name="Type" Kind="OutputPin" />
+            <Pin Id="NIBKlgotP8kP6d5Zqx3vSn" Name="Tip Position" Kind="OutputPin" />
           </Patch>
         </Node>
         <!--

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50debug36.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\Documents\repos\vl-others\VL.Devices.LeapOrion\vvvv\nodes\vl\Leap (Devices Orion) help.v4p" scrollx="0" scrolly="1410">
+   <PATCH nodename="C:\Users\joreg\Documents\repos\vl-others\VL.Devices.LeapOrion\vvvv\nodes\vl\Leap (Devices Orion) help.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="1785" top="1680" width="18420" height="12615">
    </BOUNDS>
    <PACK Name="addonpack" Version="36.0.0">
@@ -9,7 +9,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="450" top="165" width="5100" height="450">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Leap (Devices)|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Leap (Devices Orion)|">
    </PIN>
    <PIN pinname="Output String" slicecount="1" visible="0" values="||">
    </PIN>
@@ -281,7 +281,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1185" top="2910" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -291,7 +291,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="235" systemname="IOBox (String)">
@@ -1081,7 +1081,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="450" top="870" width="4260" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Before using the Leap, you need to install the drivers from|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Requires the Leap Orion drivers to be installed:|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1093,9 +1093,9 @@
    <NODE nodename="IOBox (String)" componentmode="InABox" id="331" systemname="IOBox (String)">
    <BOUNDS type="Node" left="450" top="1080" width="2220" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="450" top="1080" width="2220" height="270">
+   <BOUNDS type="Box" left="450" top="1080" width="3450" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="https://www.leapmotion.com">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="https://www.leapmotion.com/setup/desktop/">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
