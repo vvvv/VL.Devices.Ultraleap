@@ -2482,7 +2482,7 @@
     ************************ Hand ************************
 
 -->
-        <Node Name="Hand" Bounds="471,276,1648,190" Id="Qj3af0Fs5FFOGQG4DUVuyX">
+        <Node Name="Hand" Bounds="471,276,1648,197" Id="Qj3af0Fs5FFOGQG4DUVuyX">
           <p:NodeReference>
             <Choice Kind="OperationDefinition" Name="Operation" />
           </p:NodeReference>
@@ -2709,7 +2709,7 @@
             <ControlPoint Id="FcsFbMmQQWROLqTY9iVqdM" Bounds="485,292" />
             <ControlPoint Id="Ti7hk3N8HCfNeXKLgQqibg" Bounds="486,401" />
             <ControlPoint Id="RNpjmKvvIUaOgFpAQuqmyR" Bounds="570,447" />
-            <ControlPoint Id="GDvSqlrqVbjQVXOG1ZMtT7" Bounds="679,397" />
+            <ControlPoint Id="GDvSqlrqVbjQVXOG1ZMtT7" Bounds="671,454" />
             <ControlPoint Id="Qr1h0a5zG1bNN4MtuxFwoD" Bounds="799,397" />
             <ControlPoint Id="LfYVylaZPkbPFritfUqmp3" Bounds="906,397" />
             <ControlPoint Id="CLxphfpaTu5Qd3Wqfz9OXw" Bounds="1059,399" />
@@ -2731,7 +2731,7 @@
             <Link Id="MaevpYo1YFgO37X9uT2OhG" Ids="MNkdW90hIW0NVhQfbMnGDx,Ti7hk3N8HCfNeXKLgQqibg" />
             <Link Id="JoFQ28cDHOaNZMM8hzRhVV" Ids="I2AS2FzhGt9LoKhBMUpfxy,HDI8u884yrYNAm63SZKcjk" />
             <Link Id="TCnPpPp688qMcZArpF0Soa" Ids="B09Gvcnk2HzLyeMGra3rLv,Qr1h0a5zG1bNN4MtuxFwoD" />
-            <Link Id="GCdFEkNUQL1MboCQWfA4jv" Ids="OEoGYA360cIOb8B98DXqRN,GDvSqlrqVbjQVXOG1ZMtT7" />
+            <Link Id="GCdFEkNUQL1MboCQWfA4jv" Ids="OEoGYA360cIOb8B98DXqRN,Fm2b6dRb7PiQJAQLMCojcx" />
             <Link Id="JmwUhCTtl1UL9HOOU5tQMp" Ids="SBD3DRU941fOxmcsgyssZc,FcsFbMmQQWROLqTY9iVqdM" IsHidden="true" />
             <Link Id="IBXpb5bQ3Q6NaNmfMEm7yM" Ids="Ti7hk3N8HCfNeXKLgQqibg,EUfWjl0Cz2QNvl288WdHiE" IsHidden="true" />
             <Link Id="SWOT22XxxR8NrXHaH6Tbbk" Ids="RNpjmKvvIUaOgFpAQuqmyR,JOFqKm8CVfJQX0TuSyxLpS" IsHidden="true" />
@@ -2778,6 +2778,15 @@
               <Pin Id="CcQQA9BlmzPQWbbDYJacuH" Name="Result" Kind="OutputPin" />
             </Node>
             <Link Id="Gv8aE4gHXlyNscEvbH4lI2" Ids="CcQQA9BlmzPQWbbDYJacuH,RNpjmKvvIUaOgFpAQuqmyR" />
+            <Node Bounds="703,416" Id="GU35sVFQv1BNnBYnctsZZA">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ToMatrix" />
+              </p:NodeReference>
+              <Pin Id="Fm2b6dRb7PiQJAQLMCojcx" Name="Matrix Leap" Kind="InputPin" />
+              <Pin Id="QSBKqg7gMo3QPRZUdUnbz1" Name="Matrix 3D" Kind="OutputPin" />
+            </Node>
+            <Link Id="VY8V6D9999AMCH5mlZJ3J3" Ids="QSBKqg7gMo3QPRZUdUnbz1,GDvSqlrqVbjQVXOG1ZMtT7" />
           </Patch>
         </Node>
         <!--
