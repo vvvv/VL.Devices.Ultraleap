@@ -6,3 +6,5 @@ src/obj/
 
 # Dynamic plugins .dll
 bin/
+
+/src/obj/
