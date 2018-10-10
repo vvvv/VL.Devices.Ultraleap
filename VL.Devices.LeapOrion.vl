@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" Version="0.93">
+<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" Version="0.94">
   <NugetDependency Id="Iq4vWTkbkoDPMlxoomCd40" Location="VL.CoreLib" Version="0.35.33" />
   <Patch Id="CRY1QDZAi59Lh77QfDSgCw">
     <Canvas Id="FNO51wlZsR4OteD0cgU10j" DefaultCategory="Devices.LeapOrion" CanvasType="FullCategory">
@@ -808,7 +808,7 @@
             <Pin Id="GFJdpC24OD4PIcZapb0wJs" Name="Enable Data in Background" Kind="InputPin" />
             <Pin Id="DLgo48Me1EzMt0Oom5n9Fc" Name="Enable Images" Kind="InputPin" />
             <Pin Id="MfN8a4OZhAoLleQyr9AmZQ" Name="Enable Head Mount Optimization" Kind="InputPin" />
-            <Pin Id="KwvywiHMQ2fOGXmXpl8LvQ" Name="Enabled" Kind="InputPin" DefaultValue="true">
+            <Pin Id="KwvywiHMQ2fOGXmXpl8LvQ" Name="Enabled" Kind="InputPin" DefaultValue="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -826,14 +826,14 @@
             <Pin Id="GUtCshwaxSRNSlN8V1hjYo" MergeId="104127" Name="Map Points Set" Kind="OutputPin" />
           </Patch>
           <Canvas Id="OpNwRHOwFvMMikXM2J6P6k" CanvasType="Group">
-            <Pad Id="PiNl4NeUuapNeAov7dWgdV" Comment="IsFirstFrame" Bounds="889,1182,40,19" ShowValueBox="true" isIOBox="true" Value="false">
+            <Pad Id="PiNl4NeUuapNeAov7dWgdV" Comment="IsFirstFrame" Bounds="889,1182,40,19" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings />
             </Pad>
-            <Pad Id="OMZB1PYrLdTMev3OVBzL6Q" Comment="IsFirstFrame" Bounds="756,1179,40,19" ShowValueBox="true" isIOBox="true" Value="true">
+            <Pad Id="OMZB1PYrLdTMev3OVBzL6Q" Comment="IsFirstFrame" Bounds="756,1179,40,19" ShowValueBox="true" isIOBox="true" Value="True">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -954,7 +954,7 @@
               <Pin Id="MOk2fuFljGkNAeaYMsFhU1" Name="Output" Kind="StateOutputPin" />
               <Pin Id="IL7faaLQnsMN9C0nH1KpGj" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="KOyUvgXHdkoPYCtmN3xdoI" Comment="Policy" Bounds="707,612,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_BACKGROUND_FRAMES&quot;">
+            <Pad Id="KOyUvgXHdkoPYCtmN3xdoI" Comment="Policy" Bounds="707,612,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_BACKGROUND_FRAMES">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -970,7 +970,7 @@
               <Pin Id="IuHVaWBVHe8MPKUpvP6Kho" Name="Output" Kind="StateOutputPin" />
               <Pin Id="E8r53Gbx9HBMkanoJVjH2p" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="JPVSIS9GEcMLS32pPMw729" Comment="Policy" Bounds="890,640,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_IMAGES&quot;">
+            <Pad Id="JPVSIS9GEcMLS32pPMw729" Comment="Policy" Bounds="890,640,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_IMAGES">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -986,7 +986,7 @@
               <Pin Id="AFF2I8mi2O4LmMxFn1K5qg" Name="Output" Kind="StateOutputPin" />
               <Pin Id="LxyDXzZeSzePOarM1inGtP" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="MK2JyJ9CA0TPL4XdjMVueA" Comment="Policy" Bounds="1082,657,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_OPTIMIZE_HMD&quot;">
+            <Pad Id="MK2JyJ9CA0TPL4XdjMVueA" Comment="Policy" Bounds="1082,657,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_OPTIMIZE_HMD">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1096,7 +1096,7 @@
                 <Pin Id="I6NMMeSI2iOQT8Ur7G4YE6" Name="Do Set" Kind="InputPin" Bounds="1639,800" />
               </Patch>
             </Node>
-            <Pad Id="LubwCWmhC6cLRjamYoPmF8" Comment="Policy" Bounds="890,1352,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_BACKGROUND_FRAMES&quot;">
+            <Pad Id="LubwCWmhC6cLRjamYoPmF8" Comment="Policy" Bounds="890,1352,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_BACKGROUND_FRAMES">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1126,7 +1126,7 @@
               </Patch>
               <ControlPoint Id="OMc3jkYBZbdP31JbJ0BQmQ" Bounds="1207,1381" Alignment="Top" />
             </Node>
-            <Pad Id="NNmrpVnL5JDLcACfFqhtew" Comment="Policy" Bounds="1140,1353,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_IMAGES&quot;">
+            <Pad Id="NNmrpVnL5JDLcACfFqhtew" Comment="Policy" Bounds="1140,1353,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_IMAGES">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1156,7 +1156,7 @@
               </Patch>
               <ControlPoint Id="OwpoFeGrOvjLO8vYFHwdX8" Bounds="1457,1382" Alignment="Top" />
             </Node>
-            <Pad Id="VTG7re16LVEN0uL5cWsprT" Comment="Policy" Bounds="1390,1354,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_OPTIMIZE_HMD&quot;">
+            <Pad Id="VTG7re16LVEN0uL5cWsprT" Comment="Policy" Bounds="1390,1354,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_OPTIMIZE_HMD">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1186,7 +1186,7 @@
               </Patch>
               <ControlPoint Id="DT3fa3gSeqTL3hi5EtQpYM" Bounds="1707,1383" Alignment="Top" />
             </Node>
-            <Pad Id="PcBF34lfqIfN8QQzS77zEi" Comment="Policy" Bounds="1640,1355,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_ALLOW_PAUSE_RESUME&quot;">
+            <Pad Id="PcBF34lfqIfN8QQzS77zEi" Comment="Policy" Bounds="1640,1355,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_ALLOW_PAUSE_RESUME">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1216,7 +1216,7 @@
               </Patch>
               <ControlPoint Id="EBrtGDVaPxOLIcdljyfLEa" Bounds="1957,1384" Alignment="Top" />
             </Node>
-            <Pad Id="Kev8ld6cXW2Mtu5x1zGjVD" Comment="Policy" Bounds="1890,1356,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_MAP_POINTS&quot;">
+            <Pad Id="Kev8ld6cXW2Mtu5x1zGjVD" Comment="Policy" Bounds="1890,1356,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_MAP_POINTS">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1304,7 +1304,7 @@
                     </CategoryReference>
                   </p:NodeReference>
                   <Pin Id="LnHTGMadUf5QA7DMvhSw7f" Name="Input" Kind="StateInputPin" />
-                  <Pin Id="G5HZjZuiiw1MfPGAVZsMc2" Name="Camera" Kind="InputPin" DefaultValue="&quot;RIGHT&quot;">
+                  <Pin Id="G5HZjZuiiw1MfPGAVZsMc2" Name="Camera" Kind="InputPin" DefaultValue="RIGHT">
                     <p:TypeAnnotation LastCategoryFullName="Leap.Image" LastSymbolSource="LeapCSharp4.dll">
                       <Choice Kind="TypeFlag" Name="CameraType" />
                     </p:TypeAnnotation>
@@ -1455,7 +1455,7 @@
               <Pin Id="BOwheGe0HsALXwpV7B1Oo6" Name="Output" Kind="StateOutputPin" />
               <Pin Id="NL3AXGDmxe9LppwWVAb2Xr" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="MUkQcVuVXaHPDtXqEnMV6X" Comment="Policy" Bounds="1331,655,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_ALLOW_PAUSE_RESUME&quot;">
+            <Pad Id="MUkQcVuVXaHPDtXqEnMV6X" Comment="Policy" Bounds="1331,655,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_ALLOW_PAUSE_RESUME">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1472,7 +1472,7 @@
               <Pin Id="Lgi68fhWyc9QBEaVb0RgRR" Name="Output" Kind="StateOutputPin" />
               <Pin Id="DCYL5am0hGWLz9EsN622av" Name="Result" Kind="OutputPin" />
             </Node>
-            <Pad Id="VuGZMjpq219LdK1B8K6dtg" Comment="Policy" Bounds="1580,653,170,19" ShowValueBox="true" isIOBox="true" Value="&quot;POLICY_MAP_POINTS&quot;">
+            <Pad Id="VuGZMjpq219LdK1B8K6dtg" Comment="Policy" Bounds="1580,653,170,19" ShowValueBox="true" isIOBox="true" Value="POLICY_MAP_POINTS">
               <p:TypeAnnotation LastCategoryFullName="Leap.Controller" LastSymbolSource="LeapCSharp4.dll">
                 <Choice Kind="TypeFlag" Name="PolicyFlag" />
               </p:TypeAnnotation>
@@ -1627,7 +1627,7 @@
                 <CategoryReference Kind="Category" Name="Spread" />
               </p:NodeReference>
               <Patch Id="U0AJsnk1JMLOcfGcUUWL7S" Name="Predicate">
-                <Pad Id="Az6A1JPlsPQM6L55NBay2w" Comment="right" Bounds="206,114,60,19" ShowValueBox="true" isIOBox="true" Value="&quot;Right&quot;">
+                <Pad Id="Az6A1JPlsPQM6L55NBay2w" Comment="right" Bounds="206,114,60,19" ShowValueBox="true" isIOBox="true" Value="Right">
                   <p:TypeAnnotation LastCategoryFullName="Devices.Leap.LeapVLWrapper" LastSymbolSource="VL.Devices.Leap.vl">
                     <Choice Kind="TypeFlag" Name="HandSide" />
                     <CategoryReference Kind="Category" Name="LeapVLWrapper" />
@@ -1888,7 +1888,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="Uxgd5zQW4kDPhLF5JXZpUV" Name="Fingers" Kind="OutputPin" />
-            <Pad Id="IaLV8LrPNPVOdYQS8kyNLx" Comment="comment" Bounds="527,386,217,35" ShowValueBox="true" isIOBox="true" Value="&quot;When two or more are equally far front, left, or right, this will return all of them.&quot;">
+            <Pad Id="IaLV8LrPNPVOdYQS8kyNLx" Comment="comment" Bounds="527,386,217,35" ShowValueBox="true" isIOBox="true" Value="When two or more are equally far front, left, or right, this will return all of them.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -2482,7 +2482,7 @@
     ************************ Hand ************************
 
 -->
-        <Node Name="Hand" Bounds="471,276,1648,197" Id="Qj3af0Fs5FFOGQG4DUVuyX">
+        <Node Name="Hand" Bounds="471,276,1648,256" Id="Qj3af0Fs5FFOGQG4DUVuyX">
           <p:NodeReference>
             <Choice Kind="OperationDefinition" Name="Operation" />
           </p:NodeReference>
@@ -2503,7 +2503,7 @@
             <Pin Id="VORFc8dZLVCLwdr79WXpHh" Name="Id" Kind="OutputPin" />
             <Pin Id="RIk5fv0q1EnPLK7POVrtUg" Name="Is Left" Kind="OutputPin" />
             <Pin Id="TabX3ldgjqeMHsVFdooKTu" Name="Time Visible" Kind="OutputPin" />
-            <Pad Id="BvCTsmcQcPyPtzE17l509H" Comment="comment" Bounds="895,433,630,19" ShowValueBox="true" isIOBox="true" Value="&quot;Stabilized Palm Position bugs - it lags behind in one axis much more than in the others. Hence not imported. Leap SDK version 2.3.1&quot;">
+            <Pad Id="BvCTsmcQcPyPtzE17l509H" Comment="comment" Bounds="1082,503,630,19" ShowValueBox="true" isIOBox="true" Value="Stabilized Palm Position bugs - it lags behind in one axis much more than in the others. Hence not imported. Leap SDK version 2.3.1">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -2710,9 +2710,9 @@
             <ControlPoint Id="Ti7hk3N8HCfNeXKLgQqibg" Bounds="486,401" />
             <ControlPoint Id="RNpjmKvvIUaOgFpAQuqmyR" Bounds="570,447" />
             <ControlPoint Id="GDvSqlrqVbjQVXOG1ZMtT7" Bounds="671,454" />
-            <ControlPoint Id="Qr1h0a5zG1bNN4MtuxFwoD" Bounds="799,397" />
-            <ControlPoint Id="LfYVylaZPkbPFritfUqmp3" Bounds="906,397" />
-            <ControlPoint Id="CLxphfpaTu5Qd3Wqfz9OXw" Bounds="1059,399" />
+            <ControlPoint Id="Qr1h0a5zG1bNN4MtuxFwoD" Bounds="839,399" />
+            <ControlPoint Id="LfYVylaZPkbPFritfUqmp3" Bounds="917,508" />
+            <ControlPoint Id="CLxphfpaTu5Qd3Wqfz9OXw" Bounds="1084,426" />
             <ControlPoint Id="FyR2LBTuVvrPGzb8SW6x7y" Bounds="1200,399" />
             <ControlPoint Id="H4pGGhSH4IpOaO3F2DpKVe" Bounds="1314,399" />
             <ControlPoint Id="Uzi3WwlNZYqQVOi7yKTkmL" Bounds="1393,399" />
@@ -2754,8 +2754,6 @@
             <Link Id="AdERVXBX3yTMRq5sIqD8vO" Ids="FcsFbMmQQWROLqTY9iVqdM,GPnijv1i1iaMHk3lNMA4VT" />
             <Link Id="VSXxMaoYYYUNxjO13sL1vq" Ids="FcsFbMmQQWROLqTY9iVqdM,GgoVRv5kcjVM175Njxr00l" />
             <Link Id="DXCMSjKGMe8LdQyid43TGs" Ids="FcsFbMmQQWROLqTY9iVqdM,Un1sqVZA9LzQCJq4wci1n2" />
-            <Link Id="Gf4MY1brEziLGAi2eEPLpB" Ids="AAhCUfGSwrwOGX2oXh4L6D,LfYVylaZPkbPFritfUqmp3" />
-            <Link Id="HdR6oT8iS0WK9vct74jKuA" Ids="NMJSK3G4c0ALSarRNjuhqr,CLxphfpaTu5Qd3Wqfz9OXw" />
             <Link Id="FGAeeL9KY7EN7EpJ8UhFc6" Ids="K6sWO4TYTZANhOIwZdVSTZ,FyR2LBTuVvrPGzb8SW6x7y" />
             <Link Id="TvS2jCNASoCOUXYKqqX13v" Ids="Bz7a5AkUw4fQbnPsGsxyfY,H4pGGhSH4IpOaO3F2DpKVe" />
             <Link Id="KAiRC1fdavcNwlHHBAg5Eo" Ids="FYaZKWYpVjGO5Nfl8zwUiH,Uzi3WwlNZYqQVOi7yKTkmL" />
@@ -2787,6 +2785,74 @@
               <Pin Id="QSBKqg7gMo3QPRZUdUnbz1" Name="Matrix 3D" Kind="OutputPin" />
             </Node>
             <Link Id="VY8V6D9999AMCH5mlZJ3J3" Ids="QSBKqg7gMo3QPRZUdUnbz1,GDvSqlrqVbjQVXOG1ZMtT7" />
+            <Node Bounds="944,397,73,13" Id="OofsMtWTtm0MzGK1KX3Uth">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationNode" Name="ToVector3" />
+                <CategoryReference Kind="Category" Name="LeapOrion" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="GyiuoEWN3MQPXRwla2CjHI" Name="Vector" Kind="InputPin" />
+              <Pin Id="CSznOUjBJnHOaSjMlXouWq" Name="Vector3" Kind="OutputPin" />
+            </Node>
+            <Link Id="BeVgsZh7JldLgKz6DD7Wbp" Ids="AAhCUfGSwrwOGX2oXh4L6D,GyiuoEWN3MQPXRwla2CjHI" />
+            <Node Bounds="1071,397,73,13" Id="AF28tsFkiDbOrSw8sv4za0">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationNode" Name="ToVector3" />
+                <CategoryReference Kind="Category" Name="LeapOrion" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="N974eRwCdCBMq1JuvlFoJx" Name="Vector" Kind="InputPin" />
+              <Pin Id="U6swmnshEs8L8Nm7guUNw2" Name="Vector3" Kind="OutputPin" />
+            </Node>
+            <Link Id="Cxbrg3J3XB9MZJRRKBWZaX" Ids="NMJSK3G4c0ALSarRNjuhqr,N974eRwCdCBMq1JuvlFoJx" />
+            <Link Id="QUlIx5yk7qIOtkovG2JVFf" Ids="U6swmnshEs8L8Nm7guUNw2,CLxphfpaTu5Qd3Wqfz9OXw" />
+            <Node Bounds="796,427,48,22" Id="BS2VmNOr1KlMdehp6jFdKW">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Imported.Hand" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Rotation" />
+                <CategoryReference Kind="ClassType" Name="Hand" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="Imported" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="O8vvwkadxocMN8JEInMHT7" Name="Input" Kind="StateInputPin" />
+              <Pin Id="K5fbTUymQWLOkFarSyXjzp" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UvoiVxuKbRMMSoI9HmF1ba" Name="Rotation" Kind="OutputPin" />
+            </Node>
+            <Link Id="TNxJDMfqvqFPTnjwtWYLL2" Ids="BN4jT3suduHNoU6g0TtSRH,O8vvwkadxocMN8JEInMHT7" />
+            <Node Bounds="795,469,89,13" Id="LH6N7p6ZhLlLCpgnzNdG5S">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ToQuaternion" />
+              </p:NodeReference>
+              <Pin Id="GAcnANAhik1Os00b5laOfL" Name="Input" Kind="InputPin" />
+              <Pin Id="TcrY1HsJTt9LSVQlKmOKkC" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="Tnhjuy7YbJCPFoCv8cEpuK" Ids="UvoiVxuKbRMMSoI9HmF1ba,GAcnANAhik1Os00b5laOfL" />
+            <ControlPoint Id="NB2lPtdNU1bNmpmYibAqR7" Bounds="797,509" />
+            <Link Id="Pu6Wf1I62v9Lv4EovKmbHN" Ids="TcrY1HsJTt9LSVQlKmOKkC,NB2lPtdNU1bNmpmYibAqR7" />
+            <Pin Id="OuongPffN73LaTEZDxF4nz" Name="Palm Rotation" Kind="OutputPin" Bounds="797,509" />
+            <Link Id="EIVpsLMSoN2QVeXWCBkaYw" Ids="NB2lPtdNU1bNmpmYibAqR7,OuongPffN73LaTEZDxF4nz" IsHidden="true" />
+            <Node Bounds="914,462,25,13" Id="N0sRHCEOnw2L6SJtnml8Xn">
+              <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="* (Scale)" />
+              </p:NodeReference>
+              <Pin Id="DrH6Dja9dXoNb6V8dsbrZN" Name="Input" Kind="InputPin" />
+              <Pin Id="NqKFa9mrgecPKFHnQYq6ut" Name="Scalar" Kind="InputPin" />
+              <Pin Id="UY15EwlgR2ZPbNF7r5VZXg" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Pad Id="CscEMitRckYP5wfSv5g3Au" Comment="mm to m" Bounds="940,445,82,19" ShowValueBox="true" isIOBox="true" Value="0.0009999984">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Float32" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:precision p:Type="Int32">3</p:precision>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Link Id="UCNPUgOzjgwMY1vSvac6FW" Ids="CscEMitRckYP5wfSv5g3Au,NqKFa9mrgecPKFHnQYq6ut" />
+            <Link Id="FZ3Mrqvbv5kMPgsYHjuKEQ" Ids="CSznOUjBJnHOaSjMlXouWq,DrH6Dja9dXoNb6V8dsbrZN" />
+            <Link Id="PRULmYJi4s9LGDIBskyv6r" Ids="UY15EwlgR2ZPbNF7r5VZXg,LfYVylaZPkbPFritfUqmp3" />
           </Patch>
         </Node>
         <!--
@@ -3034,7 +3100,7 @@
                 <CategoryReference Kind="ClassType" Name="Finger" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="BSxxSYnFbv2Mjc0ScGjkqD" Name="Input" Kind="StateInputPin" />
-              <Pin Id="I4C1bEkSdvEPx0SL4IIMI3" Name="Bone Ix" Kind="InputPin" DefaultValue="&quot;TYPE_PROXIMAL&quot;">
+              <Pin Id="I4C1bEkSdvEPx0SL4IIMI3" Name="Bone Ix" Kind="InputPin" DefaultValue="TYPE_PROXIMAL">
                 <p:TypeAnnotation LastCategoryFullName="Leap.Bone" LastSymbolSource="LeapCSharp4.dll">
                   <Choice Kind="TypeFlag" Name="BoneType" />
                 </p:TypeAnnotation>
@@ -3049,7 +3115,7 @@
                 <CategoryReference Kind="ClassType" Name="Finger" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="HP3jE0751CQODb3Lq6o6Yl" Name="Input" Kind="StateInputPin" />
-              <Pin Id="DOtnScqrkcoLrGbJ1gviDh" Name="Bone Ix" Kind="InputPin" DefaultValue="&quot;TYPE_INTERMEDIATE&quot;">
+              <Pin Id="DOtnScqrkcoLrGbJ1gviDh" Name="Bone Ix" Kind="InputPin" DefaultValue="TYPE_INTERMEDIATE">
                 <p:TypeAnnotation LastCategoryFullName="Leap.Bone" LastSymbolSource="LeapCSharp4.dll">
                   <Choice Kind="TypeFlag" Name="BoneType" />
                 </p:TypeAnnotation>
@@ -3064,7 +3130,7 @@
                 <CategoryReference Kind="ClassType" Name="Finger" NeedsToBeDirectParent="true" />
               </p:NodeReference>
               <Pin Id="IXnkWaMpQukNuQhAERotFo" Name="Input" Kind="StateInputPin" />
-              <Pin Id="Ja8TLzfdfQLNpw9SNzJndH" Name="Bone Ix" Kind="InputPin" DefaultValue="&quot;TYPE_DISTAL&quot;">
+              <Pin Id="Ja8TLzfdfQLNpw9SNzJndH" Name="Bone Ix" Kind="InputPin" DefaultValue="TYPE_DISTAL">
                 <p:TypeAnnotation LastCategoryFullName="Leap.Bone" LastSymbolSource="LeapCSharp4.dll">
                   <Choice Kind="TypeFlag" Name="BoneType" />
                 </p:TypeAnnotation>
@@ -3382,7 +3448,7 @@
                 <Choice Kind="OperationCallFlag" Name="*" />
               </p:NodeReference>
               <Pin Id="JYB2B7zzPnlLPlGHxCYueC" Name="Input" Kind="InputPin" />
-              <Pin Id="IXIy58dC39jPIeLQvisG2b" Name="Input 2" Kind="InputPin" DefaultValue="2.0">
+              <Pin Id="IXIy58dC39jPIeLQvisG2b" Name="Input 2" Kind="InputPin" DefaultValue="2">
                 <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="TypeFlag" Name="Float32" />
                 </p:TypeAnnotation>
@@ -3441,7 +3507,7 @@
             <Pin Id="OYfkwd5Bm0zOnKT8ShuzZV" Name="Baseline" Kind="OutputPin" />
             <Pin Id="ERFfO9YqDfnP7tCL9qfYgJ" Name="Is Streaming" Kind="OutputPin" />
             <Pin Id="NWXVW6wBSNjO4nI9fGAnsb" Name="Serial Number" Kind="OutputPin" />
-            <Pad Id="QKygloW0kbpPYBPCe2fX5G" Comment="comment" Bounds="415,71,80,19" ShowValueBox="true" isIOBox="true" Value="&quot;radians to cycles&quot;">
+            <Pad Id="QKygloW0kbpPYBPCe2fX5G" Comment="comment" Bounds="415,71,80,19" ShowValueBox="true" isIOBox="true" Value="radians to cycles">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -3672,7 +3738,7 @@
                 <CategoryReference Kind="Category" Name="3D" NeedsToBeDirectParent="true" />
               </p:TypeAnnotation>
             </Pin>
-            <Pad Id="AL06N5s6rGZQA5LF0DONY1" Comment="Column 4" Bounds="600,446,33,76" ShowValueBox="true" isIOBox="true" Value="new vec(0.0,0.0,0.0,1.0)">
+            <Pad Id="AL06N5s6rGZQA5LF0DONY1" Comment="Column 4" Bounds="600,446,33,76" ShowValueBox="true" isIOBox="true" Value="0, 0, 0, 1">
               <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Vector4" />
                 <CategoryReference Kind="Category" Name="3D" />
@@ -3837,7 +3903,7 @@
               <Pin Id="PDxNftoYNbrLEyJPHnIk97" Name="Output" Kind="OutputPin" />
             </Node>
             <Link Id="KXcmj7POXIgPQmagBe0HGq" Ids="PDxNftoYNbrLEyJPHnIk97,EOURqVHAX2NM6xJJmReSXZ" />
-            <Pad Id="Nw84QBJSSRIN4a8qi14ka3" Comment="Apply" Bounds="634,302,40,18" ShowValueBox="true" isIOBox="true" Value="false">
+            <Pad Id="Nw84QBJSSRIN4a8qi14ka3" Comment="Apply" Bounds="634,302,40,18" ShowValueBox="true" isIOBox="true" Value="False">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Boolean" />
               </p:TypeAnnotation>
@@ -3863,7 +3929,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="VAvs6J0fBXEQXc9SpImhpE" Name="Vector3" Kind="OutputPin" />
-            <Pad Id="VS3SmUYeB0VOSFEWNw3ktN" Comment="comment" Bounds="913,294,183,45" ShowValueBox="true" isIOBox="true" Value="&quot;&lt; Leap Vectors are in a Right Handed coordinate system, vvvv uses left handed.&quot;">
+            <Pad Id="VS3SmUYeB0VOSFEWNw3ktN" Comment="comment" Bounds="913,294,183,45" ShowValueBox="true" isIOBox="true" Value="&lt; Leap Vectors are in a Right Handed coordinate system, vvvv uses left handed.">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -4079,21 +4145,21 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="PIuKKIp6gjUOFoHfe4WxiG" Name="Vectors" Kind="OutputPin" />
-            <Pad Id="Egzmrpig78QN4fiEIi70DK" Bounds="889,749,12,19" ShowValueBox="true" isIOBox="true" Value="&quot;Leftmost&quot;">
+            <Pad Id="Egzmrpig78QN4fiEIi70DK" Bounds="889,749,12,19" ShowValueBox="true" isIOBox="true" Value="Leftmost">
               <p:TypeAnnotation LastCategoryFullName="Devices.Leap.LeapVLWrapper" LastSymbolSource="VL.Devices.Leap.vl">
                 <Choice Kind="TypeFlag" Name="RelativePosition" />
                 <CategoryReference Kind="Category" Name="LeapVLWrapper" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings />
             </Pad>
-            <Pad Id="Q0jJFYYGgoBMQAwXNHGQg8" Bounds="1169,743,12,19" ShowValueBox="true" isIOBox="true" Value="&quot;Rightmost&quot;">
+            <Pad Id="Q0jJFYYGgoBMQAwXNHGQg8" Bounds="1169,743,12,19" ShowValueBox="true" isIOBox="true" Value="Rightmost">
               <p:TypeAnnotation LastCategoryFullName="Devices.Leap.LeapVLWrapper" LastSymbolSource="VL.Devices.Leap.vl">
                 <Choice Kind="TypeFlag" Name="RelativePosition" />
                 <CategoryReference Kind="Category" Name="LeapVLWrapper" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings />
             </Pad>
-            <Pad Id="UltHGFCY6KsN973ZZ8TMPn" Bounds="1483,742,12,19" ShowValueBox="true" isIOBox="true" Value="&quot;Frontmost&quot;">
+            <Pad Id="UltHGFCY6KsN973ZZ8TMPn" Bounds="1483,742,12,19" ShowValueBox="true" isIOBox="true" Value="Frontmost">
               <p:TypeAnnotation LastCategoryFullName="Devices.Leap.LeapVLWrapper" LastSymbolSource="VL.Devices.Leap.vl">
                 <Choice Kind="TypeFlag" Name="RelativePosition" />
                 <CategoryReference Kind="Category" Name="LeapVLWrapper" />
@@ -4568,7 +4634,7 @@
               <Choice Kind="TypeFlag" Name="Hand" />
             </p:TypeAnnotation>
             <Patch Id="AC6q0jYdPkZMxBUr5Ltzcl">
-              <Canvas Id="Hvn81Z97vKKMHJpc6qkvSJ" BordersChecked="false" CanvasType="Group" />
+              <Canvas Id="Hvn81Z97vKKMHJpc6qkvSJ" CanvasType="Group" />
               <ProcessDefinition Id="Gv2DX0to1AkNdA1M2tpBzf" IsHidden="true" />
             </Patch>
           </Node>
@@ -4743,6 +4809,86 @@
             </Patch>
           </Node>
         </Canvas>
+        <!--
+
+    ************************ ToQuaternion ************************
+
+-->
+        <Node Name="ToQuaternion" Bounds="378,641,129,291" Id="IjGVnOfvcgiNdC6EDluIvs">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+            <Choice Kind="OperationDefinition" Name="Operation" />
+          </p:NodeReference>
+          <Patch Id="Dywam1p9PzrOsUvpyF055z">
+            <Node Bounds="391,676" Id="EveavzuE7d2NStAuCAyH8a">
+              <p:NodeReference LastCategoryFullName="Leap.LeapQuaternion" LastSymbolSource="LeapCSharp4.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="LeapQuaternion" />
+                <Choice Kind="OperationCallFlag" Name="x" />
+              </p:NodeReference>
+              <Pin Id="ObTIq2Ze550QVhTBfnH5TI" Name="Input" Kind="StateInputPin" />
+              <Pin Id="MEI35TBNFExMbcOhIUbKaW" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="K36gFYVAxUeQbIAiHlwpB8" Name="X" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="GBZXpER2IraPopgOsSZVlz" Bounds="394,657" />
+            <Link Id="Nxlg2WYCe4JNDV5MzJkEKp" Ids="GBZXpER2IraPopgOsSZVlz,ObTIq2Ze550QVhTBfnH5TI" />
+            <Pin Id="AwGcUGt6ToFQBpIucIuFVa" Name="Input" Kind="InputPin" Bounds="394,657" />
+            <Link Id="DxWbJUtnaIbOIGco1U7xUp" Ids="AwGcUGt6ToFQBpIucIuFVa,GBZXpER2IraPopgOsSZVlz" IsHidden="true" />
+            <Node Bounds="390,720,66,22" Id="G6K2jjrDBFPMGUOZNzA0xs">
+              <p:NodeReference LastCategoryFullName="Leap.LeapQuaternion" LastSymbolSource="LeapCSharp4.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="y" />
+                <CategoryReference Kind="AssemblyCategory" Name="LeapQuaternion" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="Dawi8KTWhSnPs5YHhvricd" Name="Input" Kind="StateInputPin" />
+              <Pin Id="VfJWqbF5ZNaQb9gcweNnj4" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="DB5etQmiaR0PQO73SJ9wRp" Name="Y" Kind="OutputPin" />
+            </Node>
+            <Link Id="NXfWjvpKuOPLExP130tutF" Ids="MEI35TBNFExMbcOhIUbKaW,Dawi8KTWhSnPs5YHhvricd" />
+            <Node Bounds="391,760,66,22" Id="JhMHi9WSQcJPn1z2mYmCOU">
+              <p:NodeReference LastCategoryFullName="Leap.LeapQuaternion" LastSymbolSource="LeapCSharp4.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="z" />
+                <CategoryReference Kind="AssemblyCategory" Name="LeapQuaternion" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="Pb4C7xEKttbMe0DDICc6eA" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Ok0U9i0NgD5O2r7kaegZX6" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="SaAFdg9dXNeOvinHDrNS2o" Name="Z" Kind="OutputPin" />
+            </Node>
+            <Link Id="OTg2RjP02FGLEXGirsW5Yt" Ids="VfJWqbF5ZNaQb9gcweNnj4,Pb4C7xEKttbMe0DDICc6eA" />
+            <Node Bounds="392,808,66,22" Id="RIVYpD1s9KUPKHleA1hji2">
+              <p:NodeReference LastCategoryFullName="Leap.LeapQuaternion" LastSymbolSource="LeapCSharp4.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="w" />
+                <CategoryReference Kind="AssemblyCategory" Name="LeapQuaternion" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="RBVVmrEAlDYQQCkVp1sS7r" Name="Input" Kind="StateInputPin" />
+              <Pin Id="VOvdm17tbl2NJUyUHbUydk" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="IuRqLX4eAkjP5PK0JC1wkk" Name="W" Kind="OutputPin" />
+            </Node>
+            <Link Id="S85CoKuErpwNKnAMx04nFf" Ids="Ok0U9i0NgD5O2r7kaegZX6,RBVVmrEAlDYQQCkVp1sS7r" />
+            <Node Bounds="430,861,65,13" Id="RECeufbIwrVN7AaHeXOJ3u">
+              <p:NodeReference LastCategoryFullName="3D.Quaternion" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="3D" />
+                <CategoryReference Kind="RecordType" Name="Quaternion" />
+                <Choice Kind="OperationCallFlag" Name="Quaternion (Join)" />
+              </p:NodeReference>
+              <Pin Id="VliTEmwSebdNxxnyzqVSY6" Name="X" Kind="InputPin" />
+              <Pin Id="QVHlGqXDD6dPxAMeI21Ody" Name="Y" Kind="InputPin" />
+              <Pin Id="Vlmu10ahSCtPU4den6Ov3p" Name="Z" Kind="InputPin" />
+              <Pin Id="K9M1wL0gOTbQOIyIyZjLd7" Name="W" Kind="InputPin" />
+              <Pin Id="Q2azeuOpxfqPSlJSh8ETXT" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Link Id="B0WOHywWWAiOqSCzVCVe57" Ids="K36gFYVAxUeQbIAiHlwpB8,VliTEmwSebdNxxnyzqVSY6" />
+            <Link Id="Ip9oXn8gtpJN2aK0s5oEXE" Ids="DB5etQmiaR0PQO73SJ9wRp,QVHlGqXDD6dPxAMeI21Ody" />
+            <Link Id="O16DJG3S73tNQk0cj6GKil" Ids="SaAFdg9dXNeOvinHDrNS2o,Vlmu10ahSCtPU4den6Ov3p" />
+            <Link Id="DjWXgoBLDpQPPRJLantoEL" Ids="IuRqLX4eAkjP5PK0JC1wkk,K9M1wL0gOTbQOIyIyZjLd7" />
+            <ControlPoint Id="DdpfvqkgbjjMaIMJDeXnHx" Bounds="431,913" />
+            <Link Id="QkbEjnPJkNPNVPS1F4uRQM" Ids="Q2azeuOpxfqPSlJSh8ETXT,DdpfvqkgbjjMaIMJDeXnHx" />
+            <Pin Id="LEXG7eZpTwRP9NCJzTp8xw" Name="Output" Kind="OutputPin" Bounds="431,913" />
+            <Link Id="JSlSDPanWGtLMPQtpXUGy2" Ids="DdpfvqkgbjjMaIMJDeXnHx,LEXG7eZpTwRP9NCJzTp8xw" IsHidden="true" />
+          </Patch>
+        </Node>
       </Canvas>
     </Canvas>
   </Patch>
