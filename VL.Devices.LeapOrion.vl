@@ -2423,7 +2423,7 @@
     ************************ Arm ************************
 
 -->
-        <Node Name="Arm" Bounds="36,259,349,194" Id="DVAB8TC83hPLcevqPJcJwr">
+        <Node Name="Arm" Bounds="36,239,390,214" Id="DVAB8TC83hPLcevqPJcJwr">
           <p:NodeReference>
             <Choice Kind="OperationDefinition" Name="Operation" />
           </p:NodeReference>
@@ -2431,7 +2431,7 @@
             <Pin Id="JkIp4D6JheNPjER5zjm359" Name="Arm" Kind="InputPin" />
             <Pin Id="NnkkRJr9CBaNsYageQ2t3k" Name="Elbow Position" Kind="OutputPin" />
             <Pin Id="JBR6Dw8oreeLf1kBNlcG4j" Name="Wrist Position" Kind="OutputPin" />
-            <Pad Id="AHBy0MN5ATkNkuUMMCqCw8" Comment="mm to m" Bounds="272,382,39,19" ShowValueBox="true" isIOBox="true" Value="0.0009999984">
+            <Pad Id="AHBy0MN5ATkNkuUMMCqCw8" Comment="mm to m" Bounds="265,387,39,19" ShowValueBox="true" isIOBox="true" Value="0.0009999984">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Float32" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -2474,7 +2474,7 @@
               <Pin Id="IOAP6nVQMEoPSWswbWU9oy" Name="Vector" Kind="InputPin" />
               <Pin Id="UWXUQtD54K6MnnqfjZ0gJs" Name="Vector3" Kind="OutputPin" />
             </Node>
-            <ControlPoint Id="APHuEt0OiW8QSzLs4cRllb" Bounds="51,275" />
+            <ControlPoint Id="APHuEt0OiW8QSzLs4cRllb" Bounds="50,255" />
             <ControlPoint Id="FP8HcIEvcKlNY3Xp5ENlKH" Bounds="82,434" />
             <ControlPoint Id="QJpmpITAM0MN8XSaYqjSXz" Bounds="206,434" />
             <Link Id="NQJ4sVpCm46QIcRqkH58Wa" Ids="T2ONNOmmev2PXQvbrzCgYu,DFtEk1htGI2PDluDQtmLxg" />
@@ -2508,6 +2508,29 @@
             <Link Id="Ii0rrLSZcO7NCdiPBH8Mir" Ids="QfgWmM41mYINsFRCdzAHXm,QJpmpITAM0MN8XSaYqjSXz" />
             <Link Id="N8yHOamJhYaMiAe209bvBH" Ids="AHBy0MN5ATkNkuUMMCqCw8,MOxIc6I66DzOC93X91LKVW" />
             <Link Id="K2QAo7OWMylNddizDeYYyB" Ids="AHBy0MN5ATkNkuUMMCqCw8,FqLnNqAfd2zOJzDCXlJFvG" />
+            <Node Bounds="325,286,48,22" Id="KHgDahgun2sOz1CQ0F9C6p">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Imported.Bone" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="RecordType" Name="Bone" />
+                <Choice Kind="OperationCallFlag" Name="Rotation" />
+              </p:NodeReference>
+              <Pin Id="STvSoclSD5vQIFaXdWtqMh" Name="Input" Kind="StateInputPin" />
+              <Pin Id="R2MF9I3IaD0M62MFBRdtPH" Name="Rotation" Kind="OutputPin" />
+            </Node>
+            <Link Id="AN3m1ILtP3wMXCwpaQ71wt" Ids="APHuEt0OiW8QSzLs4cRllb,STvSoclSD5vQIFaXdWtqMh" />
+            <ControlPoint Id="ATH6Acer87HPs2BKvvZ7Fu" Bounds="326,364" />
+            <Pin Id="FpMxhPwLS3mO7Fv0WJrMYp" Name="Rotation" Kind="OutputPin" Bounds="335,360" />
+            <Link Id="M7G1yLbu10DOc6bW93OY9V" Ids="ATH6Acer87HPs2BKvvZ7Fu,FpMxhPwLS3mO7Fv0WJrMYp" IsHidden="true" />
+            <Node Bounds="325,330,89,13" Id="BXLGYBn8pE0N2KxB8W157Z">
+              <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ToQuaternion" />
+              </p:NodeReference>
+              <Pin Id="ToT5A3pA5NPP4eF5XuiMgk" Name="Input" Kind="InputPin" />
+              <Pin Id="OEYp5Jyv7ImQEXq58h5RKJ" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Link Id="Aet69K2yYlgNkQZUK8uVPi" Ids="R2MF9I3IaD0M62MFBRdtPH,ToT5A3pA5NPP4eF5XuiMgk" />
+            <Link Id="PMY2jJPPpSqNvslRyOzBie" Ids="OEYp5Jyv7ImQEXq58h5RKJ,ATH6Acer87HPs2BKvvZ7Fu" />
           </Patch>
         </Node>
         <!--
@@ -5002,11 +5025,6 @@
             <Pin Id="SHzZsGJcWzhNu5P2866we1" Name="Index" Kind="InputPin" Bounds="571,184" />
             <Pin Id="JG60czFEqPmOnR3Ezay9mV" Name="Is Lighting Bad" Kind="OutputPin" Bounds="694,526" />
           </Patch>
-          <!--
-
-    ************************  ************************
-
--->
           <ProcessDefinition Id="J9Y2GLbztqzMYilSdccSBT">
             <Fragment Id="V6y4NH18yG9Mdmn9xNvoEV" Patch="Hdjs4Bs5VAjLrhlUgYPHuJ" Enabled="true" />
             <Fragment Id="NARrYxUV2KEOVdzBlWgVcG" Patch="F41jvWZRbBSNIL7fRNZx8D" Enabled="true" />
