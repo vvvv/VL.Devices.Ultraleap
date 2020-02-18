@@ -8,3 +8,5 @@ src/obj/
 bin/
 
 /src/obj/
+.vl/
+/src/VL.LeapOrion.xkpkg.user
