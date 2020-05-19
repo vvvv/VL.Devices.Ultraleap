@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="LeapCSharp4">
-      <HintPath>..\lib\netstandard2.0\LeapCSharp4.dll</HintPath>
+    <Reference Include="LeapOrionSharp">
+      <HintPath>..\lib\netstandard2.0\LeapOrionSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 
