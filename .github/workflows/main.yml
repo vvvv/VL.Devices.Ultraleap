@@ -15,6 +15,15 @@ jobs:
     steps:
     - name: Git Checkout
       uses: actions/checkout@master
+      
+    - name: Setup MSBuild.exe
+      uses: warrenbuckley/Setup-MSBuild@v1
+      
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v1.4.0
+  
+    - name: Build
+      run: msbuild src\VL.LeapOrion.sln /t:Build /v:m /m /restore /p:Configuration=Release 
 
     - name: Setup Nuget.exe
       uses: nuget/setup-nuget@v1
