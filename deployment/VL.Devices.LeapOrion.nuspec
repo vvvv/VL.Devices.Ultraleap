@@ -12,13 +12,12 @@
     <description>Set of nodes for using the Leap Motion with VL</description>
     <tags>VL, tracking, leapmotion, hand, finger</tags>
 	<license type="expression">LGPL-3.0-only</license>
-	<icon>icon\VL.png</icon>
+	<icon>icon\nugeticon.png</icon>
   </metadata>
   <files>
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
 	<file src="..\lib\**" target="lib\" exclude="" />
 	<file src="..\lib-native\**" target="lib-native\" exclude="" />
-	<file src="VL.png" target="icon\" />
   </files>
 </package>
