@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.Devices.LeapOrion</id>
+    <title>VL.Devices.LeapOrion</title>
+    <authors>vvvv</authors>
+    <owners>vvvv</owners>
+    <projectUrl>https://github.com/vvvv/VL.Devices.LeapOrion</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Set of nodes for using the Leap Motion with VL</summary>
+    <description>Set of nodes for using the Leap Motion with VL</description>
+    <tags>VL, tracking, leapmotion, hand, finger</tags>
+	<license type="expression">LGPL-3.0-only</license>
+	<icon>icon\VL.png</icon>
+  </metadata>
+  <files>
+    <file src="..\*.vl" target="" exclude="" />
+    <file src="..\help\**" target="help\" exclude="" />
+	<file src="..\lib\**" target="lib\" exclude="" />
+	<file src="..\lib-native\**" target="lib-native\" exclude="" />
+	<file src="VL.png" target="icon\" />
+  </files>
+</package>
