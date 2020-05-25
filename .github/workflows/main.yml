@@ -24,6 +24,12 @@ jobs:
   
     - name: Build
       run: msbuild src\VL.LeapOrion.sln /t:Build /v:m /m /restore /p:Configuration=Release 
+      
+    - name: Download Icon
+      uses: carlosperate/download-file-action@v1.0.3
+      with:
+        file-url: 'https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png'
+        location: './icon'
 
     - name: Setup Nuget.exe
       uses: nuget/setup-nuget@v1
