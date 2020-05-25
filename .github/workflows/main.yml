@@ -29,7 +29,7 @@ jobs:
       uses: carlosperate/download-file-action@v1.0.3
       with:
         file-url: 'https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png'
-        location: './icon'
+        location: './deployment'
 
     - name: Setup Nuget.exe
       uses: nuget/setup-nuget@v1
