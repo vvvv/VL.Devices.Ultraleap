@@ -12,6 +12,9 @@
     <description>Set of nodes for using the Leap Motion with VL</description>
     <tags>VL, tracking, leapmotion, hand, finger</tags>
     <license type="expression">LGPL-3.0-only</license>
+	<dependencies>
+        <dependency id="VL.Skia3d" version="[1.0.34-alpha]" />
+    </dependencies>
     <icon>icon\nugeticon.png</icon>
   </metadata>
   <files>
