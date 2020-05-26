@@ -1,5 +1,6 @@
 .vs
 src/obj/
+/lib
 
 # .v4p backup files
 *~.xml

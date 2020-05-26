@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" LanguageVersion="2020.1.1.108" Version="0.128">
-  <NugetDependency Id="Iq4vWTkbkoDPMlxoomCd40" Location="VL.CoreLib" Version="2020.1.1" />
+<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" LanguageVersion="2020.1.2.135" Version="0.128">
+  <NugetDependency Id="Iq4vWTkbkoDPMlxoomCd40" Location="VL.CoreLib" Version="2020.1.2" />
   <Patch Id="CRY1QDZAi59Lh77QfDSgCw">
     <Canvas Id="FNO51wlZsR4OteD0cgU10j" DefaultCategory="Devices.LeapOrion" CanvasType="FullCategory">
       <!--
@@ -6258,8 +6258,8 @@
       </Patch>
     </Node>
   </Patch>
-  <PlatformDependency Id="UkkiIo4UXQlOWG3qIjD3Au" Location="./src/bin/Debug/netstandard2.0/VL.LeapOrion.dll" />
   <PlatformDependency Id="FEYfDVjITWdPtPVLtPJBI0" Location="./lib/netstandard2.0/LeapOrionSharp.dll" />
   <NugetDependency Id="GCmJxa8acvEP51nLnyIjAH" Location="VL.Skia3d" Version="0.0.0.0" />
-  <NugetDependency Id="Qx15ULQueElLJMR0UU0lYz" Location="VL.Core" Version="2020.1.1" />
+  <NugetDependency Id="Qx15ULQueElLJMR0UU0lYz" Location="VL.Core" Version="2020.1.2" />
+  <PlatformDependency Id="LTcK1oad4alOeoZX31DWiN" Location="./lib/netstandard2.0/VL.LeapOrion.dll" />
 </Document>
