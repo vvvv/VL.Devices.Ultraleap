@@ -1471,6 +1471,49 @@
             <Link Id="TQopL8CBqodNBHToRZVlbP" Ids="RRHWr8DqjGnNxnh2uLaUUY,MT80cJaBSndM9dFVDFdGAr" />
           </Patch>
         </Node>
+        <!--
+
+    ************************ Device ************************
+
+-->
+        <Node Name="Device" Bounds="120,517" Id="ByW9Uag6eWFLW3zxnv0rEF">
+          <p:NodeReference>
+            <Choice Kind="ForwardDefinition" Name="Forward" />
+            <FullNameCategoryReference ID="Primitive" />
+          </p:NodeReference>
+          <p:TypeAnnotation LastCategoryFullName="Leap" LastSymbolSource="LeapOrionSharp.dll">
+            <Choice Kind="TypeFlag" Name="Device" />
+          </p:TypeAnnotation>
+          <Patch Id="AuAY8WmXcpBLJnqLkIlxG2">
+            <Canvas Id="S3TvHbjpqHpM7MWabhdIcb" CanvasType="Group">
+              <!--
+
+    ************************ CreateDefault ************************
+
+-->
+              <Node Name="CreateDefault" Bounds="389,418,100,50" Id="DXBSjNTsRx7MXdBxWa5KeK">
+                <p:NodeReference>
+                  <Choice Kind="OperationDefinition" Name="Operation" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:NodeReference>
+                <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+                <Patch Id="BeofNx8Kc02PVtpfKul7wz">
+                  <Node Bounds="389,418,10,10" AutoConnect="true" Id="DhqKKYieMBjOdRZ9bRSZ2s">
+                    <p:NodeReference LastCategoryFullName="Leap.Device" LastSymbolSource="LeapOrionSharp.dll">
+                      <Choice Kind="OperationNode" Name="Create" />
+                      <FullNameCategoryReference ID="Leap.Device" />
+                    </p:NodeReference>
+                    <Pin Id="NAQaI0U91S5OUnh29PZTDV" Name="Output" Kind="StateOutputPin" />
+                  </Node>
+                  <Pin Id="JAuc0DuaKzcNN9xz67TEWn" Name="Output" Kind="OutputPin" />
+                </Patch>
+              </Node>
+            </Canvas>
+            <ProcessDefinition Id="H4xZFkgPtLoPmC6NP3lShk" IsHidden="true">
+              <Fragment Id="NZZGyMfOciZP4ZXY3n6mEO" Patch="DXBSjNTsRx7MXdBxWa5KeK" Enabled="true" />
+            </ProcessDefinition>
+          </Patch>
+        </Node>
       </Canvas>
       <!--
 
