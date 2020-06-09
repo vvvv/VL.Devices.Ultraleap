@@ -1,7 +1,7 @@
 # VL.Devices.LeapOrion
 Set of nodes to work with LeapMotions Orion SDK
 
-Try it with vvvv, the visual live-programming environment for .NET
+Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
 
 ## Requirements:
