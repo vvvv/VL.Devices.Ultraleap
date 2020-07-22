@@ -2,15 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.Devices.LeapOrion</id>
-	<version>0.0.0</version>
+	<version>1.1.0</version>
     <title>VL.Devices.LeapOrion</title>
     <authors>vvvv</authors>
     <owners>vvvv</owners>
     <projectUrl>https://github.com/vvvv/VL.Devices.LeapOrion</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Set of nodes for using the Leap Motion with VL</summary>
-    <description>Set of nodes for using the Leap Motion with VL</description>
-    <tags>VL, tracking, leapmotion, hand, finger</tags>
+    <summary>UltraLeap Motion controller for vvvv</summary>
+    <tags>VL, ultraleap, leapmotion, orion, tracking, hand, finger</tags>
     <license type="expression">LGPL-3.0-only</license>
 	<dependencies>
 		<group targetFramework=".NETStandard2.0">
