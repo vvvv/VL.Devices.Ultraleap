@@ -9,6 +9,7 @@
     <projectUrl>https://github.com/vvvv/VL.Devices.LeapOrion</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>UltraLeap Motion controller for vvvv</summary>
+	<description>UltraLeap Motion controller for vvvv</description>
     <tags>VL, ultraleap, leapmotion, orion, tracking, hand, finger</tags>
     <license type="expression">LGPL-3.0-only</license>
 	<dependencies>
