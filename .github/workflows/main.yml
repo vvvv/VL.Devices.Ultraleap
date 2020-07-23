@@ -27,5 +27,5 @@ jobs:
         solution: src\VL.Devices.LeapOrion.csproj
         nuspec: deployment\VL.Devices.LeapOrion.nuspec
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
-        icon-dst: ./nugeticon.png
+        icon-dst: ./deployment/nugeticon.png
         nuget-key: ${{ secrets.NUGET_KEY }}
