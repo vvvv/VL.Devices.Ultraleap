@@ -22,9 +22,9 @@ jobs:
       uses: nuget/setup-nuget@v1
       
     - name: Publish VL Nuget
-      uses: vvvv/PublishVLNuget@1.0.25-alpha
+      uses: vvvv/PublishVLNuget@1.0.27-alpha
       with:
-        solution: src\VL.Devices.LeapOrion.csproj
+        csproj: src\VL.Devices.LeapOrion.csproj
         nuspec: deployment\VL.Devices.LeapOrion.nuspec
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
         icon-dst: ./deployment/nugeticon.png
