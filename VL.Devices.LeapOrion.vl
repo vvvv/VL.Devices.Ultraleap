@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" LanguageVersion="2020.1.3.147" Version="0.128">
-  <NugetDependency Id="Iq4vWTkbkoDPMlxoomCd40" Location="VL.CoreLib" Version="2020.1.3" />
+<Document xmlns:p="property" Id="SY7d05EhVSFMYY5OkX6G23" Summary="Nodes for the Leap Motion device: https://www.leapmotion.com" Authors="dominikKoller, vvvv group" LicenseUrl="https://www.gnu.org/licenses/lgpl-3.0-standalone.html" ProjectUrl="https://vvvv.org/" LanguageVersion="2020.1.7.184" Version="0.128">
+  <NugetDependency Id="Iq4vWTkbkoDPMlxoomCd40" Location="VL.CoreLib" Version="2020.1.7" />
   <Patch Id="CRY1QDZAi59Lh77QfDSgCw">
     <Canvas Id="FNO51wlZsR4OteD0cgU10j" DefaultCategory="Devices.LeapOrion" CanvasType="FullCategory">
       <!--
@@ -588,7 +588,7 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="AO7vjC91Ps4LCveXUerUek" Bounds="455,187,321,37" ShowValueBox="true" isIOBox="true" Value="&lt;- We want the events to fire on the original thread, not the UI thread">
+            <Pad Id="AO7vjC91Ps4LCveXUerUek" Bounds="458,186,321,37" ShowValueBox="true" isIOBox="true" Value="&lt; We want the events to fire on the original thread, not the UI thread">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -3265,7 +3265,7 @@
                 <Pin Id="MwxNt3vGCGxMJBDUt3nvpu" Name="Output" Kind="OutputPin" />
               </Node>
               <ControlPoint Id="KvRPZK9yH7lNU9tjR3W8Yr" Bounds="401,321" />
-              <Node Bounds="404,403,140,290" Id="KtxhIT7zI5jPMOzQiGwZ3v">
+              <Node Bounds="404,403,182,267" Id="KtxhIT7zI5jPMOzQiGwZ3v">
                 <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
                   <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="ForEach" />
@@ -3281,8 +3281,8 @@
                     <Pin Id="Q0oSGFQDx0dN9X8X9oC7vr" Name="Output" Kind="OutputPin" />
                   </Patch>
                   <ControlPoint Id="Uv73PD5Ef3qOdD0T27XjlU" Bounds="424,411" />
-                  <ControlPoint Id="OW9g3EPwVZ1PiJijR64mb6" Bounds="480,686" />
-                  <Node Bounds="427,488,105,180" Id="OQ1SCmkY2E1Pkr50t0zFVl">
+                  <ControlPoint Id="OW9g3EPwVZ1PiJijR64mb6" Bounds="480,663" />
+                  <Node Bounds="427,488,147,157" Id="OQ1SCmkY2E1Pkr50t0zFVl">
                     <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                       <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                       <Choice Kind="ApplicationStatefulRegion" Name="If" />
@@ -3314,7 +3314,7 @@
                         <Pin Id="TjETI8kcQ8kPSzuFxvdyog" Name="Result" Kind="OutputPin" />
                       </Node>
                     </Patch>
-                    <ControlPoint Id="J83MZbBgEueMVs4vvbtq37" Bounds="480,662" Alignment="Bottom" />
+                    <ControlPoint Id="J83MZbBgEueMVs4vvbtq37" Bounds="480,639" Alignment="Bottom" />
                     <ControlPoint Id="Um02xyAsUBXLHdxjrklyDA" Bounds="482,494" Alignment="Top" />
                   </Node>
                   <Node Bounds="422,443,65,19" Id="RGPumw5Y0yNPRVwanFPqWk">
@@ -3328,7 +3328,7 @@
                   </Node>
                 </Patch>
               </Node>
-              <ControlPoint Id="MMvFtTqv05cMfMzHh8ZdQT" Bounds="400,718" />
+              <ControlPoint Id="MMvFtTqv05cMfMzHh8ZdQT" Bounds="400,695" />
             </Canvas>
             <Patch Id="NJpzhDRtmLCObO5Ynnsq31" Name="Create" />
             <Patch Id="E4Sga65GBTPNiy2M8eJjrl" Name="Update">
@@ -6148,5 +6148,5 @@
   </Patch>
   <PlatformDependency Id="FEYfDVjITWdPtPVLtPJBI0" Location="./lib/netstandard2.0/LeapOrionSharp.dll" />
   <NugetDependency Id="GCmJxa8acvEP51nLnyIjAH" Location="VL.Skia3d" Version="0.0.0.0" />
-  <PlatformDependency Id="LTcK1oad4alOeoZX31DWiN" Location="./lib/netstandard2.0/VL.LeapOrion.dll" />
+  <PlatformDependency Id="KlQug3cagPROT3flXcXORO" Location="./lib/netstandard2.0/VL.Devices.LeapOrion.dll" />
 </Document>
