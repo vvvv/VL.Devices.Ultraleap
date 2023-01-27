@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.Devices.LeapOrion</id>
-	<version>1.1.4</version>
+	<version>1.2.0</version>
     <title>VL.Devices.LeapOrion</title>
     <authors>vvvv</authors>
     <owners>vvvv</owners>
@@ -23,7 +23,7 @@
     <file src="..\*.vl" target="" exclude="" />
     <file src="..\help\**" target="help\" exclude="" />
     <file src="..\lib\**" target="lib\" exclude="" />
-    <file src="..\lib-native\**" target="lib-native\" exclude="" />
+    <file src="..\runtimes\**" target="runtimes\" exclude="" />
     <file src="nugeticon.png" target="icon\" />
   </files>
 </package>
