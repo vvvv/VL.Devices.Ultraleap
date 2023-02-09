@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="RfVI3mZdiMvQUhgjcNm8lp" LanguageVersion="2020.1.2.135" Version="0.128">
-  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2020.1.2" />
+<Document xmlns:p="property" Id="RfVI3mZdiMvQUhgjcNm8lp" LanguageVersion="2022.5.0-0558-g23e76e599d" Version="0.128">
+  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2022.5.0-0558-g23e76e599d" />
   <NugetDependency Id="DjUPOHScrZmNkAAoE5Csi8" Location="VL.Devices.LeapOrion" Version="0.0.0.0" />
   <Patch Id="NHg5NVa32adL18Mo9Az8ZW">
     <Canvas Id="MGL9rOTfYRMMapym9ZgI5D" DefaultCategory="Main" CanvasType="FullCategory" />
@@ -17,7 +17,7 @@
       <Patch Id="UqQtImCEa6TPypxUEabcs0">
         <Canvas Id="VeHwQKVHINkNp8Hy6w7KqX" CanvasType="Group">
           <Node Bounds="179,235,266,19" Id="Q3AacWjiYGaOpYYwDIGxb1">
-            <p:NodeReference>
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Devices" />
               <Choice Kind="ProcessAppFlag" Name="LeapOrion" />
@@ -32,7 +32,7 @@
           <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="442,294,40,19" ShowValueBox="true" isIOBox="true" />
           <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="442,270,40,19" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="167,590,468,128" Id="APbzUaJBj5pLpvg2fVBn6r">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -45,35 +45,27 @@
               <Patch Id="AuJtF6NdJ4mPono7XinG2d" Name="Update" ManuallySortedPins="true" />
               <Patch Id="N4n1EjmB7otPl45PbZiycQ" Name="Dispose" ManuallySortedPins="true" />
               <Node Bounds="179,635,65,19" Id="KkBacOgfVLIQO1ylGdow3q">
-                <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Stickhand" />
                 </p:NodeReference>
                 <Pin Id="AVMpvu9coRYN8kiPSKro0R" Name="Input" Kind="InputPin" />
                 <Pin Id="GtUYP50CFJwM49O0ngNfSK" Name="Color" Kind="InputPin" />
                 <Pin Id="A24ShZtDMqNOnnul3TEIVg" Name="Stroke Width" Kind="InputPin" />
-                <Pin Id="CMnTfxNDNVlNWT6JOu9EfY" Name="Enabled" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                    <Choice Kind="TypeFlag" Name="Boolean" />
-                  </p:TypeAnnotation>
-                </Pin>
+                <Pin Id="CMnTfxNDNVlNWT6JOu9EfY" Name="Enabled" Kind="InputPin" />
                 <Pin Id="CM0BOIjflrNNNuX0EmVo5o" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="273,635,105,19" Id="KVIbrhCc5McOMrtWChKlQB">
-                <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Boxhand" />
                 </p:NodeReference>
                 <Pin Id="KL0PafyKikULYEoBBbQ0jU" Name="Input" Kind="InputPin" />
                 <Pin Id="B4NOkE6ojT7OQ9InOeXN4Z" Name="Color" Kind="InputPin" />
                 <Pin Id="TL5kGPYa2hgMXhWGQFhpr4" Name="Stroke Width" Kind="InputPin" />
-                <Pin Id="A32ywaosXtoMAqP5YSiBvc" Name="Show Boxes" Kind="InputPin">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                    <Choice Kind="TypeFlag" Name="Boolean" />
-                  </p:TypeAnnotation>
-                </Pin>
+                <Pin Id="A32ywaosXtoMAqP5YSiBvc" Name="Show Boxes" Kind="InputPin" />
                 <Pin Id="TdWxGG9M8G3M9Jv0OAIgpF" Name="Show Axis" Kind="InputPin" DefaultValue="True">
-                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="TypeFlag" Name="Boolean" />
                   </p:TypeAnnotation>
                 </Pin>
@@ -81,7 +73,7 @@
                 <Pin Id="NK9JHDZE6ttMy1JnHLd6bZ" Name="Output" Kind="OutputPin" />
               </Node>
               <Node Bounds="438,635,185,26" Id="DhuBK6OIQ4SQHoMeVXaZcR">
-                <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastSymbolSource="VL.Devices.LeapOrion.vl">
+                <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Split" />
                   <CategoryReference Kind="ClassType" Name="Hand" NeedsToBeDirectParent="true" />
@@ -101,12 +93,12 @@
             </Patch>
           </Node>
           <Node Bounds="243,973,145,19" Id="RT0EhwaRL0uOW1j4DidgSI">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastSymbolSource="VL.Skia.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Renderer" />
             </p:NodeReference>
             <Pin Id="FMjYJVcrubCPQ2G5K8imYs" Name="Bounds" Kind="InputPin" DefaultValue="1197, 67, 605, 438">
-              <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastSymbolSource="System.Drawing.dll">
+              <p:TypeAnnotation LastCategoryFullName="System.Drawing" LastDependency="System.Drawing.dll">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
             </Pin>
@@ -122,7 +114,7 @@
             <Pin Id="JlDEgj4eyysOsgBTrprcnn" Name="Render Time" Kind="OutputPin" />
           </Node>
           <Node Bounds="263,822,45,19" Id="PFrIAg4bktoOIwfirQjMRs">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia3d" LastSymbolSource="VL.Skia3d.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia3d" LastDependency="VL.Skia3d.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group" />
               <CategoryReference Kind="Category" Name="Skia3d" NeedsToBeDirectParent="true" />
@@ -133,7 +125,7 @@
             <Pin Id="VeSkDHqOFdhOiXCHqEC8rs" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="687,452,85,19" Id="TPQ9HRMyreKOl8vaiTGryW">
-            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="DeviceInfo" />
             </p:NodeReference>
@@ -145,7 +137,7 @@
             <Pin Id="B7MGoJSEGBOOsN34R4mgM5" Name="Serial Number" Kind="OutputPin" />
           </Node>
           <Node Bounds="685,414,80,19" Id="PFYXYJjFjiQLygwSjccn2j">
-            <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
             </p:NodeReference>
@@ -159,7 +151,7 @@
           <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="789,512,35,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="907,511,84,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="179,353,45,19" Id="BnMPB4idUQmPHiKPe9aMpT">
-            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Hands" />
               <CategoryReference Kind="Category" Name="LeapOrion" NeedsToBeDirectParent="true">
@@ -170,7 +162,7 @@
             <Pin Id="FBI0j93dVRmMwNLbNge869" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="273,740,44,19" Id="B78QN8djIsPMIBhVyr0NL2">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia3d" LastSymbolSource="VL.Skia3d.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia3d" LastDependency="VL.Skia3d.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Group (Spectral)" />
               <CategoryReference Kind="Category" Name="Skia3d" NeedsToBeDirectParent="true" />
@@ -180,12 +172,12 @@
             <Pin Id="LvFjq0ve3tJMGp4dTsEe2T" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Pad Id="QCKUa2ynJGMNb8MWjGIWut" Comment="Enabled" Bounds="442,190,35,35" ShowValueBox="true" isIOBox="true" Value="True">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="VT2uZYhNa9qL68qcwqsgbO" Bounds="118,78,176,19" ShowValueBox="true" isIOBox="true" Value="Requires Leap Orion V4 SDK">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -193,8 +185,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="NqXYZsgTlSzPBLCJWWyybN" Bounds="118,103,305,19" ShowValueBox="true" isIOBox="true" Value="https://developer.leapmotion.com/setup/desktop">
-            <p:TypeAnnotation>
+          <Pad Id="NqXYZsgTlSzPBLCJWWyybN" Bounds="118,103,305,19" ShowValueBox="true" isIOBox="true" Value="https://developer.leapmotion.com/releases/leap-motion-orion-410-99fe5-crpgl">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -203,7 +195,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="247,353,49,19" Id="P2bqUSFs7n0LsFZyoBW2SP">
-            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Images" />
             </p:NodeReference>
@@ -212,7 +204,7 @@
             <Pin Id="JVQAZdPM9EqLeoC9ep3ws3" Name="Right Camera" Kind="OutputPin" />
           </Node>
           <Pad Id="H2Km9k9qJ5aOMtoFmPzauv" Bounds="318,357,157,77" ShowValueBox="true" isIOBox="true" Value="&lt; There are also reactive versions available of these nodes in the Advanced aspect.">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -222,41 +214,33 @@
           </Pad>
           <Pad Id="C9oWKjsTTXiM9iD4gV1zBL" Comment="FOV" Bounds="689,514,35,28" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="205,498,71,19" Id="N5bcqZCaTBVMSp18R1KdkD">
-            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="SelectHands" />
             </p:NodeReference>
             <Pin Id="DCZwyjmyOlrMgbts3ud80Y" Name="Hands" Kind="InputPin" />
-            <Pin Id="DLddHsPMDUYQWj4OMvEKCA" Name="Side" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
-                <Choice Kind="TypeFlag" Name="HandSide" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="DLddHsPMDUYQWj4OMvEKCA" Name="Side" Kind="InputPin" />
             <Pin Id="QMqgB6qjiVmM9rNjiecLhR" Name="Hands" Kind="OutputPin" />
           </Node>
           <Node Bounds="417,498,71,19" Id="D45VrPmKTOtQNeNPPiReul">
-            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="SelectHands (Position)" />
             </p:NodeReference>
             <Pin Id="JoIByEngGZuN5VIKrS3ZLy" Name="Hands" Kind="InputPin" />
-            <Pin Id="SztNgkW5rpaO6Y0oA5gi8i" Name="Position" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
-                <Choice Kind="TypeFlag" Name="RelativePosition" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="SztNgkW5rpaO6Y0oA5gi8i" Name="Position" Kind="InputPin" />
             <Pin Id="Acj4X0bUzI5NnciH7jdTLF" Name="Hands" Kind="OutputPin" />
           </Node>
           <Pad Id="UNhW7aKhIdRLoD7E0JbghS" Comment="Hands" Bounds="419,542,150,15" ShowValueBox="true" isIOBox="true">
             <p:Value />
           </Pad>
           <Pad Id="IPDJcSORMzlNV00GwIU7gM" Comment="Side" Bounds="273,476,52,15" ShowValueBox="true" isIOBox="true" Value="Left">
-            <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="TypeFlag" Name="HandSide" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="LgoOAbgsQLiO9o2Ysg1o0D" Comment="Position" Bounds="485,480,75,15" ShowValueBox="true" isIOBox="true" Value="Frontmost">
-            <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastSymbolSource="VL.Devices.LeapOrion.vl">
+            <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="TypeFlag" Name="RelativePosition" />
             </p:TypeAnnotation>
           </Pad>
@@ -264,22 +248,18 @@
             <p:Value />
           </Pad>
           <Node Bounds="263,883,51,19" Id="UjVfPGjk1o5OdPSHNph4HI">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia3d.Transform" LastSymbolSource="VL.Skia3d.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia3d.Transform" LastDependency="VL.Skia3d.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Camera (FOV)" />
             </p:NodeReference>
             <Pin Id="QKbM8BNbsHONganjHR23KF" Name="Input" Kind="InputPin" />
             <Pin Id="PE1p9HalUfhMwpMrXQB9G2" Name="Transformation" Kind="InputPin" />
-            <Pin Id="CV34kcTcPh5L9EzfbQIPbG" Name="Vertical FOV" Kind="InputPin">
-              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Float32" />
-              </p:TypeAnnotation>
-            </Pin>
+            <Pin Id="CV34kcTcPh5L9EzfbQIPbG" Name="Vertical FOV" Kind="InputPin" />
             <Pin Id="AeBnvUob3EHLl95p4k1oEE" Name="Aspect" Kind="InputPin" />
             <Pin Id="FFDluqp6Oz3O6xctatvaaG" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="352,845,45,19" Id="V4TTkDTfc77PUOaFhZfyxj">
-            <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="3D.Transform" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Rotate" />
               <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
@@ -291,12 +271,12 @@
             <Pin Id="A3qxUOA91GkQCUmfSGmH9K" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="MKAsuwJkkgANplHvPyIfHV" Comment="Rotation" Bounds="448,822,35,43" ShowValueBox="true" isIOBox="true" Value="-0.25, 0, 0">
-            <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="3D" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Vector3" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="352,791,25,19" Id="PKLygD0vXe9PPczJb0EXWC">
-            <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="3D.Transform" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Translate" />
               <CategoryReference Kind="Category" Name="Transform" NeedsToBeDirectParent="true">
@@ -308,12 +288,12 @@
             <Pin Id="TSHEEVs4dSaPemaWwQInL1" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="ADaXTAYdIeQQZl5oe7pql1" Comment="Translation" Bounds="447,764,35,43" ShowValueBox="true" isIOBox="true" Value="0, 0.8, 0">
-            <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="3D" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Vector3" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="73,756,145,19" Id="T8RKL6djE1lQNI1C6LORFu">
-            <p:NodeReference LastCategoryFullName="Graphics.Skia3d.Layers" LastSymbolSource="VL.Skia3d.vl">
+            <p:NodeReference LastCategoryFullName="Graphics.Skia3d.Layers" LastDependency="VL.Skia3d.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="AxisAndGrid" />
               <CategoryReference Kind="Category" Name="Layers" NeedsToBeDirectParent="true">
@@ -324,9 +304,7 @@
             <Pin Id="RL8pgMEocHnOoWK88mMlHX" Name="Size" Kind="InputPin" />
             <Pin Id="TnEjNHPyWjyPz7w76R6hCD" Name="Resolution" Kind="InputPin" />
             <Pin Id="MysZLuYU8D5NYg6SsOt7SS" Name="Grid Color" Kind="InputPin" />
-            <Pin Id="GlPisNJCImTPYYbGJnP0uB" Name="Grid Stroke Width" Kind="InputPin" />
             <Pin Id="CZTKAqhgpDSM9v2vbGGnsc" Name="Axis Size" Kind="InputPin" />
-            <Pin Id="Gj6vbND4GAhOiRv91m6My6" Name="Axis Stroke Width" Kind="InputPin" />
             <Pin Id="P9SQWnJptLDLrq9F0UkxBy" Name="Enabled" Kind="InputPin" />
             <Pin Id="Dg8H1XMQv3cPboMRO1QXeV" Name="Output" Kind="OutputPin" />
           </Node>
@@ -373,5 +351,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="Gi5MLyzhx9QOcyUrl6IYBv" Location="VL.Skia3d" Version="0.0.0.0" />
-  <NugetDependency Id="LNKVBaDDihnQZTQMydku0d" Location="VL.Skia" Version="2020.1.2" />
+  <NugetDependency Id="LNKVBaDDihnQZTQMydku0d" Location="VL.Skia" Version="2022.5.0-0558-g23e76e599d" />
 </Document>
