@@ -1,5 +1,5 @@
 # VL.Devices.LeapOrion
-Set of nodes to work with [UltraLeaps](https://developer.leapmotion.com) Orion SDK
+A package for using the [Motion Controller by Ultraleap](https://developer.leapmotion.com) in VL (using the Orion SDK).
 
 Try it with vvvv, the visual live-programming environment for .NET  
 Download: http://visualprogramming.net
