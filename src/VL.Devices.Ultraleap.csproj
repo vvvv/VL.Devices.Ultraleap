@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	 <OutputPath>..\lib\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="LeapCSharp\**" />
+    <EmbeddedResource Remove="LeapCSharp\**" />
+    <None Remove="LeapCSharp\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Arm.cs" Link="Arm.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Bone.cs" Link="Bone.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\CircularObjectBuffer.cs" Link="CircularObjectBuffer.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Config.cs" Link="Config.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Connection.cs" Link="Connection.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Controller.cs" Link="Controller.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\CopyFromLeapCExtensions.cs" Link="CopyFromLeapCExtensions.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\CopyFromOtherExtensions.cs" Link="CopyFromOtherExtensions.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\CSharpExtensions.cs" Link="CSharpExtensions.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Device.cs" Link="Device.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\DeviceList.cs" Link="DeviceList.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\DistortionData.cs" Link="DistortionData.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Events.cs" Link="Events.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\FailedDevice.cs" Link="FailedDevice.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\FailedDeviceList.cs" Link="FailedDeviceList.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Finger.cs" Link="Finger.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Frame.cs" Link="Frame.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Hand.cs" Link="Hand.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\IController.cs" Link="IController.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Image.cs" Link="Image.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\ImageData.cs" Link="ImageData.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\LeapC.cs" Link="LeapC.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\LeapTransform.cs" Link="LeapTransform.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Logger.cs" Link="Logger.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\MemoryManager.cs" Link="MemoryManager.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\MessageSeverity.cs" Link="MessageSeverity.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\PointMapping.cs" Link="PointMapping.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\ServerStatus.cs" Link="ServerStatus.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\StructMarshal.cs" Link="StructMarshal.cs" />
+    <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\TransformExtensions.cs" Link="TransformExtensions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.2.0.2188" />
+  </ItemGroup>
+
+</Project>

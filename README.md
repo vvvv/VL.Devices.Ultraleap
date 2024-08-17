@@ -1,17 +1,22 @@
-# VL.Devices.LeapOrion
-A package for using the [Motion Controller by Ultraleap](https://developer.leapmotion.com) in VL (using the Orion SDK).
+# VL.Devices.Ultraleap
 
-Try it with vvvv, the visual live-programming environment for .NET  
-Download: http://visualprogramming.net
+Provides support for [Ultraleap](https://www.ultraleap.com/) devices using their [Gemini hand tracking platform](https://www.ultraleap.com/tracking/gemini-hand-tracking-platform/).
 
-## Requirements:
-* [Leap v4](https://developer.leapmotion.com/releases/leap-motion-orion-410-99fe5-crpgl)
+For use with vvvv, the visual live-programming environment for .NET: http://visualprogramming.net
 
-## Using the library
-In order to use this library with VL you have to install the nuget that is available via nuget.org. For information on how to use nugets with VL, see [Managing Nugets](https://thegraybook.vvvv.org/reference/libraries/dependencies.html#manage-nugets) in the VL documentation. As described there you go to the commandline and then type:
+## Getting started
+Install as [described here](https://thegraybook.vvvv.org/reference/hde/managing-nugets.html) via commandline:
 
-    nuget install VL.Devices.LeapOrion
+    nuget install VL.Devices.Ultraleap
 
-Once the VL.Devices.LeapOrion nuget is installed and referenced in your VL document you'll see the category "LeapOrion" under "Devices" in the nodebrowser. 
+Usage examples and more information are included in the package and can be found via the [Help Browser](https://thegraybook.vvvv.org/reference/hde/findinghelp.html)
 
-Demos are available via the Help Browser!
+### Credits
+
+* Based on Ultraleap's [LeapCSharp](https://github.com/ultraleap/UnityPlugin/tree/develop/Packages/Tracking/Core/Runtime/Plugins/LeapCSharp) ([see fork](https://github.com/vvvv/UnityPlugin/tree/develop-vvvv)).
+* Update to the Gemini drivers thanks to @bj-rn
+
+### Sponsoring
+Development of this library was partially sponsored by:  
+* [AVMS](https://www.avms-germany.de/)
+* [Christine Mayerhofer](https://christinemayerhofer.de/)

@@ -1,0 +1,3 @@
+[submodule "UnityPlugin"]
+	path = UnityPlugin
+	url = https://github.com/vvvv/UnityPlugin.git
