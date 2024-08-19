@@ -34,8 +34,8 @@
             <Pin Id="GSkvLSUoccXNxNyRdA5RcZ" Name="Tracking Mode" Kind="OutputPin" />
             <Pin Id="S856qY7aaGSNAoxVWD7XlJ" Name="Tracking Mode Changed" Kind="OutputPin" />
           </Node>
-          <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="603,389,40,19" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="655,352,40,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="603,419,40,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="655,382,40,19" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="421,2288,165,19" Id="RT0EhwaRL0uOW1j4DidgSI">
             <p:NodeReference LastCategoryFullName="Graphics.Skia" LastDependency="VL.Skia.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -76,7 +76,7 @@
             <Pin Id="MM3cTGgJhtmL4MKaKcX9FB" Name="Enabled" Kind="InputPin" />
             <Pin Id="VeSkDHqOFdhOiXCHqEC8rs" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="625,444,125,19" Id="TPQ9HRMyreKOl8vaiTGryW">
+          <Node Bounds="625,474,125,19" Id="TPQ9HRMyreKOl8vaiTGryW">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="DeviceInfo" />
@@ -91,7 +91,7 @@
             <Pin Id="B7MGoJSEGBOOsN34R4mgM5" Name="Serial Number" Kind="OutputPin" />
             <Pin Id="Cyp0TBvSrGgL2lEhHDljhj" Name="Type" Kind="OutputPin" />
           </Node>
-          <Node Bounds="550,412,80,19" Id="PFYXYJjFjiQLygwSjccn2j">
+          <Node Bounds="550,442,80,19" Id="PFYXYJjFjiQLygwSjccn2j">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
@@ -101,15 +101,15 @@
             <Pin Id="PUgyR9IvkdKP65N2WMy8Zw" Name="Output" Kind="StateOutputPin" />
             <Pin Id="UNF7dpWC7FwMMilROYz5LS" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="BEDV6BImEIeN7yJefhbWBi" Comment="Range" Bounds="651,573,37,15" ShowValueBox="true" isIOBox="true">
+          <Pad Id="BEDV6BImEIeN7yJefhbWBi" Comment="Range" Bounds="651,603,37,15" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:precision p:Type="Int32">2</p:precision>
               <p:stepsize p:Type="Single">0.01</p:stepsize>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="AQHB9y27OxmQcdUotBvGlK" Comment="Baseline" Bounds="675,547,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="699,527,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,501,84,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="AQHB9y27OxmQcdUotBvGlK" Comment="Baseline" Bounds="675,577,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="699,557,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,531,84,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="495,583,45,19" Id="BnMPB4idUQmPHiKPe9aMpT">
             <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -140,7 +140,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="C9oWKjsTTXiM9iD4gV1zBL" Comment="FOV" Bounds="627,594,35,28" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="C9oWKjsTTXiM9iD4gV1zBL" Comment="FOV" Bounds="627,624,35,28" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="702,853,71,19" Id="N5bcqZCaTBVMSp18R1KdkD">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
@@ -367,7 +367,7 @@
             <Pin Id="FfLYySlkEoZL35BukgNqpX" Name="Enabled" Kind="InputPin" />
             <Pin Id="LvFjq0ve3tJMGp4dTsEe2T" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Pad Id="RlwejqXNJGrQUErEmdcvPF" Comment="Type" Bounds="747,478,122,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RlwejqXNJGrQUErEmdcvPF" Comment="Type" Bounds="747,508,122,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="Igy1OLXXDxEN3yPNtbWhI9" Comment="Tracking Mode" Bounds="499,189,87,15" ShowValueBox="true" isIOBox="true" Value="Desktop">
             <p:TypeAnnotation LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="TypeFlag" Name="TrackingMode" />
@@ -381,8 +381,8 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="CF6a6rF8BsMOmwrUHjIamC" Comment="Tracking Mode" Bounds="708,318,87,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="760,276,35,35" ShowValueBox="true" isIOBox="true">
+          <Pad Id="CF6a6rF8BsMOmwrUHjIamC" Comment="Tracking Mode" Bounds="708,348,87,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="760,306,35,35" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
@@ -541,7 +541,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="V4JLMQJ6raSO3o9luBrOhp" Bounds="772,553,249,65" ShowValueBox="true" isIOBox="true" Value="At least for a 1. gen Leap controller  &quot;Is Streaming&quot; seems to be always false and &quot;Fov&quot; and &quot;Range&quot; return 0.0.">
+          <Pad Id="V4JLMQJ6raSO3o9luBrOhp" Bounds="772,583,249,65" ShowValueBox="true" isIOBox="true" Value="At least for a 1. gen Leap controller  &quot;Is Streaming&quot; seems to be always false and &quot;Fov&quot; and &quot;Range&quot; return 0.0.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -559,7 +559,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="O2jDPRx2YSPNRSwcx1L7vE" Bounds="924,276,266,58" ShowValueBox="true" isIOBox="true" Value="&lt; a policy can be changed by the user at any time (using the Leap Motion settings dialog). ">
+          <Pad Id="O2jDPRx2YSPNRSwcx1L7vE" Bounds="924,306,266,58" ShowValueBox="true" isIOBox="true" Value="&lt; A policy can be changed by the user at any time (using the Leap Motion settings dialog). ">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -713,7 +713,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="OOEIwpY6vctMLT9V5yFP5z" Bounds="108,63,157,19" ShowValueBox="true" isIOBox="true" Value="Requires Leap Gemini V5">
+          <Pad Id="OOEIwpY6vctMLT9V5yFP5z" Bounds="56,77,157,19" ShowValueBox="true" isIOBox="true" Value="Requires Leap Gemini V5">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -722,13 +722,22 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FxcUGl3sgDdM29BFSNcx6O" Bounds="108,88,305,19" ShowValueBox="true" isIOBox="true" Value="https://leap2.ultraleap.com/downloads/">
+          <Pad Id="FxcUGl3sgDdM29BFSNcx6O" Bounds="56,102,305,19" ShowValueBox="true" isIOBox="true" Value="https://leap2.ultraleap.com/downloads/">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="FU94MlPqsvuOp8XxI7SsBr" Bounds="853,196,267,75" ShowValueBox="true" isIOBox="true" Value="&lt; In case you're using multiple Ultraleap nodes, they share a connection to the driver. Therefore disabling one, will make you loose connections to all of them!">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
