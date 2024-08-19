@@ -18,6 +18,7 @@ jobs:
     - name: Git Checkout
       uses: actions/checkout@main
       with:
+        submodules: 'true'
         lfs: 'true'
     
     - name: Setup MSBuild.exe
