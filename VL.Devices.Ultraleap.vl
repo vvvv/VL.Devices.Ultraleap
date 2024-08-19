@@ -102,7 +102,7 @@
             <Choice Kind="TypeFlag" Name="Arm" />
           </p:TypeAnnotation>
           <Patch Id="KOrLGRZstKeLrnHH7LYcOd">
-            <Canvas Id="K5Ab0XpHFZqMoWjPSiSSrY" BordersChecked="false" CanvasType="Group" />
+            <Canvas Id="K5Ab0XpHFZqMoWjPSiSSrY" CanvasType="Group" />
             <ProcessDefinition Id="CxY76re5WZsLy0iZz9S89Q" IsHidden="true" />
           </Patch>
         </Node>
@@ -111,7 +111,7 @@
     ************************ Bone ************************
 
 -->
-        <Node Name="Bone" Bounds="620,227" Id="TIRs7LYpjhfNsQrIfG3yhl">
+        <Node Name="Bone" Bounds="622,193" Id="TIRs7LYpjhfNsQrIfG3yhl">
           <p:NodeReference>
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <CategoryReference Kind="Category" Name="Primitive" />
@@ -172,7 +172,7 @@
     ************************ Frame ************************
 
 -->
-        <Node Name="Frame" Bounds="620,425" Id="RIieRbD4NkRN1JWhE2FFzp">
+        <Node Name="Frame" Bounds="626,275" Id="RIieRbD4NkRN1JWhE2FFzp">
           <p:NodeReference>
             <Choice Kind="ForwardDefinition" Name="Forward" />
             <CategoryReference Kind="Category" Name="Primitive" />
@@ -181,7 +181,7 @@
             <Choice Kind="TypeFlag" Name="Frame" />
           </p:TypeAnnotation>
           <Patch Id="EGuvWaH2LS6M6yawwFFZme">
-            <Canvas Id="MYuN6oxzdWDODEFV6um29I" BordersChecked="false" CanvasType="Group" />
+            <Canvas Id="MYuN6oxzdWDODEFV6um29I" CanvasType="Group" />
             <ProcessDefinition Id="UXT4obySbr7OAaoKr1N3pN" IsHidden="true" />
           </Patch>
         </Node>
@@ -2386,29 +2386,29 @@
     ************************ Split ************************
 
 -->
-            <Node Name="Split" Bounds="115,432,1726,210" Id="RfNZQCreA23OhGAtOzo4ML">
+            <Node Name="Split" Bounds="113,299,1726,210" Id="RfNZQCreA23OhGAtOzo4ML">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="builtin">
                 <Choice Kind="OperationDefinition" Name="Operation" />
               </p:NodeReference>
               <p:HideCategory p:Type="Boolean">false</p:HideCategory>
               <Patch Id="KXqY2iHQWb7LeuICag7mrR" ManuallySortedPins="true">
-                <ControlPoint Id="LtsrlZ8McszMdU1lkDnHYK" Bounds="129,450" />
+                <ControlPoint Id="LtsrlZ8McszMdU1lkDnHYK" Bounds="127,317" />
                 <Link Id="H1wzirFo7G1OkFnvHez9s8" Ids="RS4ZzvxrN5uOJUhqwpJnBC,LtsrlZ8McszMdU1lkDnHYK" IsHidden="true" />
-                <ControlPoint Id="GLdjA8egsC8MaZKiFYj8PJ" Bounds="242,539" />
+                <ControlPoint Id="GLdjA8egsC8MaZKiFYj8PJ" Bounds="240,406" />
                 <Link Id="HMyTQLUalRCPPFdvmGOVIq" Ids="GLdjA8egsC8MaZKiFYj8PJ,TDIkIfVh3lPQWJZ2ExhQLN" IsHidden="true" />
-                <ControlPoint Id="PKq35fBoXduOtDs0qWMOcR" Bounds="357,539" />
+                <ControlPoint Id="PKq35fBoXduOtDs0qWMOcR" Bounds="355,406" />
                 <Link Id="BQRIoZH86tHMMtpj64LPXo" Ids="PKq35fBoXduOtDs0qWMOcR,NbiKqqfvH7vPXzan9tRJmY" IsHidden="true" />
-                <ControlPoint Id="VCUBSib6ltxMNhTMJBfAx9" Bounds="969,539" />
+                <ControlPoint Id="VCUBSib6ltxMNhTMJBfAx9" Bounds="967,406" />
                 <Link Id="JjqD9YtaPRnMJE94nV9LSG" Ids="VCUBSib6ltxMNhTMJBfAx9,C8fLt1qeRJNQCwqINmeyuI" IsHidden="true" />
-                <ControlPoint Id="RZGgAFliv5YM0akamda9ZO" Bounds="847,539" />
+                <ControlPoint Id="RZGgAFliv5YM0akamda9ZO" Bounds="845,406" />
                 <Link Id="LpyJGakiyrlLfn6jpe9P1W" Ids="RZGgAFliv5YM0akamda9ZO,KNNhQ7QB23NOVOGXXiOm09" IsHidden="true" />
-                <ControlPoint Id="J214kZdlGTOLyco61NZ6HI" Bounds="747,539" />
+                <ControlPoint Id="J214kZdlGTOLyco61NZ6HI" Bounds="745,406" />
                 <Link Id="FPCm9i5jjVwMcokbfFWGge" Ids="J214kZdlGTOLyco61NZ6HI,C2TNC9wz28nOCIatyo3YUX" IsHidden="true" />
-                <ControlPoint Id="VnaDWIbN8xxNRcIwIoox5X" Bounds="618,568" />
+                <ControlPoint Id="VnaDWIbN8xxNRcIwIoox5X" Bounds="616,435" />
                 <Link Id="It4FRmhBaT6NWZkjI8e6i6" Ids="VnaDWIbN8xxNRcIwIoox5X,GN2blU6QfOLQTJhg8D4U6F" IsHidden="true" />
-                <ControlPoint Id="NUQ7pt7cUIdMRtaC3IwmTl" Bounds="601,625" />
+                <ControlPoint Id="NUQ7pt7cUIdMRtaC3IwmTl" Bounds="599,492" />
                 <Link Id="CIrSECxWCM2MyHEYDYzshO" Ids="NUQ7pt7cUIdMRtaC3IwmTl,Fzrs4k6z0UbN8QdQEGxB9d" IsHidden="true" />
-                <ControlPoint Id="JucFE8a9oH9OPkTOx5whYz" Bounds="163,539" />
+                <ControlPoint Id="JucFE8a9oH9OPkTOx5whYz" Bounds="161,406" />
                 <Link Id="MNVppo6Ar2iL2Xv7RgBKNn" Ids="JucFE8a9oH9OPkTOx5whYz,JWoIao5PHbJMK858l3bzSM" IsHidden="true" />
                 <Pin Id="JWoIao5PHbJMK858l3bzSM" Name="ID" Kind="OutputPin" Bounds="357,1312" />
                 <Pin Id="TDIkIfVh3lPQWJZ2ExhQLN" Name="Is Left" Kind="OutputPin" Bounds="-20,1722" />
@@ -2418,7 +2418,7 @@
                 <Pin Id="C2TNC9wz28nOCIatyo3YUX" Name="Palm Position" Kind="OutputPin" Bounds="378,1304" />
                 <Pin Id="KNNhQ7QB23NOVOGXXiOm09" Name="Palm Width" Kind="OutputPin" Bounds="-6,1471" />
                 <Pin Id="RS4ZzvxrN5uOJUhqwpJnBC" Name="Input" Kind="InputPin" Bounds="329,1109" />
-                <Node Bounds="127,482,39,26" Id="RDVmQDkEjxYLORX9GK6mgU">
+                <Node Bounds="125,349,39,26" Id="RDVmQDkEjxYLORX9GK6mgU">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2428,7 +2428,7 @@
                   <Pin Id="FoZmCkDbPwZLZwfe6ha7Xe" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="HD106yuvHzmLHrJX1LwKgQ" Name="Id" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="676,482,74,26" Id="RDyeEEJVCsrPcNm0GeuPUR">
+                <Node Bounds="674,349,74,26" Id="RDyeEEJVCsrPcNm0GeuPUR">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2438,7 +2438,7 @@
                   <Pin Id="VgpDzR1wy8LOvHgAOdQDYx" Name="Output" Kind="OutputPin" />
                   <Pin Id="CDkvqJgozL5NolZXBAFcpl" Name="Palm Position" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="481,482,49,26" Id="ITUUfio6q3XP1797FZ2HhA">
+                <Node Bounds="479,349,49,26" Id="ITUUfio6q3XP1797FZ2HhA">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2448,7 +2448,7 @@
                   <Pin Id="JwnFbP9Vc3DQO4v3Osasjf" Name="Output" Kind="OutputPin" />
                   <Pin Id="QVXY7VMJSWbPaj7aWwWwDu" Name="Arm" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="525,580,79,26" Id="CGMcC3g2t0ONHEvxDEmDBe">
+                <Node Bounds="523,447,79,26" Id="CGMcC3g2t0ONHEvxDEmDBe">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Arm" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Arm" />
@@ -2458,7 +2458,7 @@
                   <Pin Id="FDhWZ8ou2fiQb3YmyQLMmj" Name="Output" Kind="OutputPin" />
                   <Pin Id="MtwO89ZfDNlNl9Ii4dvUZg" Name="Elbow Position" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="525,517,96,26" Id="Rjxwh9x2yKaLksd8sTygKH">
+                <Node Bounds="523,384,96,26" Id="Rjxwh9x2yKaLksd8sTygKH">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Arm" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Arm" />
@@ -2468,7 +2468,7 @@
                   <Pin Id="Qrbe3ZQOtmuLTI3lFroXU1" Name="Output" Kind="OutputPin" />
                   <Pin Id="G0X8aDccigFMcuCgyLPYA2" Name="Wrist Position" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="901,482,71,26" Id="DJkIeCHhY2sQBkS8scfUzJ">
+                <Node Bounds="899,349,71,26" Id="DJkIeCHhY2sQBkS8scfUzJ">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="PalmNormal" />
@@ -2478,7 +2478,7 @@
                   <Pin Id="OON7o1CsWyxOIyKdtIuIgK" Name="Output" Kind="OutputPin" />
                   <Pin Id="L5FI7dMJoEbO57W6zLb01a" Name="Palm Normal" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="288,482,72,26" Id="QnWBLA03DrPOY3ewIdeokc">
+                <Node Bounds="286,349,72,26" Id="QnWBLA03DrPOY3ewIdeokc">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2488,7 +2488,7 @@
                   <Pin Id="OUstcURvYNpMbRz9440Fzn" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="B6JDdsBjODiNAL7dixjIEx" Name="Confidence" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="199,482,46,26" Id="AmWvTAfH2zbLPNUBUvb4RY">
+                <Node Bounds="197,349,46,26" Id="AmWvTAfH2zbLPNUBUvb4RY">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2498,7 +2498,7 @@
                   <Pin Id="Ve4IMXcBKBKL0W7TNOyn3W" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="DvvnkxWDWBPODpViq15Pzt" Name="Is Left" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="786,482,64,26" Id="UajZPAMJcloO223Q7JewIZ">
+                <Node Bounds="784,349,64,26" Id="UajZPAMJcloO223Q7JewIZ">
                   <p:NodeReference LastCategoryFullName="Devices.LeapOrion.Hand" LastDependency="VL.Devices.LeapOrion.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="PalmWidth" />
@@ -2516,18 +2516,18 @@
                 <Link Id="EVtLppDcN2INE3nkqZjzHi" Ids="CDkvqJgozL5NolZXBAFcpl,J214kZdlGTOLyco61NZ6HI" />
                 <Link Id="IJevDVOAeJmPS7iT6PpvKs" Ids="G0X8aDccigFMcuCgyLPYA2,VnaDWIbN8xxNRcIwIoox5X" />
                 <Link Id="RmSlcmN7GKFQD9h239UlaQ" Ids="MtwO89ZfDNlNl9Ii4dvUZg,NUQ7pt7cUIdMRtaC3IwmTl" />
-                <Node Bounds="1373,482,50,26" Id="CORw2p510dkOFAe5x469mc">
+                <Node Bounds="1371,349,50,26" Id="CORw2p510dkOFAe5x469mc">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
-                    <Choice Kind="OperationCallFlag" Name="fingers" />
+                    <Choice Kind="OperationCallFlag" Name="Fingers" />
                   </p:NodeReference>
                   <Pin Id="CkhAAamiw7zPOdVFBzjK8D" Name="Input" Kind="StateInputPin" />
                   <Pin Id="UlLb55IxHGfOnGgw0VVI2P" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="LvVAluxQj0bMbQ3ENVrKgM" Name="Fingers" Kind="OutputPin" />
                 </Node>
                 <Link Id="CGOn6IS0hRlPsCdFI4zUQ2" Ids="LtsrlZ8McszMdU1lkDnHYK,DmF68HYwNMLMvaZJlV6ME9" />
-                <Node Bounds="1418,530,83,26" Id="VXPUqTznmv4LsJuGEPLqtl">
+                <Node Bounds="1416,397,83,26" Id="VXPUqTznmv4LsJuGEPLqtl">
                   <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
@@ -2537,12 +2537,12 @@
                   <Pin Id="J9Il6E8bxt5NFfNxeDT5Ua" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Link Id="HshsSHn5dSpLlfDVp5YU1p" Ids="LvVAluxQj0bMbQ3ENVrKgM,OROvSfxqyS8LjP25OHu2gW" />
-                <ControlPoint Id="M0jVSOknie6MNs377p1Vhq" Bounds="1420,592" />
+                <ControlPoint Id="M0jVSOknie6MNs377p1Vhq" Bounds="1418,459" />
                 <Link Id="F3bGE0drOx8NSGob69ZDmJ" Ids="J9Il6E8bxt5NFfNxeDT5Ua,M0jVSOknie6MNs377p1Vhq" />
                 <Pin Id="C8fLt1qeRJNQCwqINmeyuI" Name="Palm Normal" Kind="OutputPin" Bounds="26,1636" />
                 <Pin Id="PrWxKvE1AnXMgXYnrtYwTp" Name="Palm Velocity" Kind="OutputPin" />
                 <Link Id="KWSWqxD2bg7MsFIYVZCxwH" Ids="C70v7Mif2bCMkmW3kv5bel,PrWxKvE1AnXMgXYnrtYwTp" IsHidden="true" />
-                <Node Bounds="1676,482,79,26" Id="Tj7O0r6msCQQArbxJbjwUk">
+                <Node Bounds="1674,349,79,26" Id="Tj7O0r6msCQQArbxJbjwUk">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="PinchStrength" />
@@ -2551,7 +2551,7 @@
                   <Pin Id="I44Hz92QiBCLiqlwdeFtic" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="BmKUVj0UtdINv1eEGg3vzo" Name="Pinch Strength" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="1557,482,80,26" Id="G87VwXNday7N6m7TQUVz56">
+                <Node Bounds="1555,349,80,26" Id="G87VwXNday7N6m7TQUVz56">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="PinchDistance" />
@@ -2560,11 +2560,11 @@
                   <Pin Id="RIMMBwTEg3oNShrfyQKf1c" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="GLzqRxuuYFaNzD5sLoo8YE" Name="Pinch Distance" Kind="OutputPin" />
                 </Node>
-                <ControlPoint Id="F20Surn4UEzQPebmXzF62L" Bounds="1752,539" />
+                <ControlPoint Id="F20Surn4UEzQPebmXzF62L" Bounds="1750,406" />
                 <Link Id="Kdd2AdfBhCENq7661BJaxA" Ids="BmKUVj0UtdINv1eEGg3vzo,F20Surn4UEzQPebmXzF62L" />
                 <Pin Id="JYOajSozIkCLB0tSnaDHS4" Name="Grab Strength" Kind="OutputPin" />
                 <Link Id="FDGCfTdXnRbNswOCCGKRDi" Ids="QU4sfqMgRDLNQ8hdhul1yc,JYOajSozIkCLB0tSnaDHS4" IsHidden="true" />
-                <Node Bounds="1036,482,74,26" Id="A0FG0rN2VVcN5mPHCIQp1t">
+                <Node Bounds="1034,349,74,26" Id="A0FG0rN2VVcN5mPHCIQp1t">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="PalmVelocity" />
@@ -2573,11 +2573,11 @@
                   <Pin Id="UJnE5A5iyLWPqI20ibjuE6" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="Ilvw0CK0WNKMc4uKykgcQx" Name="Palm Velocity" Kind="OutputPin" />
                 </Node>
-                <ControlPoint Id="C70v7Mif2bCMkmW3kv5bel" Bounds="1107,539" />
+                <ControlPoint Id="C70v7Mif2bCMkmW3kv5bel" Bounds="1105,406" />
                 <Link Id="DTBJJ0v22goNFE7mmctSnu" Ids="Ilvw0CK0WNKMc4uKykgcQx,C70v7Mif2bCMkmW3kv5bel" />
                 <Pin Id="O9P7uiA1C6XLV9wHhgLwoP" Name="Fingers" Kind="OutputPin" />
                 <Link Id="Ol2IGKlYRRVN0JwfXgAARO" Ids="M0jVSOknie6MNs377p1Vhq,O9P7uiA1C6XLV9wHhgLwoP" IsHidden="true" />
-                <Node Bounds="1207,482,77,26" Id="IVN4SzVsxGAQChLeoVBPQc">
+                <Node Bounds="1205,349,77,26" Id="IVN4SzVsxGAQChLeoVBPQc">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <CategoryReference Kind="ClassType" Name="Hand" />
@@ -2587,11 +2587,11 @@
                   <Pin Id="JKvAZGg2dACMKFypYhXAzL" Name="Output" Kind="StateOutputPin" />
                   <Pin Id="PUJFUt2Np9JPtFays2GCS8" Name="Grab Strength" Kind="OutputPin" />
                 </Node>
-                <ControlPoint Id="QU4sfqMgRDLNQ8hdhul1yc" Bounds="1281,539" />
+                <ControlPoint Id="QU4sfqMgRDLNQ8hdhul1yc" Bounds="1279,406" />
                 <Link Id="SxkzTCfEusZMK8NRUdndu2" Ids="PUJFUt2Np9JPtFays2GCS8,QU4sfqMgRDLNQ8hdhul1yc" />
                 <Pin Id="FWGODbtI2zjQJP3tRVooEa" Name="Pinch Strength" Kind="OutputPin" />
                 <Link Id="CxR0feVkYj6MKOThwuHJiJ" Ids="F20Surn4UEzQPebmXzF62L,FWGODbtI2zjQJP3tRVooEa" IsHidden="true" />
-                <ControlPoint Id="Ju4DVLWSbCqMIFGLkS51Jw" Bounds="1634,539" />
+                <ControlPoint Id="Ju4DVLWSbCqMIFGLkS51Jw" Bounds="1632,406" />
                 <Link Id="SqHBnsFLjQgLLMhlC0Yckr" Ids="GLzqRxuuYFaNzD5sLoo8YE,Ju4DVLWSbCqMIFGLkS51Jw" />
                 <Pin Id="VyAIDCK8RX5OYRkOUzIN3x" Name="Pinch Distance" Kind="OutputPin" />
                 <Link Id="PnfMyyg7q2nMTrRekwQBFZ" Ids="Ju4DVLWSbCqMIFGLkS51Jw,VyAIDCK8RX5OYRkOUzIN3x" IsHidden="true" />
@@ -2610,10 +2610,118 @@
                 <Link Id="Gh3z7OObDPRMbuTdcTkO7o" Ids="RIMMBwTEg3oNShrfyQKf1c,VNKPqqBbrXZOA6cQmPR3bW" />
               </Patch>
             </Node>
+            <!--
+
+    ************************ fingers (Hidden) ************************
+
+-->
+            <Node Name="fingers (Hidden)" Bounds="123,586,116,80" Id="JvuuwTjCLN1LUTGCeDDGl6">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="JldkDZKHuzqNxnOjPCZZE6">
+                <Node Bounds="139,615,48,26" AutoConnect="true" Id="AMoDJ68pqfeNKzEFn5JUXd">
+                  <p:NodeReference LastCategoryFullName="Leap.Hand" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="fingers" />
+                    <FullNameCategoryReference ID="Leap.Hand" />
+                  </p:NodeReference>
+                  <Pin Id="HBPkjSF7SMfLSk9n61eBqC" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="BNkHywe2wmoPuwpccR2m8j" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="HT3hxlO1HDfQBo4RkbP7H7" Name="Fingers" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Q180uE93vvMLa5xxzTads1" Name="Input" Kind="InputPin" />
+                <Pin Id="SIkYjSpot84OuY6TXd1hM3" Name="Output" Kind="OutputPin" />
+                <Pin Id="HTOuc3IYRt6PbrIvKyCglN" Name="Fingers" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Setfingers (Hidden) ************************
+
+-->
+            <Node Name="Setfingers (Hidden)" Bounds="304,590,112,80" Id="SfVc7sREfXJMy5vFLtMWow">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="SGfCjOOHxolNGi9yZvCPgS">
+                <Node Bounds="316,619,62,26" AutoConnect="true" Id="GofvznM095LM4fBAs19XwV">
+                  <p:NodeReference LastCategoryFullName="Leap.Hand" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="Setfingers" />
+                    <FullNameCategoryReference ID="Leap.Hand" />
+                  </p:NodeReference>
+                  <Pin Id="DPCaKgUMxRFNyRVjrduFlB" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="T9r1ziZTiTqPINjpuBPApN" Name="Value" Kind="InputPin" />
+                  <Pin Id="ED4MPhgBg2WN0OTw0W1som" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="LWvTilX1GALMpi2aNIlzUu" Name="Input" Kind="InputPin" />
+                <Pin Id="BMDCIek54wOLai2LVjytyv" Name="Value" Kind="InputPin" />
+                <Pin Id="MLRaM1wAQPDMCqJ3xX03Wk" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Fingers ************************
+
+-->
+            <Node Name="Fingers" Bounds="130,747,116,80" Id="Cp9JapwIykqOWmpTjXziUQ">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="IHO0BkqDwVmNueX4z2neTw">
+                <Node Bounds="146,776,48,26" AutoConnect="true" Id="LQxdiUsLp0pP3OwYqKgrml">
+                  <p:NodeReference LastCategoryFullName="Leap.Hand" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="fingers" />
+                    <FullNameCategoryReference ID="Leap.Hand" />
+                  </p:NodeReference>
+                  <Pin Id="BpteQTSN4QzPaycOG8BOS1" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="HcpVvk8Kn75OtALlukuhN3" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="G9Dvk9hBwGwOHZ4q5FAXMK" Name="Fingers" Kind="OutputPin" />
+                </Node>
+                <Pin Id="AdhGu6WC0UPPmjrZTgBSff" Name="Input" Kind="InputPin" />
+                <Pin Id="A5RIMM774Y7N21PLfcGYTR" Name="Output" Kind="OutputPin" />
+                <Pin Id="LYaoVtTJOKcMnjvlWBIKGQ" Name="Fingers" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ SetFingers ************************
+
+-->
+            <Node Name="SetFingers" Bounds="311,751,112,80" Id="OngeUB6JaTNPqjOEXcZKU8">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Mh7ohNC8bxfQDE32oYdXOe">
+                <Node Bounds="323,780,62,26" AutoConnect="true" Id="UjKfepd06FWPapnBzzUKGc">
+                  <p:NodeReference LastCategoryFullName="Leap.Hand" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="Setfingers" />
+                    <FullNameCategoryReference ID="Leap.Hand" />
+                  </p:NodeReference>
+                  <Pin Id="MsgcXcI8tsFNkhLRXAaGNW" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Hs7oSJ6CIZtPeiZbMi9ICN" Name="Value" Kind="InputPin" />
+                  <Pin Id="Mp6FlYGEQQtPRy63n4Ym4j" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="JTEkgSre89QPgKNuY4ZXMR" Name="Input" Kind="InputPin" />
+                <Pin Id="QSbnlypYdKdQM6k7XAKJ80" Name="Value" Kind="InputPin" />
+                <Pin Id="H787Kc9MPprPa90leVcNyZ" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
           </Canvas>
           <ProcessDefinition Id="C2miZXgC0JBNauK8q8d6Bf" IsHidden="true">
             <Fragment Id="SvwQrsOdgCPQKIVHoVZAM4" Patch="TXdBUk2hl7OPAUPRVRrK7g" Enabled="true" />
             <Fragment Id="VaFdwUk9Y36MXBNzNRAV0c" Patch="RfNZQCreA23OhGAtOzo4ML" />
+            <Fragment Id="JLm645OXvjIM647W9UND5r" Patch="JvuuwTjCLN1LUTGCeDDGl6" />
+            <Fragment Id="RZST3oJrpZZLCQTyXBHuPf" Patch="SfVc7sREfXJMy5vFLtMWow" />
+            <Fragment Id="CSugvl1SJFLQQgogFK2dec" Patch="Cp9JapwIykqOWmpTjXziUQ" />
+            <Fragment Id="BYjsXTkueK6MoIhtv0d6RT" Patch="OngeUB6JaTNPqjOEXcZKU8" />
           </ProcessDefinition>
         </Patch>
       </Node>
@@ -4057,7 +4165,7 @@
                     <Patch Id="BV0qHcOlNIkOZQlGXksO68" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="QWayLcldDbQOzlpcK1p3k3" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="Qbz0EdKirj4M2Dc2EtNTxZ" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="179,569,45,19" Id="JADrmCENzYVNMmTzpic0qU">
+                    <Node Bounds="179,569,45,26" Id="JADrmCENzYVNMmTzpic0qU">
                       <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Finger" LastDependency="VL.Devices.Ultraleap.vl">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="ClassType" Name="Finger" />
@@ -4214,10 +4322,118 @@
                 <Link Id="La5cVftenOMQA8fbTYmgTK" Ids="AsHgcfSYzlAPMNIBuqXAUK,F92mUwEirzSMkYOHlibnXc" IsHidden="true" />
               </Patch>
             </Node>
+            <!--
+
+    ************************ Bones ************************
+
+-->
+            <Node Name="Bones" Bounds="117,922,118,80" Id="FLc521Jb2quOq1S7RErtGI">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="CULfTljk3wZQVHvZoIsKWe">
+                <Node Bounds="135,951,44,26" AutoConnect="true" Id="HRcGIuYoTKKNNpy9dILS5W">
+                  <p:NodeReference LastCategoryFullName="Leap.Finger" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="bones" />
+                    <FullNameCategoryReference ID="Leap.Finger" />
+                  </p:NodeReference>
+                  <Pin Id="Jwf71EkJZ8gPO5983AF9ky" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="C0QG0Ts5SegNS7IYg76gud" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="CbO86Ws1blKPhSBOW1mXam" Name="Bones" Kind="OutputPin" />
+                </Node>
+                <Pin Id="ANYqJaSVCLhMq5i6AknLkT" Name="Input" Kind="InputPin" />
+                <Pin Id="FG36dSruVfvMlQtHYqU3II" Name="Output" Kind="OutputPin" />
+                <Pin Id="NjZQLCPxX10MOgfed8wAFH" Name="Bones" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ bones (Hidden) ************************
+
+-->
+            <Node Name="bones (Hidden)" Bounds="312,920,118,80" Id="PFRPM0Rq7jkNJ0Nab3PWnN">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="P54LcWg7w4JQXGwgDnvpDg">
+                <Node Bounds="330,949,44,26" AutoConnect="true" Id="GUiyCIUjxosQG09xezGqMv">
+                  <p:NodeReference LastCategoryFullName="Leap.Finger" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="bones" />
+                    <FullNameCategoryReference ID="Leap.Finger" />
+                  </p:NodeReference>
+                  <Pin Id="P1LVbz7cxHjMk6RO4AtQ4V" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Ahr8sOwtZtjPEbaxs1XYwQ" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="GIzlowtnStBPulHrUx6ZqL" Name="Bones" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Cqnaq8vhNEuL19sJzNJHoQ" Name="Input" Kind="InputPin" />
+                <Pin Id="JMuWrXlNdlSLkEiCwpXOTf" Name="Output" Kind="OutputPin" />
+                <Pin Id="GmrNVqIF5GcQGUgdIWDO33" Name="Bones" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Setbones (Hidden) ************************
+
+-->
+            <Node Name="Setbones (Hidden)" Bounds="320,1069,112,80" Id="An4nLItjTADPpoOHKaEYGk">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="EA1F90IYxSgNbrmTRNmtsU">
+                <Node Bounds="332,1098,58,26" AutoConnect="true" Id="BQ0wCJlVVQGMz9J07rxljW">
+                  <p:NodeReference LastCategoryFullName="Leap.Finger" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="Setbones" />
+                    <FullNameCategoryReference ID="Leap.Finger" />
+                  </p:NodeReference>
+                  <Pin Id="Ue9NLW9yxXwQGRikwUmzeM" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="TYzHQwwx0vWOBRQmjjolbN" Name="Value" Kind="InputPin" />
+                  <Pin Id="AqB9doLJqOVNQXTktRWCsy" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="FPPYqS0LNgnNAZxA5fzZOi" Name="Input" Kind="InputPin" />
+                <Pin Id="KompQVwrcmXP5aWfIXy9pX" Name="Value" Kind="InputPin" />
+                <Pin Id="SRC8lHAADYNOOaNaR8RfYY" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ SetBones ************************
+
+-->
+            <Node Name="SetBones" Bounds="133,1066,112,80" Id="VIC6lT4qmXGLpeV1ZVDeBe">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="F5J8NpUXx5RNBeG6FLASQH">
+                <Node Bounds="145,1095,58,26" AutoConnect="true" Id="FFpURRcpg6iN9Fd6KJPzUp">
+                  <p:NodeReference LastCategoryFullName="Leap.Finger" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Choice Kind="OperationNode" Name="Setbones" />
+                    <FullNameCategoryReference ID="Leap.Finger" />
+                  </p:NodeReference>
+                  <Pin Id="FuF5YkwWnedLMxhIKw41WD" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="HS8Yn49sfCbL5NoVcAgNTM" Name="Value" Kind="InputPin" />
+                  <Pin Id="GEPzjdq3LroPHHgPMdXazU" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="McMnjDtBXFVNdLW0qpb7Qc" Name="Input" Kind="InputPin" />
+                <Pin Id="UdEK0JXEFtjPjdWqAe92Rj" Name="Value" Kind="InputPin" />
+                <Pin Id="Eytg6eHoGZrLckCFzFqfM5" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
           </Canvas>
           <ProcessDefinition Id="AW3iXkDUr06LT0KUozIyvi" IsHidden="true">
             <Fragment Id="QEVxLPEcXAoOadOYYn5EEp" Patch="IwYB7okk8MPNcvNtoAX9Bg" Enabled="true" />
             <Fragment Id="EdHkeSfSgltNwwPsmHpZsb" Patch="NwaesQKBNzcLI4PhTZEm4r" />
+            <Fragment Id="BKgXtwJRP63Otr9fljes66" Patch="FLc521Jb2quOq1S7RErtGI" />
+            <Fragment Id="Au0nFEqd9qoNjjqvxAlsko" Patch="PFRPM0Rq7jkNJ0Nab3PWnN" />
+            <Fragment Id="LRZbOouNsZKMylHVLgqe7O" Patch="An4nLItjTADPpoOHKaEYGk" />
+            <Fragment Id="ACiyHl9fBiJPIQRdx58tZP" Patch="VIC6lT4qmXGLpeV1ZVDeBe" />
           </ProcessDefinition>
         </Patch>
       </Node>
