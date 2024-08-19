@@ -3,16 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
 
 	 <OutputPath>..\lib\</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="LeapCSharp\**" />
-    <EmbeddedResource Remove="LeapCSharp\**" />
-    <None Remove="LeapCSharp\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="..\UnityPlugin\Packages\Tracking\Core\Runtime\Plugins\LeapCSharp\Arm.cs" Link="Arm.cs" />
