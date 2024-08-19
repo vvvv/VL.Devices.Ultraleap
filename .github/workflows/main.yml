@@ -16,7 +16,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Git Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
       with:
         lfs: 'true'
     
