@@ -1,6 +1,6 @@
 # VL.Devices.Ultraleap
 
-Provides support for [Ultraleap](https://www.ultraleap.com/) devices using their [Gemini hand tracking platform](https://www.ultraleap.com/tracking/gemini-hand-tracking-platform/).
+Provides support for [Ultraleap](https://www.ultraleap.com/) devices. Tested to work with their [Gemini (5.x)](https://www.ultraleap.com/tracking/gemini-hand-tracking-platform/) and [Hyperion (6.x)](https://leap2.ultraleap.com/ultraleap-hyperion/) line of drivers.
 
 For use with vvvv, the visual live-programming environment for .NET: http://visualprogramming.net
 
