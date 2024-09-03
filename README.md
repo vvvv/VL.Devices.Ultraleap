@@ -14,7 +14,7 @@ Usage examples and more information are included in the package and can be found
 ### Credits
 
 * Based on Ultraleap's [LeapCSharp](https://github.com/ultraleap/UnityPlugin/tree/develop/Packages/Tracking/Core/Runtime/Plugins/LeapCSharp) ([see fork](https://github.com/vvvv/UnityPlugin/tree/develop-vvvv)).
-* Update to the Gemini drivers thanks to @bj-rn
+* Update to the Gemini / Hyperion drivers by [bj-rn](https://github.com/bj-rn)
 
 ### Sponsoring
 Development of this library was partially sponsored by:  
