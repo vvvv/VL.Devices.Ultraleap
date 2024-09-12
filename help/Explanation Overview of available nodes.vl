@@ -69,7 +69,7 @@
           </Pad>
           <Pad Id="AQHB9y27OxmQcdUotBvGlK" Comment="Baseline" Bounds="675,577,35,15" ShowValueBox="true" isIOBox="true" />
           <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="699,557,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,531,84,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,531,206,15" ShowValueBox="true" isIOBox="true" />
           <Node Bounds="495,583,45,19" Id="BnMPB4idUQmPHiKPe9aMpT">
             <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
