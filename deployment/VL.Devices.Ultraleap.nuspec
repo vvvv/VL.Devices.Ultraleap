@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.Devices.Ultraleap</id>
-    <version>0.0.2-alpha</version>
+    <version>1.0.0</version>
     <title>VL.Devices.Ultraleap</title>
     <authors>bj-rn, vvvv, ultraleap</authors>
-    <projectUrl>https://github.com/vvvv/VL.Devices.Ultraleap</projectUrl>
+    <repository type="git" url="https://github.com/vvvv/VL.Devices.Ultraleap.git" />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Support for Ultraleap motion controllers in vvvv.</description>
     <tags>VL, vvvv, Ultraleap, gemini, hyperion, leapmotion, leap, motion, tracking, hand, finger</tags>

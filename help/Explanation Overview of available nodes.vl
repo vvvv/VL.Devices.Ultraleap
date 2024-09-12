@@ -632,7 +632,6 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="LNKVBaDDihnQZTQMydku0d" Location="VL.Skia" Version="2024.6.6" />
   <NugetDependency Id="ApWgc1CmjzRPgvIer2oijL" Location="VL.Devices.Ultraleap" Version="0.0.0" />
   <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.6" />
 </Document>
