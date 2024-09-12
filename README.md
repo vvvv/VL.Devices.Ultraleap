@@ -1,6 +1,6 @@
 # VL.Devices.Ultraleap
 
-Provides support for [Ultraleap](https://www.ultraleap.com/) devices using their [Gemini hand tracking platform](https://www.ultraleap.com/tracking/gemini-hand-tracking-platform/).
+Provides support for [Ultraleap](https://www.ultraleap.com/) devices. Tested to work with their [Gemini (5.x)](https://www.ultraleap.com/tracking/gemini-hand-tracking-platform/) and [Hyperion (6.x)](https://leap2.ultraleap.com/ultraleap-hyperion/) line of drivers.
 
 For use with vvvv, the visual live-programming environment for .NET: http://visualprogramming.net
 
@@ -14,7 +14,7 @@ Usage examples and more information are included in the package and can be found
 ### Credits
 
 * Based on Ultraleap's [LeapCSharp](https://github.com/ultraleap/UnityPlugin/tree/develop/Packages/Tracking/Core/Runtime/Plugins/LeapCSharp) ([see fork](https://github.com/vvvv/UnityPlugin/tree/develop-vvvv)).
-* Update to the Gemini drivers thanks to @bj-rn
+* Update to the Gemini / Hyperion drivers by [bj-rn](https://github.com/bj-rn)
 
 ### Sponsoring
 Development of this library was partially sponsored by:  
