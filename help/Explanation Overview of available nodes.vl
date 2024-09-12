@@ -515,7 +515,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="OOEIwpY6vctMLT9V5yFP5z" Bounds="56,77,157,19" ShowValueBox="true" isIOBox="true" Value="Requires Leap Gemini V5">
+          <Pad Id="OOEIwpY6vctMLT9V5yFP5z" Bounds="56,77,353,19" ShowValueBox="true" isIOBox="true" Value="Requires Ultraleap Gemini (5.x) or Hyperion (6.x) drivers:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
