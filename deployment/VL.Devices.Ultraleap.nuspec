@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.Devices.Ultraleap</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>VL.Devices.Ultraleap</title>
     <authors>bj-rn, vvvv, ultraleap</authors>
     <repository type="git" url="https://github.com/vvvv/VL.Devices.Ultraleap.git" />
@@ -13,6 +13,9 @@
     <license type="expression">Apache-2.0</license>
     <icon>icon\nugeticon.png</icon>
     <readme>docs\README.md</readme>
+    <dependencies>
+        <dependency id="VL.Skia3d" version="1.1.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="..\lib\**\*.dll" target="lib\" exclude="" />
