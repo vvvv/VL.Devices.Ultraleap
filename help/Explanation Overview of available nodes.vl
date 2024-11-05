@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.6" Version="0.128">
-  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.7-0220-ge2c006c41f" Version="0.128">
+  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.7-0220-ge2c006c41f" />
   <Patch Id="NHg5NVa32adL18Mo9Az8ZW">
     <Canvas Id="MGL9rOTfYRMMapym9ZgI5D" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="UqQtImCEa6TPypxUEabcs0">
         <Canvas Id="VeHwQKVHINkNp8Hy6w7KqX" CanvasType="Group">
-          <Node Bounds="497,246,266,19" Id="Q3AacWjiYGaOpYYwDIGxb1">
+          <Node Bounds="497,246,316,19" Id="Q3AacWjiYGaOpYYwDIGxb1">
             <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Devices" />
@@ -26,13 +26,16 @@
             <Pin Id="IkXSXkkLPYVLf8WgOmF75S" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="K6jqjsoM114P31sH0bMcIl" Name="Supports Multiple Devices" Kind="InputPin" IsHidden="true" />
             <Pin Id="LkpDcpA7tEbLhQWEqutMAN" Name="Tracking Mode" Kind="InputPin" />
-            <Pin Id="QrRPbHWm2UGO2RtvRjbSWf" Name="Enabled" Kind="InputPin" />
+            <Pin Id="K5UFxIibuzxMR8bzZuHEYP" Name="Hints" Kind="InputPin" />
             <Pin Id="VM6bzr3x04bOg5AMiHBJ9Y" Name="Output" Kind="OutputPin" />
             <Pin Id="NpOsIOzZjdQMCwI7U7wVfX" Name="Devices" Kind="OutputPin" />
             <Pin Id="FCCL3TnzwHlNoViQSSyCn7" Name="Is Connected" Kind="OutputPin" />
             <Pin Id="RurukVWJzpQM9vaKYWTDtE" Name="Is Service Connected" Kind="OutputPin" />
             <Pin Id="GSkvLSUoccXNxNyRdA5RcZ" Name="Tracking Mode" Kind="OutputPin" />
             <Pin Id="S856qY7aaGSNAoxVWD7XlJ" Name="Tracking Mode Changed" Kind="OutputPin" />
+            <Pin Id="OYuq4LvssOIPiJfy48KbcB" Name="Frames" Kind="OutputPin" />
+            <Pin Id="Il0WuXDnbqfP8vp9DTzNIT" Name="Request Hints" Kind="InputPin" />
+            <Pin Id="QrRPbHWm2UGO2RtvRjbSWf" Name="Enabled" Kind="InputPin" />
           </Node>
           <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="603,419,40,19" ShowValueBox="true" isIOBox="true" />
           <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="655,382,40,19" ShowValueBox="true" isIOBox="true" />
@@ -200,7 +203,7 @@
               <Choice Kind="TypeFlag" Name="TrackingMode" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EptruTeJGxaPyskSZ9dzIH" Comment="Enabled" Bounds="760,200,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="EptruTeJGxaPyskSZ9dzIH" Comment="Enabled" Bounds="810,203,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -209,7 +212,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="CF6a6rF8BsMOmwrUHjIamC" Comment="Tracking Mode" Bounds="708,348,87,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="760,306,35,35" ShowValueBox="true" isIOBox="true">
+          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="758,306,35,35" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
@@ -533,7 +536,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FU94MlPqsvuOp8XxI7SsBr" Bounds="853,196,267,75" ShowValueBox="true" isIOBox="true" Value="&lt; In case you're using multiple Ultraleap nodes, they share a connection to the driver. Therefore disabling one, will make you loose connections to all of them!">
+          <Pad Id="FU94MlPqsvuOp8XxI7SsBr" Bounds="907,197,267,75" ShowValueBox="true" isIOBox="true" Value="&lt; In case you're using multiple Ultraleap nodes, they share a connection to the driver. Therefore disabling one, will make you loose connections to all of them!">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -541,6 +544,37 @@
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IinjOlaLDrjLn8HJh5BVuE" Comment="Request Hints" Bounds="707,133,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DupM4PHDlE9MgPcpqiFE7H" Bounds="804,67,491,23" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="C0rQfmuXQYJLVYIp75cBpB" Comment="Hints" Bounds="604,69,152,49" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
+                  <Choice Kind="TypeFlag" Name="Hints" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>FastHandMotion</Item>
+              <Item>UltraPerformanceMode</Item>
+            </p:Value>
           </Pad>
         </Canvas>
         <Patch Id="Tq8vKQfPPrkNuf1H0LeMaO" Name="Create" />
@@ -629,9 +663,11 @@
         <Link Id="RbK1IZhMSkwQHXSWSi0n3g" Ids="V4N9LVNqHx0N0YTKftXfbs,Qv3MWqlLkKTN5uGVEaQ7ku" />
         <Link Id="H5cVEJCBtIpPJ2waKXmMzq" Ids="Vc3XAxOuRNMLN1nSoADFhp,CvMh22RpmbgO7JLPKSEGwW" />
         <Link Id="VwoebFmr4mIORR42ZgV6ll" Ids="V4N9LVNqHx0N0YTKftXfbs,IQbCezLmc6nPagaxGUBcA5" />
+        <Link Id="KNYsFbWeX8VNRqlbAQTID4" Ids="IinjOlaLDrjLn8HJh5BVuE,Il0WuXDnbqfP8vp9DTzNIT" />
+        <Link Id="AVeE9UZticINEfpcvA4fZo" Ids="C0rQfmuXQYJLVYIp75cBpB,K5UFxIibuzxMR8bzZuHEYP" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="ApWgc1CmjzRPgvIer2oijL" Location="VL.Devices.Ultraleap" Version="0.0.0" />
-  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.6" />
+  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.7-0220-ge2c006c41f" />
 </Document>
