@@ -232,7 +232,7 @@
             <Pin Id="NBTeLMeCNxlM4YHlU2q85G" Name="Input" Kind="InputPin" />
             <Pin Id="EemabxSCsL9QdeX0M30ddQ" Name="Camera" Kind="InputPin" />
             <Pin Id="VGkrYm5GWgVPQyFJOBNjku" Name="Enable Default Camera" Kind="InputPin" />
-            <Pin Id="RuPasCKleKlMrI82uLzPmt" Name="Title" Kind="InputPin" />
+            <Pin Id="RuPasCKleKlMrI82uLzPmt" Name="Title" Kind="InputPin" DefaultValue="Ultraleap" />
             <Pin Id="DkdniLSiRiVP0eJS3G6ubZ" Name="Clear Color" Kind="InputPin" />
             <Pin Id="CjznxVYLW8mNHeL7fwyeaY" Name="Clear" Kind="InputPin" />
             <Pin Id="R0e9nJOoSZqPsKBGkJeOdj" Name="Post Effects" Kind="InputPin" />
