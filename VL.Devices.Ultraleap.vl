@@ -1603,7 +1603,7 @@
             <ControlPoint Id="KSjb62Zs4gzM7eXattnTYv" Bounds="1144,987" />
             <Pad Id="C6yEzGjnu8JLb5WZP5hCAu" Bounds="1650,900" />
             <ControlPoint Id="SPJNQcp1KA9QbfxvAy0AgR" Bounds="1248,988" />
-            <Node Bounds="1548,1770,198,280" Id="G7PY3pYJCWWPdDhv6tV3jX">
+            <Node Bounds="1548,1710,198,280" Id="G7PY3pYJCWWPdDhv6tV3jX">
               <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <CategoryReference Kind="Category" Name="Primitive" />
@@ -1613,7 +1613,7 @@
               <Patch Id="QxtmRicq59uLn3nG0eECKa" ManuallySortedPins="true">
                 <Patch Id="HzmeGpz2IiEMYzAprVxH5d" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Ov2zBrxp7qIP9b1FMnZivu" Name="Then" ManuallySortedPins="true" />
-                <Node Bounds="1560,2004,139,26" Id="TbH1RdgbSsXOG1BjbIk9oa">
+                <Node Bounds="1560,1944,139,26" Id="TbH1RdgbSsXOG1BjbIk9oa">
                   <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Controller" LastDependency="VL.Devices.Ultraleap.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="RequestHandTrackingHints" />
@@ -1623,14 +1623,14 @@
                   <Pin Id="GKmh3xgUI4VQHjdzavEWNb" Name="Device" Kind="InputPin" />
                   <Pin Id="DicpEOhleZaMDVst1up32o" Name="Output" Kind="StateOutputPin" />
                 </Node>
-                <Node Bounds="1694,1977,40,19" Id="LE3rrLrUccaOelo5RTg5Bj">
+                <Node Bounds="1694,1917,40,19" Id="LE3rrLrUccaOelo5RTg5Bj">
                   <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="CoreLibBasics.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="NULL" />
                   </p:NodeReference>
                   <Pin Id="FmYhMiAnjwPOCgcMZQ45sJ" Name="Result" Kind="OutputPin" />
                 </Node>
-                <Node Bounds="1615,1790,99,107" Id="C3L3Hi1HBRTOtzBxwGprBh">
+                <Node Bounds="1615,1730,93,81" Id="C3L3Hi1HBRTOtzBxwGprBh">
                   <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
                     <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                     <CategoryReference Kind="Category" Name="Primitive" />
@@ -1641,20 +1641,20 @@
                     <Patch Id="SjbtKfkpKEMM3tOGMJXKDQ" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="OSi104tzdx2Lj3Xi81hYPP" Name="Update" ManuallySortedPins="true" />
                     <Patch Id="JRSxeM2ybKmNgihIJuerYv" Name="Dispose" ManuallySortedPins="true" />
-                    <Node Bounds="1627,1822,75,26" Id="HpsPpyMyJnFPyJzKjwuDgn">
-                      <p:NodeReference LastCategoryFullName="VL.Devices.Ultraleap.EnumExtensions" LastDependency="VL.Devices.Ultraleap.dll">
+                    <Node Bounds="1627,1759,69,19" Id="B1kDwsz7VK0MxZM2C1Rxyi">
+                      <p:NodeReference LastCategoryFullName="VL.Devices.Ultraleap.UltraleapHelper" LastDependency="VL.Devices.Ultraleap.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                        <CategoryReference Kind="AssemblyCategory" Name="EnumExtensions" NeedsToBeDirectParent="true" />
-                        <Choice Kind="OperationCallFlag" Name="Description" />
+                        <CategoryReference Kind="AssemblyCategory" Name="UltraleapHelper" />
+                        <Choice Kind="OperationCallFlag" Name="LookupHint" />
                       </p:NodeReference>
-                      <Pin Id="BxlfD32WYYLOoPr9GWWCCl" Name="Input" Kind="StateInputPin" />
-                      <Pin Id="ME0tVUPyi2RPydxHHEc4Gz" Name="Result" Kind="OutputPin" />
+                      <Pin Id="S1V4tr1I2KTNvD4MoMBrmB" Name="Key" Kind="InputPin" />
+                      <Pin Id="VwhlJUvHpCwPAXBfHKG8ug" Name="Result" Kind="OutputPin" />
                     </Node>
                   </Patch>
-                  <ControlPoint Id="CiWzPHhZeVKOEHUvoYdYEE" Bounds="1629,1796" Alignment="Top" />
-                  <ControlPoint Id="IeHY8d6kVdLNvGfu8CjGTS" Bounds="1629,1891" Alignment="Bottom" />
+                  <ControlPoint Id="CiWzPHhZeVKOEHUvoYdYEE" Bounds="1629,1736" Alignment="Top" />
+                  <ControlPoint Id="IeHY8d6kVdLNvGfu8CjGTS" Bounds="1629,1805" Alignment="Bottom" />
                 </Node>
-                <Node Bounds="1627,1914,91,26" Id="DNGKsZnOYtpMrWzQYfluLc">
+                <Node Bounds="1627,1854,91,26" Id="DNGKsZnOYtpMrWzQYfluLc">
                   <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="OperationCallFlag" Name="GetInternalArray" />
@@ -1673,10 +1673,10 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="N9bQdFnFnDOQJRaGav8B6L" SlotId="OljbjZyXyxaLxX1YRa9bMD" Bounds="1508,1988" />
-            <ControlPoint Id="FAkFeDQ7Aa2OPCoGafVTrr" Bounds="1630,1675" />
+            <Pad Id="N9bQdFnFnDOQJRaGav8B6L" SlotId="OljbjZyXyxaLxX1YRa9bMD" Bounds="1508,1928" />
+            <ControlPoint Id="FAkFeDQ7Aa2OPCoGafVTrr" Bounds="1629,1675" />
             <ControlPoint Id="R9BYqYtg951NDOKQrIZpN4" Bounds="1550,1675" />
-            <Overlay Id="UPVxc98lbOEPSKck8UWER8" Name="RequestHandTrackingHints" Bounds="1400,1616,500,636">
+            <Overlay Id="UPVxc98lbOEPSKck8UWER8" Name="RequestHandTrackingHints" Bounds="1400,1616,500,500">
               <p:ColorIndex p:Type="Int32">2</p:ColorIndex>
             </Overlay>
             <Pad Id="Qx7WPPgQwdpPe93k2elooM" Bounds="1928,1622,527,20" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
@@ -1688,7 +1688,7 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="SAnOLh55xVGP6rJAYlabIY" Bounds="1401,2073,490,64" ShowValueBox="true" isIOBox="true" Value="/// Send a specific set of hints, if this does not include previously set ones, they will be cleared.&#xD;&#xA;/// &lt;/summary&gt;&#xD;&#xA;/// &lt;param name=&quot;hints&quot;&gt;The hints you wish to send&lt;/param&gt;&#xD;&#xA;/// &lt;param name=&quot;device&quot;&gt;An optional specific Device, otherwise the first found will be used&lt;/param&gt;">
+            <Pad Id="SAnOLh55xVGP6rJAYlabIY" Bounds="1401,2013,490,64" ShowValueBox="true" isIOBox="true" Value="/// Send a specific set of hints, if this does not include previously set ones, they will be cleared.&#xD;&#xA;/// &lt;/summary&gt;&#xD;&#xA;/// &lt;param name=&quot;hints&quot;&gt;The hints you wish to send&lt;/param&gt;&#xD;&#xA;/// &lt;param name=&quot;device&quot;&gt;An optional specific Device, otherwise the first found will be used&lt;/param&gt;">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -1870,8 +1870,6 @@
           <Link Id="CooyFcdIAMJNmgsqSppV6R" Ids="N9bQdFnFnDOQJRaGav8B6L,NbwhjY2DaidOKp7YkD7OAS" />
           <Link Id="QExF2rLQ4faPmiKrvliG9A" Ids="DErUOKKFdVGMhf22l58BOL,FAkFeDQ7Aa2OPCoGafVTrr" IsHidden="true" />
           <Link Id="GKKSuYNoQ5qPbDiKG2dJpP" Ids="FAkFeDQ7Aa2OPCoGafVTrr,CiWzPHhZeVKOEHUvoYdYEE" />
-          <Link Id="GS2O2Zzo1diMweuyD4KbYL" Ids="CiWzPHhZeVKOEHUvoYdYEE,BxlfD32WYYLOoPr9GWWCCl" />
-          <Link Id="Vmf3NSgZf19OOpuB98Zbf5" Ids="ME0tVUPyi2RPydxHHEc4Gz,IeHY8d6kVdLNvGfu8CjGTS" />
           <Link Id="VeqdUGXJLl9NHxBRDPEHFh" Ids="IeHY8d6kVdLNvGfu8CjGTS,LIJcZi4F1lsOCkX0QGvw5P" />
           <Link Id="DTfH7GS7cEdO0RsVCKf1fo" Ids="OrXrMZzAcJYMwX8Hfk0naq,T22HfoSz24cK93NkYOIqde" />
           <Link Id="FNXLnhxflnHMlg7aEQmKFo" Ids="R9BYqYtg951NDOKQrIZpN4,Qs6Oo0fuAFKOjfs4kMgHiD" />
@@ -1882,7 +1880,7 @@
                 <Choice Kind="TypeFlag" Name="Spread" />
                 <p:TypeArguments>
                   <TypeReference>
-                    <Choice Kind="TypeFlag" Name="Hints" />
+                    <Choice Kind="TypeFlag" Name="LeapHint" />
                   </TypeReference>
                 </p:TypeArguments>
               </p:TypeAnnotation>
@@ -1899,6 +1897,8 @@
             <Fragment Id="MPmfN7D8vP7OITuAU2Ae3D" Patch="TPooMHAi5qoQXUWqzfD9Gw" />
             <Fragment Id="DL9Ipy1ZwYsNInlEhFCM72" Patch="QzksMHm5Mq0OYpwyfmOssq" />
           </ProcessDefinition>
+          <Link Id="DMVBTa9s7kzO7WjTZ6YJn7" Ids="CiWzPHhZeVKOEHUvoYdYEE,S1V4tr1I2KTNvD4MoMBrmB" />
+          <Link Id="HS9plV2bxw6PKogMb8yLIV" Ids="VwhlJUvHpCwPAXBfHKG8ug,IeHY8d6kVdLNvGfu8CjGTS" />
         </Patch>
       </Node>
       <Canvas Id="T647C29KRunLMkaJErNEwx" Name="Internal" Position="299,127">
@@ -4804,20 +4804,20 @@
       </Node>
       <!--
 
-    ************************ Hints ************************
+    ************************ LeapHint ************************
 
 -->
-      <Node Name="Hints" Bounds="716,227" Id="JCXNOtmDxLrPZBHSmklG6B">
+      <Node Name="LeapHint" Bounds="716,230" Id="Ckg12A2jSj9MVx6z3h3BDi">
         <p:NodeReference>
           <Choice Kind="ForwardRecordDefinition" Name="Immutable Forward" />
           <CategoryReference Kind="Category" Name="Primitive" />
         </p:NodeReference>
         <p:TypeAnnotation LastCategoryFullName="VL.Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.dll">
-          <Choice Kind="TypeFlag" Name="Hints" />
+          <Choice Kind="TypeFlag" Name="LeapHint" />
         </p:TypeAnnotation>
-        <Patch Id="BCjNUBXXAySMttLjhb57D5">
-          <Canvas Id="Dv74ZtsqojXLDiObxbkYDi" BordersChecked="false" CanvasType="Group" />
-          <ProcessDefinition Id="HZUFr0ywdOMQJRHwLO8oFV" IsHidden="true" />
+        <Patch Id="NPY28W6OkqWNCRHBj6VFxi">
+          <Canvas Id="GLZXwMWQ3GfQOJRc3VuV8Q" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="MvFB0hZnRyyMaDU2anXhm0" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
