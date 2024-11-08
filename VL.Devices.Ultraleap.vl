@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="LpW2fgt4vgDN4fpKwkjTsk" LanguageVersion="2024.6.7-0220-ge2c006c41f" Version="0.128">
-  <NugetDependency Id="NOZrMuiEEB6OHOMPkiarhI" Location="VL.CoreLib" Version="2024.6.7-0220-ge2c006c41f" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="LpW2fgt4vgDN4fpKwkjTsk" LanguageVersion="2024.6.7-0228-gd4263f9987" Version="0.128">
+  <NugetDependency Id="NOZrMuiEEB6OHOMPkiarhI" Location="VL.CoreLib" Version="2024.6.7-0228-gd4263f9987" />
   <Patch Id="VtGIXyzx3JUO95lxau4Edy">
     <Canvas Id="VJ0CQ6Ug3OAMaaOp6wlmmK" DefaultCategory="Devices.Ultraleap" CanvasType="FullCategory">
       <Canvas Id="S5G2MY7aGuvOJsFhyPeIqG" Name="Advanced" Position="98,126">
@@ -1664,22 +1664,22 @@
                 </Node>
               </Patch>
             </Node>
-            <Pad Id="OWuSM31x5rUQU2s3uk2w7p" Bounds="1927,1648,1017,1434" ShowValueBox="true" isIOBox="true" Value="Group Hints &#xD;&#xA;&#xD;&#xA;Hints a client may pass to the server to influence hand tracking settings and behaviour.&#xD;&#xA;Some hints will represent an “Axis” (e.g. application type) where values are mutually exclusive. But other hints may not be explicitly on an axis (e.g. user is typing on a virtual keyboard and microgestures) but may not be actually compatible.&#xD;&#xA;Some hints values will only be supported when the hand tracking service has a Hyperion license. These will be indicated in the hint documentation below. (Requests for unlicensed hints will be ignored)&#xD;&#xA;Over time supported hints will be added and removed (unknown values will be ignored). &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;LEAP_HINT_HAND_ON_OBJECT&#xD;&#xA;&#xD;&#xA;    Requested using “hand_on_object”.&#xD;&#xA;    Hand tracking is being used while holding objects (Hyperion license required)&#xD;&#xA;    Optimises hand tracking where hands are occluded by objects being held. Achieves higher performance in these situations at the cost of more general tracking performance e.g. Mixed and Augmented Reality.&#xD;&#xA;    To confirm this hint is available the application can check for the presence of the Hyperion “Hyperion” feature flag.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_MICROGESTURES&#xD;&#xA;&#xD;&#xA;    Requested using “microgestures”.&#xD;&#xA;    Hand tracking is for being used for Microgestures (Hyperion license required)&#xD;&#xA;    Optimises the hand tracking for small, finer movements for user navigation and control.&#xD;&#xA;    To confirm this hint is available the application can check for the presence of the “Hyperion” feature flag.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_FAST_HAND_MOTION&#xD;&#xA;&#xD;&#xA;    Requested using “fast_hand_motion”.&#xD;&#xA;    Tracked hands are expected to be moving quickly.&#xD;&#xA;    The system will optimise for hands that move quickly at the cost of using more resources (CPU, camera bandwidth, memory and power)&#xD;&#xA;&#xD;&#xA;LEAP_HINT_HIGH_HAND_FIDELITY&#xD;&#xA;&#xD;&#xA;    Requested using “high_hand_fidelity”.&#xD;&#xA;    Hand position accuracy is very important.&#xD;&#xA;    Increases the fidelity and responsiveness of hand tracking at the expense of compute resources (CPU, camera bandwidth, memory and power). Attempts to match available system resources will be made, however, callers should take steps to maintain sufficient application resources.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_LOW_RESOURCE_USAGE¶&#xD;&#xA;&#xD;&#xA;    Requested using “low_resource_usage”.&#xD;&#xA;    Minimising resource usage (CPU, camera bandwidth, memory and power) is very important.&#xD;&#xA;    The system will minimise resource usage at the cost of hand tracking quality. Using this hint to avoid OS throttling on a resource-constrained system might produce the best hand tracking experience.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_HIGH_BACKGROUND_ILLUMINATION&#xD;&#xA;&#xD;&#xA;    Requested using “high_background_illumination”.&#xD;&#xA;    Hand tracking is running in an environment with a high level of illumination, for an IR camera system it’s only the IR illumination the is relevant.&#xD;&#xA;    The system will optimise to track hands more reliably in these challenging conditions with a possible costs of latency, CPU and power.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_BALANCED&#xD;&#xA;&#xD;&#xA;    Requested using “balanced”.&#xD;&#xA;    Default tracking where there is no preference set. This mode is enabled on service restart.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_USER_INPUT&#xD;&#xA;&#xD;&#xA;    Requested using “user_input”.&#xD;&#xA;    Optimises hand predictions for user input into menus, keyboards or navigation panels.&#xD;&#xA;&#xD;&#xA;LEAP_HINT_APP_IMMERSIVE&#xD;&#xA;&#xD;&#xA;    Requested using “app_immersive”.&#xD;&#xA;    Application Type Axis: Hand tracking is being used by an immersive application, i.e. VR&#xD;&#xA;&#xD;&#xA;LEAP_HINT_APP_PASSTHROUGH&#xD;&#xA;&#xD;&#xA;    Requested using “app_passthrough”.&#xD;&#xA;    Application Type Axis: Hand tracking is being used by an application using passthrough, i.e. AR&#xD;&#xA;&#xD;&#xA;LEAP_HINT_ULTRA_PERFORMANCE_MODE&#xD;&#xA;&#xD;&#xA;    Requested using “ultra_performance_mode”.&#xD;&#xA;    Hint: Increases the fidelity and responsiveness of hand tracking at the expense of compute resources.&#xD;&#xA;    Attempts to match available system resources may be made However, callers should take steps to maintain sufficient application resources”&#xD;&#xA;">
+            <Pad Id="N9bQdFnFnDOQJRaGav8B6L" SlotId="OljbjZyXyxaLxX1YRa9bMD" Bounds="1508,1928" />
+            <ControlPoint Id="FAkFeDQ7Aa2OPCoGafVTrr" Bounds="1629,1675" />
+            <ControlPoint Id="R9BYqYtg951NDOKQrIZpN4" Bounds="1550,1675" />
+            <Overlay Id="UPVxc98lbOEPSKck8UWER8" Name="RequestHandTrackingHints" Bounds="1400,1616,802,548">
+              <p:ColorIndex p:Type="Int32">2</p:ColorIndex>
+            </Overlay>
+            <Pad Id="SAnOLh55xVGP6rJAYlabIY" Bounds="1401,2013,490,64" ShowValueBox="true" isIOBox="true" Value="/// Send a specific set of hints, if this does not include previously set ones, they will be cleared.&#xD;&#xA;/// &lt;/summary&gt;&#xD;&#xA;/// &lt;param name=&quot;hints&quot;&gt;The hints you wish to send&lt;/param&gt;&#xD;&#xA;/// &lt;param name=&quot;device&quot;&gt;An optional specific Device, otherwise the first found will be used&lt;/param&gt;">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings>
-                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:fontsize p:Type="Int32">7</p:fontsize>
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="N9bQdFnFnDOQJRaGav8B6L" SlotId="OljbjZyXyxaLxX1YRa9bMD" Bounds="1508,1928" />
-            <ControlPoint Id="FAkFeDQ7Aa2OPCoGafVTrr" Bounds="1629,1675" />
-            <ControlPoint Id="R9BYqYtg951NDOKQrIZpN4" Bounds="1550,1675" />
-            <Overlay Id="UPVxc98lbOEPSKck8UWER8" Name="RequestHandTrackingHints" Bounds="1400,1616,500,500">
-              <p:ColorIndex p:Type="Int32">2</p:ColorIndex>
-            </Overlay>
-            <Pad Id="Qx7WPPgQwdpPe93k2elooM" Bounds="1928,1622,527,20" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
+            <Pad Id="REdQDRfoZGiLMysWgouAEy" Bounds="1403,2082,505,26" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
@@ -1688,13 +1688,13 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <Pad Id="SAnOLh55xVGP6rJAYlabIY" Bounds="1401,2013,490,64" ShowValueBox="true" isIOBox="true" Value="/// Send a specific set of hints, if this does not include previously set ones, they will be cleared.&#xD;&#xA;/// &lt;/summary&gt;&#xD;&#xA;/// &lt;param name=&quot;hints&quot;&gt;The hints you wish to send&lt;/param&gt;&#xD;&#xA;/// &lt;param name=&quot;device&quot;&gt;An optional specific Device, otherwise the first found will be used&lt;/param&gt;">
+            <Pad Id="OqTrto8xiLjMX5TQOY1r0m" Bounds="1403,2111,759,22" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/unity-api/class/class_leap_1_1_controller.html?highlight=requesthandtrackinghints#function-Leap.Controller.RequestHandTrackingHints">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
               <p:ValueBoxSettings>
-                <p:fontsize p:Type="Int32">7</p:fontsize>
-                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
           </Canvas>
@@ -1875,7 +1875,7 @@
           <Link Id="FNXLnhxflnHMlg7aEQmKFo" Ids="R9BYqYtg951NDOKQrIZpN4,Qs6Oo0fuAFKOjfs4kMgHiD" />
           <Link Id="PovNZlQy60xL5PmsTcFQOV" Ids="IaC2I5eBReJOSkAXH0wNIQ,R9BYqYtg951NDOKQrIZpN4" IsHidden="true" />
           <Patch Id="LbCmBC8aWhCPPJGsaMC2XS" Name="RequestHandtrackingHints (Internal)" ManuallySortedPins="true">
-            <Pin Id="DErUOKKFdVGMhf22l58BOL" Name="Hints" Kind="InputPin">
+            <Pin Id="DErUOKKFdVGMhf22l58BOL" Name="Hints" Kind="InputPin" Visibility="Optional">
               <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
                 <Choice Kind="TypeFlag" Name="Spread" />
                 <p:TypeArguments>
@@ -1885,7 +1885,7 @@
                 </p:TypeArguments>
               </p:TypeAnnotation>
             </Pin>
-            <Pin Id="IaC2I5eBReJOSkAXH0wNIQ" Name="Request Hints" Kind="InputPin" />
+            <Pin Id="IaC2I5eBReJOSkAXH0wNIQ" Name="Request Hints" Kind="InputPin" Visibility="Optional" />
           </Patch>
           <ProcessDefinition Id="VQ3lpLnDXRWM7Cywoe8P3B" HasStateOut="true">
             <Fragment Id="UqjisjdnJUPNbrDbmuc92b" Patch="SzQ5K2HM2loK9maizjp4oD" Enabled="true" />
@@ -4844,5 +4844,5 @@
     </Node>
   </Patch>
   <PlatformDependency Id="JH6DpUPdYO5OeNwhbnZHfV" Location="./lib/net8.0/VL.Devices.Ultraleap.dll" />
-  <NugetDependency Id="CJViQF51oJqQENZ57bmaYX" Location="VL.Stride" Version="2024.6.7-0220-ge2c006c41f" />
+  <NugetDependency Id="CJViQF51oJqQENZ57bmaYX" Location="VL.Stride" Version="2024.6.7-0228-gd4263f9987" />
 </Document>
