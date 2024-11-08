@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.7-0220-ge2c006c41f" Version="0.128">
-  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.7-0220-ge2c006c41f" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.7-0228-gd4263f9987" Version="0.128">
+  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.7-0228-gd4263f9987" />
   <Patch Id="NHg5NVa32adL18Mo9Az8ZW">
     <Canvas Id="MGL9rOTfYRMMapym9ZgI5D" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -553,7 +553,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="DupM4PHDlE9MgPcpqiFE7H" Bounds="805,214,491,23" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
+          <Pad Id="DupM4PHDlE9MgPcpqiFE7H" Bounds="805,235,491,23" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -562,7 +562,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="F8uk7bzL22gOXE0NC3Pcha" Comment="Hints" Bounds="603,70,152,49" ShowValueBox="true" isIOBox="true">
+          <Pad Id="F8uk7bzL22gOXE0NC3Pcha" Comment="Hints" Bounds="603,175,152,49" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Spread" />
               <p:TypeArguments>
@@ -576,15 +576,6 @@
               <Item>FastHandMotion</Item>
             </p:Value>
           </Pad>
-          <Pad Id="EZrmPiJsDGXLYeMhrlUJ9B" Bounds="805,236,448,22" ShowValueBox="true" isIOBox="true" Value="Inside the Ultraleap node you'll also find a description of the &quot;hints&quot;">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="TypeFlag" Name="String" />
-            </p:TypeAnnotation>
-            <p:ValueBoxSettings>
-              <p:fontsize p:Type="Int32">9</p:fontsize>
-              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
-            </p:ValueBoxSettings>
-          </Pad>
           <Pad Id="CHmik1wkA1wMOG7ssXvOy7" Bounds="819,298,549,19" ShowValueBox="true" isIOBox="true" Value="Send a specific set of hints, if this does not include previously set ones, they will be cleared.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
@@ -594,13 +585,22 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="RQN5FoBicVHPKPv6Hohjs2" Bounds="805,71,622,140" ShowValueBox="true" isIOBox="true" Value="Hints a client may pass to the server to influence hand tracking settings and behaviour.&#xD;&#xA;Some hints will represent an “Axis” (e.g. application type) where values are mutually exclusive. But other hints may not be explicitly on an axis (e.g. user is typing on a virtual keyboard and microgestures) but may not be actually compatible.&#xD;&#xA;Some hints values will only be supported when the hand tracking service has a Hyperion license. These will be indicated in the hint documentation below. (Requests for unlicensed hints will be ignored)&#xD;&#xA;Over time supported hints will be added and removed (unknown values will be ignored). &#xD;&#xA;">
+          <Pad Id="RQN5FoBicVHPKPv6Hohjs2" Bounds="805,176,619,62" ShowValueBox="true" isIOBox="true" Value="Hints a client may pass to the server to influence hand tracking settings and behaviour.&#xD;&#xA;Some hints values will only be supported when the hand tracking service has a Hyperion license.&#xD;&#xA;Some are mutually exclusive. For more info see:">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DNgX8x4xoiPPplOewqd6XC" Bounds="805,264,745,19" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/unity-api/class/class_leap_1_1_controller.html?highlight=requesthandtrackinghints#function-Leap.Controller.RequestHandTrackingHints">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
@@ -696,5 +696,5 @@
     </Node>
   </Patch>
   <NugetDependency Id="ApWgc1CmjzRPgvIer2oijL" Location="VL.Devices.Ultraleap" Version="0.0.0" />
-  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.7-0220-ge2c006c41f" />
+  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.7-0228-gd4263f9987" />
 </Document>
