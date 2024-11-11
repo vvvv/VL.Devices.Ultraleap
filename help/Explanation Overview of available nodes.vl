@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.6" Version="0.128">
-  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.6" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="IyQYxDvQ3t9NSsqc3Otl5L" LanguageVersion="2024.6.7-0228-gd4263f9987" Version="0.128">
+  <NugetDependency Id="ReKkiaX6YtgPDaZ6uNFni3" Location="VL.CoreLib" Version="2024.6.7-0228-gd4263f9987" />
   <Patch Id="NHg5NVa32adL18Mo9Az8ZW">
     <Canvas Id="MGL9rOTfYRMMapym9ZgI5D" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
@@ -15,7 +15,7 @@
       </p:NodeReference>
       <Patch Id="UqQtImCEa6TPypxUEabcs0">
         <Canvas Id="VeHwQKVHINkNp8Hy6w7KqX" CanvasType="Group">
-          <Node Bounds="497,246,266,19" Id="Q3AacWjiYGaOpYYwDIGxb1">
+          <Node Bounds="497,411,316,19" Id="Q3AacWjiYGaOpYYwDIGxb1">
             <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Devices" />
@@ -26,17 +26,20 @@
             <Pin Id="IkXSXkkLPYVLf8WgOmF75S" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="K6jqjsoM114P31sH0bMcIl" Name="Supports Multiple Devices" Kind="InputPin" IsHidden="true" />
             <Pin Id="LkpDcpA7tEbLhQWEqutMAN" Name="Tracking Mode" Kind="InputPin" />
-            <Pin Id="QrRPbHWm2UGO2RtvRjbSWf" Name="Enabled" Kind="InputPin" />
+            <Pin Id="K5UFxIibuzxMR8bzZuHEYP" Name="Hints" Kind="InputPin" />
             <Pin Id="VM6bzr3x04bOg5AMiHBJ9Y" Name="Output" Kind="OutputPin" />
             <Pin Id="NpOsIOzZjdQMCwI7U7wVfX" Name="Devices" Kind="OutputPin" />
             <Pin Id="FCCL3TnzwHlNoViQSSyCn7" Name="Is Connected" Kind="OutputPin" />
             <Pin Id="RurukVWJzpQM9vaKYWTDtE" Name="Is Service Connected" Kind="OutputPin" />
             <Pin Id="GSkvLSUoccXNxNyRdA5RcZ" Name="Tracking Mode" Kind="OutputPin" />
             <Pin Id="S856qY7aaGSNAoxVWD7XlJ" Name="Tracking Mode Changed" Kind="OutputPin" />
+            <Pin Id="OYuq4LvssOIPiJfy48KbcB" Name="Frames" Kind="OutputPin" />
+            <Pin Id="Il0WuXDnbqfP8vp9DTzNIT" Name="Request Hints" Kind="InputPin" />
+            <Pin Id="QrRPbHWm2UGO2RtvRjbSWf" Name="Enabled" Kind="InputPin" />
           </Node>
-          <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="603,419,40,19" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="655,382,40,19" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="625,474,125,19" Id="TPQ9HRMyreKOl8vaiTGryW">
+          <Pad Id="U4LDcDsSYbNODxnG2xNlUl" Comment="Is Connected" Bounds="603,584,40,19" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SWKbD2s9pV7LwbrdMuCTQh" Comment="Is Service Connected" Bounds="655,547,40,19" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="625,639,125,19" Id="TPQ9HRMyreKOl8vaiTGryW">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="DeviceInfo" />
@@ -51,7 +54,7 @@
             <Pin Id="B7MGoJSEGBOOsN34R4mgM5" Name="Serial Number" Kind="OutputPin" />
             <Pin Id="Cyp0TBvSrGgL2lEhHDljhj" Name="Type" Kind="OutputPin" />
           </Node>
-          <Node Bounds="550,442,80,19" Id="PFYXYJjFjiQLygwSjccn2j">
+          <Node Bounds="550,607,80,19" Id="PFYXYJjFjiQLygwSjccn2j">
             <p:NodeReference LastCategoryFullName="Collections.Sequence" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="FirstOrDefault" />
@@ -61,16 +64,16 @@
             <Pin Id="PUgyR9IvkdKP65N2WMy8Zw" Name="Output" Kind="StateOutputPin" />
             <Pin Id="UNF7dpWC7FwMMilROYz5LS" Name="Result" Kind="OutputPin" />
           </Node>
-          <Pad Id="BEDV6BImEIeN7yJefhbWBi" Comment="Range" Bounds="651,603,37,15" ShowValueBox="true" isIOBox="true">
+          <Pad Id="BEDV6BImEIeN7yJefhbWBi" Comment="Range" Bounds="651,768,37,15" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:precision p:Type="Int32">2</p:precision>
               <p:stepsize p:Type="Single">0.01</p:stepsize>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="AQHB9y27OxmQcdUotBvGlK" Comment="Baseline" Bounds="675,577,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="699,557,35,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,531,206,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="495,583,45,19" Id="BnMPB4idUQmPHiKPe9aMpT">
+          <Pad Id="AQHB9y27OxmQcdUotBvGlK" Comment="Baseline" Bounds="675,742,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JOz8rOqphi0NRsEBMSwATc" Comment="Is Streaming" Bounds="699,722,35,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Mj4BChvGiI1OiJmJLb5LbC" Comment="Serial Number" Bounds="723,696,206,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="495,748,45,19" Id="BnMPB4idUQmPHiKPe9aMpT">
             <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Hands" />
@@ -80,7 +83,7 @@
             <Pin Id="VgRlJbwBzAqNok57hmaHMO" Name="Device" Kind="InputPin" />
             <Pin Id="FBI0j93dVRmMwNLbNge869" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="147,583,49,19" Id="P2bqUSFs7n0LsFZyoBW2SP">
+          <Node Bounds="147,748,49,19" Id="P2bqUSFs7n0LsFZyoBW2SP">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Images" />
@@ -91,7 +94,7 @@
             <Pin Id="UDKBH7JHOP2MJIeOW6zvUk" Name="Left Camera" Kind="OutputPin" />
             <Pin Id="JVQAZdPM9EqLeoC9ep3ws3" Name="Right Camera" Kind="OutputPin" />
           </Node>
-          <Pad Id="H2Km9k9qJ5aOMtoFmPzauv" Bounds="265,593,147,75" ShowValueBox="true" isIOBox="true" Value="There are also reactive versions available of these nodes in the Advanced aspect.">
+          <Pad Id="H2Km9k9qJ5aOMtoFmPzauv" Bounds="265,758,147,75" ShowValueBox="true" isIOBox="true" Value="There are also reactive versions available of these nodes in the Advanced aspect.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -100,8 +103,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="C9oWKjsTTXiM9iD4gV1zBL" Comment="FOV" Bounds="627,624,35,28" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="702,853,71,19" Id="N5bcqZCaTBVMSp18R1KdkD">
+          <Pad Id="C9oWKjsTTXiM9iD4gV1zBL" Comment="FOV" Bounds="627,789,35,28" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="702,1018,71,19" Id="N5bcqZCaTBVMSp18R1KdkD">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="SelectHands" />
@@ -111,7 +114,7 @@
             <Pin Id="DLddHsPMDUYQWj4OMvEKCA" Name="Side" Kind="InputPin" />
             <Pin Id="QMqgB6qjiVmM9rNjiecLhR" Name="Hands" Kind="OutputPin" />
           </Node>
-          <Node Bounds="902,844,71,19" Id="D45VrPmKTOtQNeNPPiReul">
+          <Node Bounds="902,1009,71,19" Id="D45VrPmKTOtQNeNPPiReul">
             <p:NodeReference LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="SelectHands (Position)" />
@@ -121,35 +124,35 @@
             <Pin Id="SztNgkW5rpaO6Y0oA5gi8i" Name="Position" Kind="InputPin" />
             <Pin Id="Acj4X0bUzI5NnciH7jdTLF" Name="Hands" Kind="OutputPin" />
           </Node>
-          <Pad Id="UNhW7aKhIdRLoD7E0JbghS" Comment="" Bounds="904,888,170,121" ShowValueBox="true" isIOBox="true">
+          <Pad Id="UNhW7aKhIdRLoD7E0JbghS" Comment="" Bounds="904,1053,170,121" ShowValueBox="true" isIOBox="true">
             <p:Value />
           </Pad>
-          <Pad Id="IPDJcSORMzlNV00GwIU7gM" Comment="Side" Bounds="770,840,52,15" ShowValueBox="true" isIOBox="true" Value="Right">
+          <Pad Id="IPDJcSORMzlNV00GwIU7gM" Comment="Side" Bounds="770,1005,52,15" ShowValueBox="true" isIOBox="true" Value="Right">
             <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="TypeFlag" Name="HandSide" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="LgoOAbgsQLiO9o2Ysg1o0D" Comment="Position" Bounds="970,830,75,15" ShowValueBox="true" isIOBox="true" Value="Frontmost">
+          <Pad Id="LgoOAbgsQLiO9o2Ysg1o0D" Comment="Position" Bounds="970,995,75,15" ShowValueBox="true" isIOBox="true" Value="Frontmost">
             <p:TypeAnnotation LastCategoryFullName="Devices.LeapOrion" LastDependency="VL.Devices.LeapOrion.vl">
               <Choice Kind="TypeFlag" Name="RelativePosition" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="VzKsN8F4zE0Ml8IQBidh8q" Comment="" Bounds="704,888,171,121" ShowValueBox="true" isIOBox="true">
+          <Pad Id="VzKsN8F4zE0Ml8IQBidh8q" Comment="" Bounds="704,1053,171,121" ShowValueBox="true" isIOBox="true">
             <p:Value />
           </Pad>
-          <Node Bounds="483,1260,463,203" Id="APbzUaJBj5pLpvg2fVBn6r">
+          <Node Bounds="483,1425,463,203" Id="APbzUaJBj5pLpvg2fVBn6r">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
               <CategoryReference Kind="Category" Name="Primitive" />
             </p:NodeReference>
             <Pin Id="CLzUMgLIdiqPCrEFCTaHmu" Name="Break" Kind="OutputPin" />
-            <ControlPoint Id="JtSthxjJgh9LfCpF5NDzBL" Bounds="497,1266" Alignment="Top" />
+            <ControlPoint Id="JtSthxjJgh9LfCpF5NDzBL" Bounds="497,1431" Alignment="Top" />
             <Patch Id="HvhlnA63FlTLJFy5gmkR6A" ManuallySortedPins="true">
               <Patch Id="DRo3UUybCQUNC9KMMmniCX" Name="Create" ManuallySortedPins="true" />
               <Patch Id="AuJtF6NdJ4mPono7XinG2d" Name="Update" ManuallySortedPins="true" />
               <Patch Id="N4n1EjmB7otPl45PbZiycQ" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="736,1358,105,19" Id="FFjdpQXa2xzQUMNZ8EAGTI">
+              <Node Bounds="736,1523,105,19" Id="FFjdpQXa2xzQUMNZ8EAGTI">
                 <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Boxhand" />
@@ -163,7 +166,7 @@
                 <Pin Id="IQbCezLmc6nPagaxGUBcA5" Name="Enabled" Kind="InputPin" DefaultValue="False" />
                 <Pin Id="Um77qvY2YUkP5PhrCfKOtH" Name="Output" Kind="OutputPin" />
               </Node>
-              <Node Bounds="639,1358,65,19" Id="ArkhMLGiJPXMVLoYJWb3Ei">
+              <Node Bounds="639,1523,65,19" Id="ArkhMLGiJPXMVLoYJWb3Ei">
                 <p:NodeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Stickhand" />
@@ -175,7 +178,7 @@
                 <Pin Id="GOnQE1ZZWPrO1KMWKRb1aZ" Name="Output" Kind="OutputPin" />
                 <Pin Id="CvMh22RpmbgO7JLPKSEGwW" Name="Enabled" Kind="InputPin" />
               </Node>
-              <Node Bounds="542,1408,392,19" Id="UjhhQ4j75jMOs3hiWPdsRg">
+              <Node Bounds="542,1573,392,19" Id="UjhhQ4j75jMOs3hiWPdsRg">
                 <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true">
@@ -192,15 +195,15 @@
                 <Pin Id="QatDYesllijMdrdcG9dFiH" Name="Output" Kind="StateOutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="VzbYJoASZh3LF0rD4XLH3W" Bounds="544,1457" Alignment="Bottom" />
+            <ControlPoint Id="VzbYJoASZh3LF0rD4XLH3W" Bounds="544,1622" Alignment="Bottom" />
           </Node>
-          <Pad Id="RlwejqXNJGrQUErEmdcvPF" Comment="Type" Bounds="747,508,122,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="Igy1OLXXDxEN3yPNtbWhI9" Comment="Tracking Mode" Bounds="499,189,87,15" ShowValueBox="true" isIOBox="true" Value="Desktop">
+          <Pad Id="RlwejqXNJGrQUErEmdcvPF" Comment="Type" Bounds="747,673,122,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Igy1OLXXDxEN3yPNtbWhI9" Comment="Tracking Mode" Bounds="499,354,87,15" ShowValueBox="true" isIOBox="true" Value="Desktop">
             <p:TypeAnnotation LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
               <Choice Kind="TypeFlag" Name="TrackingMode" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EptruTeJGxaPyskSZ9dzIH" Comment="Enabled" Bounds="760,200,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="EptruTeJGxaPyskSZ9dzIH" Comment="Enabled" Bounds="810,368,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -208,13 +211,13 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="CF6a6rF8BsMOmwrUHjIamC" Comment="Tracking Mode" Bounds="708,348,87,15" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="760,306,35,35" ShowValueBox="true" isIOBox="true">
+          <Pad Id="CF6a6rF8BsMOmwrUHjIamC" Comment="Tracking Mode" Bounds="708,513,87,15" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="LrPEBlz29h5MLbGODw8q4K" Comment="Tracking Mode Changed" Bounds="758,471,35,35" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="474,1689,225,19" Id="SZ9lTrFrBFuOxXOOEKpNya">
+          <Node Bounds="474,1854,225,19" Id="SZ9lTrFrBFuOxXOOEKpNya">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
@@ -229,7 +232,7 @@
             <Pin Id="NBTeLMeCNxlM4YHlU2q85G" Name="Input" Kind="InputPin" />
             <Pin Id="EemabxSCsL9QdeX0M30ddQ" Name="Camera" Kind="InputPin" />
             <Pin Id="VGkrYm5GWgVPQyFJOBNjku" Name="Enable Default Camera" Kind="InputPin" />
-            <Pin Id="RuPasCKleKlMrI82uLzPmt" Name="Title" Kind="InputPin" />
+            <Pin Id="RuPasCKleKlMrI82uLzPmt" Name="Title" Kind="InputPin" DefaultValue="Ultraleap" />
             <Pin Id="DkdniLSiRiVP0eJS3G6ubZ" Name="Clear Color" Kind="InputPin" />
             <Pin Id="CjznxVYLW8mNHeL7fwyeaY" Name="Clear" Kind="InputPin" />
             <Pin Id="R0e9nJOoSZqPsKBGkJeOdj" Name="Post Effects" Kind="InputPin" />
@@ -254,7 +257,7 @@
             <Pin Id="MgOe2N15DT1OLaeVvufqTo" Name="Back Buffer" Kind="OutputPin" IsHidden="true" />
             <Pin Id="Du591YirzxYPCfwg9GOlYQ" Name="Depth Buffer" Kind="OutputPin" IsHidden="true" />
           </Node>
-          <Node Bounds="494,1634,85,19" Id="R3gTnjcLRf7OKDjjRZQj3k">
+          <Node Bounds="494,1799,85,19" Id="R3gTnjcLRf7OKDjjRZQj3k">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true">
@@ -271,7 +274,7 @@
             <Pin Id="VEBet55kMjNOCnovuWcU7g" Name="Enabled" Kind="InputPin" />
             <Pin Id="DNZaKHviEkBMSiO1TgH4fM" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="495,1560,105,19" Id="InlVx62dVhAN3AH4yDsFb0">
+          <Node Bounds="495,1725,105,19" Id="InlVx62dVhAN3AH4yDsFb0">
             <p:NodeReference LastCategoryFullName="Stride.Models" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Models" NeedsToBeDirectParent="true" />
@@ -286,7 +289,7 @@
             <Pin Id="LERc0T9DE9dNY4OXDwVn2U" Name="Radius" Kind="InputPin" />
             <Pin Id="DpQEVRsDVEyLVlrn6rHFB9" Name="Enabled" Kind="InputPin" />
           </Node>
-          <Node Bounds="515,1490,85,19" Id="C4rJkeleagGQKDjF7alVu2">
+          <Node Bounds="515,1655,85,19" Id="C4rJkeleagGQKDjF7alVu2">
             <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Stride" NeedsToBeDirectParent="true">
@@ -301,7 +304,7 @@
             <Pin Id="DJh5zBMgzKsO9ICM299fA8" Name="Enabled" Kind="InputPin" />
             <Pin Id="JBU0kFLGigaMdZRIrrnWyD" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Node Bounds="626,1605,285,19" Id="FQ4KMFz047pMIGcD7ED8Ea">
+          <Node Bounds="626,1770,285,19" Id="FQ4KMFz047pMIGcD7ED8Ea">
             <p:NodeReference LastCategoryFullName="Stride.Cameras" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="OrbitCamera" />
@@ -331,19 +334,19 @@
             <Pin Id="BbnTkTogMF8OfHnckU7DcB" Name="Inverse View" Kind="OutputPin" />
             <Pin Id="IYerU0GOP6QQbIefkiEwCC" Name="Camera Component" Kind="OutputPin" />
           </Node>
-          <Pad Id="EjYYaBX492qMXoxMVpSrf2" Comment="Initial Distance" Bounds="728,1563,35,15" ShowValueBox="true" isIOBox="true" Value="-0.9">
+          <Pad Id="EjYYaBX492qMXoxMVpSrf2" Comment="Initial Distance" Bounds="728,1728,35,15" ShowValueBox="true" isIOBox="true" Value="-0.9">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="TQJLR0oOHL1PO2M8BhgdJX" Comment="Initial Pitch" Bounds="708,1533,35,15" ShowValueBox="true" isIOBox="true" Value="-0.25">
+          <Pad Id="TQJLR0oOHL1PO2M8BhgdJX" Comment="Initial Pitch" Bounds="708,1698,35,15" ShowValueBox="true" isIOBox="true" Value="-0.25">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Float32" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="CiaaGTJ8ZIdNIEJOYUYt5G" Comment="Left Camera" Bounds="149,710,196,128" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="RsPTBoxW9JHPNXK96RL8qC" Comment="Right Camera" Bounds="195,853,190,129" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="UdzGEmv9PPkPMUaV4VR5VX" Bounds="194,592,289,22" ShowValueBox="true" isIOBox="true" Value="&lt;&lt;&lt;&lt;----                                      ----&gt;&gt;&gt;&gt;">
+          <Pad Id="CiaaGTJ8ZIdNIEJOYUYt5G" Comment="Left Camera" Bounds="149,875,196,128" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RsPTBoxW9JHPNXK96RL8qC" Comment="Right Camera" Bounds="195,1018,190,129" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UdzGEmv9PPkPMUaV4VR5VX" Bounds="194,757,289,22" ShowValueBox="true" isIOBox="true" Value="&lt;&lt;&lt;&lt;----                                      ----&gt;&gt;&gt;&gt;">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -352,7 +355,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="LaOnq16s3gNP3g9Zqeebfe" Bounds="55,185,426,183" ShowValueBox="true" isIOBox="true" Value="A request to change a policy is subject to user approval and a policy  &gt;&#xD;&#xA;can be changed by the user at any time (using the Leap Motion settings dialog). &#xD;&#xA;The desired policy flags must be set every time an application runs. &#xD;&#xA; &#xD;&#xA;Policy changes are completed asynchronously and, because they are subject to user approval or system compatibility checks, may not complete successfully.">
+          <Pad Id="LaOnq16s3gNP3g9Zqeebfe" Bounds="55,350,426,183" ShowValueBox="true" isIOBox="true" Value="A request to change a policy is subject to user approval and a policy  &gt;&#xD;&#xA;can be changed by the user at any time (using the Leap Motion settings dialog). &#xD;&#xA;The desired policy flags must be set every time an application runs. &#xD;&#xA; &#xD;&#xA;Policy changes are completed asynchronously and, because they are subject to user approval or system compatibility checks, may not complete successfully.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -361,7 +364,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="O2jDPRx2YSPNRSwcx1L7vE" Bounds="924,306,266,58" ShowValueBox="true" isIOBox="true" Value="&lt; A policy can be changed by the user at any time (using the Leap Motion settings dialog). ">
+          <Pad Id="O2jDPRx2YSPNRSwcx1L7vE" Bounds="924,471,266,58" ShowValueBox="true" isIOBox="true" Value="&lt; A policy can be changed by the user at any time (using the Leap Motion settings dialog). ">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -370,7 +373,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="1205,822,1073,76" Id="KIAoq15LyiqPE7AcSqZNs5">
+          <Node Bounds="1205,987,1073,76" Id="KIAoq15LyiqPE7AcSqZNs5">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -381,7 +384,7 @@
               <Patch Id="FIe2qFhl9bJP51VaaOxkYf" Name="Create" ManuallySortedPins="true" />
               <Patch Id="LFP4PIhwFL5LwcnPcTPpg1" Name="Update" ManuallySortedPins="true" />
               <Patch Id="EuAWsXnOmvzN4RkmQzgAcy" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="1217,845,1047,26" Id="LWcWhZ0jyFJNtb6D5i77YN">
+              <Node Bounds="1217,1010,1047,26" Id="LWcWhZ0jyFJNtb6D5i77YN">
                 <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Hand" LastDependency="VL.Devices.Ultraleap.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="ClassType" Name="Hand" />
@@ -404,31 +407,31 @@
                 <Pin Id="RANcbvYYcRbNmj9Mooxkdg" Name="Pinch Distance" Kind="OutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="RrimsArJkmeLvFQEyeKGTa" Bounds="1219,828" Alignment="Top" />
-            <ControlPoint Id="MgX8OKh33T1Ot0nNhGOrXD" Bounds="1219,892" Alignment="Bottom" />
-            <ControlPoint Id="VzbHhutwjmzNnw21ltdgbj" Bounds="1306,892" Alignment="Bottom" />
-            <ControlPoint Id="Ig1nSzRAbl4LhkuPGwK0zG" Bounds="1393,892" Alignment="Bottom" />
-            <ControlPoint Id="M3vGJPOqt0ILlbX7jkJ4bK" Bounds="1480,892" Alignment="Bottom" />
-            <ControlPoint Id="G2SmeUtUmB7OXcGNwqef2y" Bounds="1566,892" Alignment="Bottom" />
-            <ControlPoint Id="Bk1MIgcyinXN5ezbsqbpgY" Bounds="1653,892" Alignment="Bottom" />
-            <ControlPoint Id="NEw3MzO01MzMAVdSljmKU2" Bounds="1740,892" Alignment="Bottom" />
-            <ControlPoint Id="SSdzOUK4WCQLaf3h9iW4fo" Bounds="1827,892" Alignment="Bottom" />
-            <ControlPoint Id="P5iYGn6oY9bNq5sB18oIZo" Bounds="1914,892" Alignment="Bottom" />
-            <ControlPoint Id="AtjSa5UYMd3MuUQHkU3YC2" Bounds="2000,892" Alignment="Bottom" />
-            <ControlPoint Id="RrQfqN3YZkfOM9uFccUJ0h" Bounds="2174,892" Alignment="Bottom" />
-            <ControlPoint Id="GLd8zOvvzIQLBmgwh5JtFz" Bounds="2261,892" Alignment="Bottom" />
-            <ControlPoint Id="GkUvd2baaxfNafQElh8VOf" Bounds="2087,892" Alignment="Bottom" />
+            <ControlPoint Id="RrimsArJkmeLvFQEyeKGTa" Bounds="1219,993" Alignment="Top" />
+            <ControlPoint Id="MgX8OKh33T1Ot0nNhGOrXD" Bounds="1219,1057" Alignment="Bottom" />
+            <ControlPoint Id="VzbHhutwjmzNnw21ltdgbj" Bounds="1306,1057" Alignment="Bottom" />
+            <ControlPoint Id="Ig1nSzRAbl4LhkuPGwK0zG" Bounds="1393,1057" Alignment="Bottom" />
+            <ControlPoint Id="M3vGJPOqt0ILlbX7jkJ4bK" Bounds="1480,1057" Alignment="Bottom" />
+            <ControlPoint Id="G2SmeUtUmB7OXcGNwqef2y" Bounds="1566,1057" Alignment="Bottom" />
+            <ControlPoint Id="Bk1MIgcyinXN5ezbsqbpgY" Bounds="1653,1057" Alignment="Bottom" />
+            <ControlPoint Id="NEw3MzO01MzMAVdSljmKU2" Bounds="1740,1057" Alignment="Bottom" />
+            <ControlPoint Id="SSdzOUK4WCQLaf3h9iW4fo" Bounds="1827,1057" Alignment="Bottom" />
+            <ControlPoint Id="P5iYGn6oY9bNq5sB18oIZo" Bounds="1914,1057" Alignment="Bottom" />
+            <ControlPoint Id="AtjSa5UYMd3MuUQHkU3YC2" Bounds="2000,1057" Alignment="Bottom" />
+            <ControlPoint Id="RrQfqN3YZkfOM9uFccUJ0h" Bounds="2174,1057" Alignment="Bottom" />
+            <ControlPoint Id="GLd8zOvvzIQLBmgwh5JtFz" Bounds="2261,1057" Alignment="Bottom" />
+            <ControlPoint Id="GkUvd2baaxfNafQElh8VOf" Bounds="2087,1057" Alignment="Bottom" />
           </Node>
-          <Pad Id="T9uD1vvjtLsLjdlx5T0AKB" Comment="ID" Bounds="1221,1492,86,44" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="GiwCB2aeyBLLrpKH03cn6Y" Comment="Is Left" Bounds="1305,1427,96,44" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="UcW6jhm2vybNaFp7HHdlb2" Comment="Confidence" Bounds="1391,1375,87,36" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="PspvRWdCCCGP70OhECqJfg" Comment="Elbow Position" Bounds="1477,1322,166,42" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="SNq4WSIr8UXLrgcprlqLZu" Comment="Wrist Position" Bounds="1564,1263,163,43" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="PxFgQ5lZizBNtwvRl1EJpd" Comment="Palm Position" Bounds="1651,1206,143,40" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="MHzOugzLDP6M8u2FcLWgGO" Comment="Palm Width" Bounds="1739,1160,82,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="MtdOg2PTWqwMIeTdnBCkKp" Comment="Palm Normal" Bounds="1827,1112,144,35" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="K7Dzfkndm7iMwz1I0Khb7T" Comment="Palm Velocity" Bounds="1916,1057,143,38" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="VKWobw7mYPENm0WLxIIdaQ" Comment="Grab Strength" Bounds="2001,1011,77,37" ShowValueBox="true" isIOBox="true">
+          <Pad Id="T9uD1vvjtLsLjdlx5T0AKB" Comment="ID" Bounds="1221,1657,86,44" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="GiwCB2aeyBLLrpKH03cn6Y" Comment="Is Left" Bounds="1305,1592,96,44" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="UcW6jhm2vybNaFp7HHdlb2" Comment="Confidence" Bounds="1391,1540,87,36" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PspvRWdCCCGP70OhECqJfg" Comment="Elbow Position" Bounds="1477,1487,166,42" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SNq4WSIr8UXLrgcprlqLZu" Comment="Wrist Position" Bounds="1564,1428,163,43" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PxFgQ5lZizBNtwvRl1EJpd" Comment="Palm Position" Bounds="1651,1371,143,40" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="MHzOugzLDP6M8u2FcLWgGO" Comment="Palm Width" Bounds="1739,1325,82,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="MtdOg2PTWqwMIeTdnBCkKp" Comment="Palm Normal" Bounds="1827,1277,144,35" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="K7Dzfkndm7iMwz1I0Khb7T" Comment="Palm Velocity" Bounds="1916,1222,143,38" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VKWobw7mYPENm0WLxIIdaQ" Comment="Grab Strength" Bounds="2001,1176,77,37" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:maximum p:Type="Single">1</p:maximum>
               <p:minimum p:Type="Single">0</p:minimum>
@@ -436,7 +439,7 @@
               <p:sliderdirection p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.SliderDirectionEnum">Horizontal</p:sliderdirection>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="VswcUt4rGXRMrNtCmLNwvN" Comment="Pinch Strength" Bounds="2174,972,73,40" ShowValueBox="true" isIOBox="true">
+          <Pad Id="VswcUt4rGXRMrNtCmLNwvN" Comment="Pinch Strength" Bounds="2174,1137,73,40" ShowValueBox="true" isIOBox="true">
             <p:ValueBoxSettings>
               <p:maximum p:Type="Single">1</p:maximum>
               <p:minimum p:Type="Single">0</p:minimum>
@@ -444,8 +447,8 @@
               <p:sliderdirection p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.SliderDirectionEnum">Horizontal</p:sliderdirection>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="OQ0EVo9406gQYSvbgneM1a" Comment="Pinch Distance" Bounds="2261,931,65,38" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="2070,1128,111,67" Id="OE1jybIAxzQQLzkjDH7hWH">
+          <Pad Id="OQ0EVo9406gQYSvbgneM1a" Comment="Pinch Distance" Bounds="2261,1096,65,38" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="2070,1293,111,67" Id="OE1jybIAxzQQLzkjDH7hWH">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -456,7 +459,7 @@
               <Patch Id="G4UPiArCRq2Nh6xXEO4uhg" Name="Create" ManuallySortedPins="true" />
               <Patch Id="TEymagsAar7PCFMceRQ4Jr" Name="Update" ManuallySortedPins="true" />
               <Patch Id="MPvkD0NK2fvOffekzzkltq" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="2082,1151,85,19" Id="IdKXSaeDWq4Nz5vF4xosmG">
+              <Node Bounds="2082,1316,85,19" Id="IdKXSaeDWq4Nz5vF4xosmG">
                 <p:NodeReference LastCategoryFullName="Devices.Ultraleap.Finger" LastDependency="VL.Devices.Ultraleap.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="ClassType" Name="Finger" />
@@ -470,14 +473,14 @@
                 <Pin Id="OQYzuf70UgGNbbiwzv9BDX" Name="Is Extended" Kind="OutputPin" />
               </Node>
             </Patch>
-            <ControlPoint Id="DDzDJMtRALPQW84l4WOnNO" Bounds="2084,1134" Alignment="Top" />
-            <ControlPoint Id="VEfs27hrKmPNgP8gBzvgo0" Bounds="2164,1189" Alignment="Bottom" />
-            <ControlPoint Id="EPwOSZH0tu8OdvOFAQESdq" Bounds="2144,1189" Alignment="Bottom" />
-            <ControlPoint Id="GrevYuygFuuPWO9E5J2hLx" Bounds="2124,1189" Alignment="Bottom" />
-            <ControlPoint Id="GzzMPdgM4CmMAoQO1nIfq7" Bounds="2104,1189" Alignment="Bottom" />
-            <ControlPoint Id="NE9sjdPTYvSLe8oyHAPY9u" Bounds="2085,1189" Alignment="Bottom" />
+            <ControlPoint Id="DDzDJMtRALPQW84l4WOnNO" Bounds="2084,1299" Alignment="Top" />
+            <ControlPoint Id="VEfs27hrKmPNgP8gBzvgo0" Bounds="2164,1354" Alignment="Bottom" />
+            <ControlPoint Id="EPwOSZH0tu8OdvOFAQESdq" Bounds="2144,1354" Alignment="Bottom" />
+            <ControlPoint Id="GrevYuygFuuPWO9E5J2hLx" Bounds="2124,1354" Alignment="Bottom" />
+            <ControlPoint Id="GzzMPdgM4CmMAoQO1nIfq7" Bounds="2104,1354" Alignment="Bottom" />
+            <ControlPoint Id="NE9sjdPTYvSLe8oyHAPY9u" Bounds="2085,1354" Alignment="Bottom" />
           </Node>
-          <Node Bounds="2084,956,47,19" Id="EwwxJMLw8H7Nhh4jqnAkSQ">
+          <Node Bounds="2084,1121,47,19" Id="EwwxJMLw8H7Nhh4jqnAkSQ">
             <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="4026531840" Name="Spread" NeedsToBeDirectParent="true" />
@@ -486,11 +489,11 @@
             <Pin Id="RPF54qSFRTxPq4qIw4PvcV" Name="Input" Kind="StateInputPin" />
             <Pin Id="Sikms3JziXTNGvaGXpIjJT" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Pad Id="ToPmqs24fAmMIZmUwI66J7" Comment="Is Extended" Bounds="2164,1244,35,95" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="TJdLXwePmhLLWLi0BRFHw7" Comment="Direction" Bounds="2145,1390,142,114" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="BuWRwys9HInObET4RjkcAZ" Comment="Length" Bounds="2125,1536,35,95" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="RxTv2uJqUrLPckbAUfL1XE" Comment="Fingertip Position" Bounds="2105,1682,155,110" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="V4N9LVNqHx0N0YTKftXfbs" Comment="Enabled" Bounds="840,1201,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+          <Pad Id="ToPmqs24fAmMIZmUwI66J7" Comment="Is Extended" Bounds="2164,1409,35,95" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="TJdLXwePmhLLWLi0BRFHw7" Comment="Direction" Bounds="2145,1555,142,114" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="BuWRwys9HInObET4RjkcAZ" Comment="Length" Bounds="2125,1701,35,95" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="RxTv2uJqUrLPckbAUfL1XE" Comment="Fingertip Position" Bounds="2105,1847,155,110" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="V4N9LVNqHx0N0YTKftXfbs" Comment="Enabled" Bounds="840,1366,35,35" ShowValueBox="true" isIOBox="true" Value="True">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
             </p:TypeAnnotation>
@@ -498,7 +501,7 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="700,1228,37,19" Id="DoKw5c0WxuVLOdY2AsMtFU">
+          <Node Bounds="700,1393,37,19" Id="DoKw5c0WxuVLOdY2AsMtFU">
             <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="NOT" />
@@ -506,7 +509,7 @@
             <Pin Id="Qv3MWqlLkKTN5uGVEaQ7ku" Name="Input" Kind="StateInputPin" />
             <Pin Id="Vc3XAxOuRNMLN1nSoADFhp" Name="Output" Kind="StateOutputPin" />
           </Node>
-          <Pad Id="KfgV7ShN7XiLFF3hcrVk5r" Bounds="542,1133,393,56" ShowValueBox="true" isIOBox="true" Value="Color change of thumb and pointer visualizes Pinch Strength.&#xD;&#xA;Middle, ring and pinky show Grab Strength.">
+          <Pad Id="KfgV7ShN7XiLFF3hcrVk5r" Bounds="542,1298,393,56" ShowValueBox="true" isIOBox="true" Value="Color change of thumb and pointer visualizes Pinch Strength.&#xD;&#xA;Middle, ring and pinky show Grab Strength.">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -533,13 +536,71 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FU94MlPqsvuOp8XxI7SsBr" Bounds="853,196,267,75" ShowValueBox="true" isIOBox="true" Value="&lt; In case you're using multiple Ultraleap nodes, they share a connection to the driver. Therefore disabling one, will make you loose connections to all of them!">
+          <Pad Id="FU94MlPqsvuOp8XxI7SsBr" Bounds="907,362,267,75" ShowValueBox="true" isIOBox="true" Value="&lt; In case you're using multiple Ultraleap nodes, they share a connection to the driver. Therefore disabling one, will make you loose connections to all of them!">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="IinjOlaLDrjLn8HJh5BVuE" Comment="Request Hints" Bounds="707,300,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DupM4PHDlE9MgPcpqiFE7H" Bounds="805,235,491,23" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/tracking-api/group/group___hints.html">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="F8uk7bzL22gOXE0NC3Pcha" Comment="Hints" Bounds="603,175,152,49" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Devices.Ultraleap" LastDependency="VL.Devices.Ultraleap.vl">
+                  <Choice Kind="TypeFlag" Name="LeapHint" />
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item>UltraPerformanceMode</Item>
+              <Item>FastHandMotion</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="CHmik1wkA1wMOG7ssXvOy7" Bounds="819,298,549,19" ShowValueBox="true" isIOBox="true" Value="Send a specific set of hints, if this does not include previously set ones, they will be cleared.">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RQN5FoBicVHPKPv6Hohjs2" Bounds="805,176,619,62" ShowValueBox="true" isIOBox="true" Value="Hints a client may pass to the server to influence hand tracking settings and behaviour.&#xD;&#xA;Some hints values will only be supported when the hand tracking service has a Hyperion license.&#xD;&#xA;Some are mutually exclusive. For more info see:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="DNgX8x4xoiPPplOewqd6XC" Bounds="805,264,745,19" ShowValueBox="true" isIOBox="true" Value="https://docs.ultraleap.com/api-reference/unity-api/class/class_leap_1_1_controller.html?highlight=requesthandtrackinghints#function-Leap.Controller.RequestHandTrackingHints">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
         </Canvas>
@@ -629,9 +690,11 @@
         <Link Id="RbK1IZhMSkwQHXSWSi0n3g" Ids="V4N9LVNqHx0N0YTKftXfbs,Qv3MWqlLkKTN5uGVEaQ7ku" />
         <Link Id="H5cVEJCBtIpPJ2waKXmMzq" Ids="Vc3XAxOuRNMLN1nSoADFhp,CvMh22RpmbgO7JLPKSEGwW" />
         <Link Id="VwoebFmr4mIORR42ZgV6ll" Ids="V4N9LVNqHx0N0YTKftXfbs,IQbCezLmc6nPagaxGUBcA5" />
+        <Link Id="KNYsFbWeX8VNRqlbAQTID4" Ids="IinjOlaLDrjLn8HJh5BVuE,Il0WuXDnbqfP8vp9DTzNIT" />
+        <Link Id="UzdoY9wRZxxODKgKsohrVH" Ids="F8uk7bzL22gOXE0NC3Pcha,K5UFxIibuzxMR8bzZuHEYP" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="ApWgc1CmjzRPgvIer2oijL" Location="VL.Devices.Ultraleap" Version="0.0.0" />
-  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.6" />
+  <NugetDependency Id="Ce7XnfAz5v9OY5kUrgWjOH" Location="VL.Stride" Version="2024.6.7-0228-gd4263f9987" />
 </Document>
